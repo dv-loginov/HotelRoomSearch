@@ -30,6 +30,12 @@ module.exports = {
 
   devtool: isDev ? 'source-map' : false,
 
+  resolve: {
+    alias: {
+      'src': PATH_SRC,
+    }
+  },
+
   devServer: {
     historyApiFallback: true,
     contentBase: PATH_DIST,
@@ -57,6 +63,10 @@ module.exports = {
         {
           from: path.resolve(__dirname,'src/static/favicon.ico'),
           to: PATH_DIST
+        },
+        {
+          from: path.resolve(__dirname,'src/assets/img/'),
+          to: PATH_DIST
         }
       ]
     }),
@@ -68,7 +78,6 @@ module.exports = {
     ),
 
   ],
-
 
   module: {
 
@@ -93,13 +102,21 @@ module.exports = {
             options: {}
           },
           'css-loader',
-          'sass-loader',
+          'sass-loader'
         ],
       },
 
       {
         test: /\.pug$/,
         use: [ 'pug-loader' ],
+      },
+
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
       },
 
     ],
