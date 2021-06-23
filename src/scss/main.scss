@@ -1,0 +1,13 @@
+@import "~normalize.css";
+@import "fonts";
+@import "palette";
+@import "typography";
+
+body{
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+
+@import "../pug/sections/sections";
+@import "../pug/components/logo/logo";
