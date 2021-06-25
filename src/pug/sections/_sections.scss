@@ -1,13 +1,18 @@
 .section{
   max-width: 1440px;
   width: 100vw;
-  height: 100vh;
 
   &_sec-colors-type{
     background-color: #FFFFFF;
-  }
-  &>.warp{
-    display: flex;
+    padding-bottom: 125px;
 
+    >.warp{
+      display: flex;
+      justify-content: space-between;
+      padding: 67px 150px;
+    }
   }
 }
+
+@import "../components/palette/palette";
+@import "../components/typography/typography";

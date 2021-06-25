@@ -1,13 +1,19 @@
 @import "~normalize.css";
 @import "fonts";
-@import "palette";
+@import "colors";
 @import "typography";
 
 body{
   display: flex;
   justify-content: center;
   background-color: red;
+  font-family: Montserrat, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
 }
 
-@import "../pug/sections/sections";
 @import "../pug/components/logo/logo";
+@import "../pug/sections/sections";
+
