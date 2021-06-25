@@ -1,0 +1,10 @@
+include ../color-info/color-info
+-
+    var colorInfo = [
+        {classMod:"111", name: "222", code:"3333"},
+        {classMod:"444", name: "555", code:"6666"},
+        {classMod:"777", name: "888", code:"9999"},
+    ]
+
+.palette
+    +color-info(colorInfo[0].classMod, colorInfo[0].name, colorInfo[0].code)
