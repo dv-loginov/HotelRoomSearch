@@ -64,10 +64,6 @@ module.exports = {
           from: path.resolve(__dirname,'src/static/favicon.ico'),
           to: PATH_DIST
         },
-        {
-          from: path.resolve(__dirname,'src/assets/img/'),
-          to: PATH_DIST
-        }
       ]
     }),
 
@@ -113,6 +109,14 @@ module.exports = {
 
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
+      },
+
+      {
+        test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]'
