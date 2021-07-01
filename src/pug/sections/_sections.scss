@@ -6,7 +6,17 @@
     background-color: #FFFFFF;
     padding-bottom: 125px;
 
-    >.warp{
+    &>.warp{
+      display: flex;
+      justify-content: space-between;
+      padding: 67px 150px;
+    }
+  }
+
+  &_sec-form-elements{
+    background-color: #FFFFFF;
+
+    &>.warp{
       display: flex;
       justify-content: space-between;
       padding: 67px 150px;
@@ -14,5 +24,11 @@
   }
 }
 
+.col{
+  flex: 1;
+}
+
 @import "../components/palette/palette";
 @import "../components/typography/typography";
+@import "../components/text-field/text-field";
+@import "../components/dropdown/dropdown";
