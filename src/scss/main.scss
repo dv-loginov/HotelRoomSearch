@@ -1,11 +1,12 @@
 @import "~normalize.css";
 @import "fonts";
 @import "colors";
-@import "typography";
 
 body{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: red;
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
