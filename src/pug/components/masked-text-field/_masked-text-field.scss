@@ -1,0 +1,37 @@
+.masked-text-field {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding-bottom: 20px;
+
+  &_label {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $dark_shade_100;
+    padding-bottom: 5px;
+  }
+
+  &_input {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $dark_shade_25;
+
+    padding: 13px 15px;
+    background: #FFFFFF;
+    border: 1px solid $dark_shade_25;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $dark_shade_25;
+    }
+  }
+}

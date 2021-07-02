@@ -1,0 +1,7 @@
+mixin dropdown(className, label, defValue, ico)
+    div(class="dropdown dropdown_"+className)
+        label(class="dropdown__label")=label
+        .dropdown__wrap-input
+            input(class="dropdown__input" placeholder=defValue readonly)
+            div(class="dropdown__input-ico"+" dropdown__input-ico_"+className)
+                span(class="material-icons md-24")=ico

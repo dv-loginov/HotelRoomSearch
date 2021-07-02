@@ -1,9 +1,3 @@
-mixin dropdown(className, id, name)
-    div(class="dropdown")
-        label(class="dropdown__label" for=id)=name
-        .dropdown__wrap-input
-            input(class="dropdown__input" value="Сколько гостей" id=id readonly)
-            div(class="dropdown__input-ico"+" dropdown__input-ico_"+className)
-                span(class="material-icons md-24") expand_more
+include ../../mixins/mix-dropdown
 
-+dropdown("default", "default", "dropdown")
++dropdown("default", "dropdown", "Сколько гостей", "expand_more")

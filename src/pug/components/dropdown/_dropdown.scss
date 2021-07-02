@@ -1,4 +1,5 @@
 .dropdown{
+  width: 320px;
   padding-bottom: 20px;
   &__label{
     font-weight: 700;
@@ -12,10 +13,7 @@
     display: flex;
     justify-content: space-between;
     background: #FFFFFF;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    color: $dark_shade_75;
+
     border: 1px solid $dark_shade_25;;
     box-sizing: border-box;
     border-radius: 4px;
@@ -23,8 +21,15 @@
   }
   &__input{
     width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    color: $dark_shade_75;
     outline: none;
     border: none;
+    &::placeholder{
+      color: $dark_shade_75;
+    }
   }
   &__input-ico{
     display: flex;

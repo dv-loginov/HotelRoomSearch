@@ -1,13 +1,5 @@
-mixin text-field(type, className, id, name, defValue)
-    div(class = className)
-        label(for = id class = className + "_label")=name
-        input(
-            type = type
-            id = id
-            class = className + "_input"
-            placeholder=defValue
-        )
+include ../../mixins/mix-text-field
 
-+text-field("text", "text-field", "text-field", "TEXT FIELD", "Email")
++text-field("text", "text-field", "text-field", "text-name", "Email")
 
 

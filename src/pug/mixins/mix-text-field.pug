@@ -1,0 +1,9 @@
+mixin text-field(type, className, label, name, defValue)
+    div(class = className)
+        label(class = className + "_label")=label
+        input(
+            type = type
+            name = name
+            class = className + "_input"
+            placeholder=defValue
+        )
