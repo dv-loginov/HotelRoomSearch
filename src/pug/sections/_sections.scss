@@ -18,13 +18,20 @@
 
     &>.warp{
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       padding: 67px 150px;
     }
   }
 }
 
+.row{
+  display: flex;
+  width: 100%;
+}
+
 .col{
+  width: 33%;
   flex: 1;
 }
 
@@ -36,3 +43,4 @@
 @import "../components/date-dropdown/date-dropdown";
 @import "../components/filter-date-dropdown/filter-date-dropdown";
 @import "../components/subscription-text-field/subscription-text-field";
+@import "../components/checkbox-buttons/checkbox-buttons";

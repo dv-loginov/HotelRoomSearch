@@ -1,0 +1,28 @@
+.checkbox-buttons
+    label(class="checkbox-buttons__label")="checkbox buttons"
+    .checkbox-buttons__item
+        label(class="checkbox-buttons__item-label")
+            input(
+                class="checkbox-buttons__input"
+                type="checkbox"
+                name="isSmoke"
+                value="no")
+            span(class="checkbox-buttons__flag")="Можно курить"
+    .checkbox-buttons__item
+        label(class="checkbox-buttons__item-label")
+            input(
+                class="checkbox-buttons__input"
+                type="checkbox"
+                name="isPet"
+                checked=true
+                value="yes")
+            span(class="checkbox-buttons__flag")="Можно с питомцами"
+    .checkbox-buttons__item
+        label(class="checkbox-buttons__item-label")
+            input(
+                class="checkbox-buttons__input"
+                type="checkbox"
+                name="isSmoke"
+                checked=true
+                value="yes")
+            span(class="checkbox-buttons__flag")="Можно пригласить гостей (до 10 человек)"
