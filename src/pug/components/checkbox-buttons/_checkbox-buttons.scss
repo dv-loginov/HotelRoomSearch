@@ -2,6 +2,7 @@
   width: 222px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 40px;
 
   &__label{
     font-weight: 700;
@@ -9,14 +10,15 @@
     line-height: 15px;
     text-transform: uppercase;
     color: $dark_shade_100;
-    margin-bottom: 17px;}
+    margin-bottom: 17px;
+  }
 
   &__item-label{
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
     color: $dark_shade_50;
-    //cursor: pointer;
+    cursor: pointer;
   }
 
   &__item{
