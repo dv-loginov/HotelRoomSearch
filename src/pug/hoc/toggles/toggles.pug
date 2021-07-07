@@ -1,0 +1,14 @@
+include ../../components/label/label
+include ../../components/toggle/toggle
+
+.toggles
+    +label({text:"toggle"})
+    +toggle({
+      text: "Получать спецпредложения",
+      id: "toggle-1",
+      checked: true
+    })
+    +toggle({
+      text: "Получать спецпредложения",
+      id: "toggle-2",
+    })

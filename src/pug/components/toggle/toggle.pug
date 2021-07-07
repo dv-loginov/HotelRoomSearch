@@ -1,14 +1,18 @@
-.toggle
-    label(class="toggle__label")="toggle"
-    .toggle__warp
-        input(
-            class="toggle__input"
-            type="checkbox"
-            id="toggle"
-        )
-        label(
-            class="toggle__input-label"
-            for="toggle"
-        )
-        span(class="toggle__input-label-text") Получать спецпредложения
+mixin toggle(args)
+    - const className = args.classes ? args.classes.join(" ") : "toggle"
+    - const id = args.id ? args.id: "toggle"
+
+    div(class=className)
+        div(class=className+"__warp")
+            input(
+                class=className+"__input"
+                type="checkbox"
+                checked=args.checked
+                id=id
+            )
+            label(
+                class=className+"__input-label"
+                for=args.id
+            )
+            span(class=className+"__input-label-text")=args.text
 

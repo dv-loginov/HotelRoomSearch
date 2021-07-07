@@ -1,14 +1,4 @@
 .toggle{
-
-  &__label{
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $dark_shade_100;
-    margin-bottom: 17px;
-  }
-
   &__warp{
     display: flex;
     align-items: center;
