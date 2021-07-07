@@ -28,15 +28,16 @@
 .row{
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .col{
-  width: 33%;
-  flex: 1;
+  flex: 1 1 33%;
 }
 
 @import "../components/palette/palette";
 @import "../components/typography/typography";
+@import "../components/label/label";
 @import "../components/text-field/text-field";
 @import "../components/dropdown/dropdown";
 @import "../components/masked-text-field/masked-text-field";
@@ -46,3 +47,4 @@
 @import "../components/checkbox-buttons/checkbox-buttons";
 @import "../components/radio-buttons/radio-buttons";
 @import "../components/toggle/toggle";
+@import "../hoc/like-buttons/like-buttons";

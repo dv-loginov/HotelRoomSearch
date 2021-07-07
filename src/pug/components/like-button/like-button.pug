@@ -1,0 +1,8 @@
+mixin like-button(args)
+    - const className = args.classes ? args.classes.join(" ") : "like-button"
+    div(class=className)
+        .like-button__ico
+            span(class="material-icons" style="font-size: 10px")= args.ico
+        .like-button__num
+            span=args.num
+

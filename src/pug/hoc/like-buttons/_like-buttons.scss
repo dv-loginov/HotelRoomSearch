@@ -1,0 +1,9 @@
+.like-buttons {
+  width: 90px;
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@import "../../components/like-button/like-button";

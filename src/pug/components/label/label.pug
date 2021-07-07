@@ -1,0 +1,7 @@
+mixin label(args)
+    - const className = args.classes ? args.classes.join(" ") : "label"
+    - const forAttr = args.for ? args.for : null
+    label(
+        class=className
+        for = forAttr
+    )=args.text
