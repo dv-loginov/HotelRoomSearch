@@ -1,0 +1,23 @@
+include ../../components/label/label
+include ../../components/button/button
+
+.buttons
+    +label({text:"buttons"})
+    .buttons__row
+        +button({
+          type:"def",
+          mod:"primary"
+        })
+    .buttons__row
+        +button({
+          type: "def",
+          mod: "secondary"
+        })
+    .buttons__row
+        +button({
+          type: "link",
+        })
+    .buttons__row
+        +button({
+          type: "adv",
+        })

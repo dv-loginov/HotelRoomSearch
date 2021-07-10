@@ -1,0 +1,12 @@
+mixin button(args)
+    - const type=args.type?args.type:"def"
+    - const modClass=args.mod?" btn-def_"+args.mod:null
+    if (type==="def")
+        button(class="btn-def"+modClass)
+            span(class="btn-def__label") click me
+    if (type==="adv")
+        button(class="btn-adv")
+            span(class="btn-adv__label") перейти к оплате
+            span(class="material-icons md-24 btn-adv__label-ico")="arrow_forward"
+    if (type==="link")
+        a(class="btn-link") click me
