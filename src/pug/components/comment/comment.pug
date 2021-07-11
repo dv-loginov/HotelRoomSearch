@@ -1,0 +1,21 @@
+include ../../components/icon-text-item/icon-text-item
+include ../../components/like-button/like-button
+
+.comment
+    +icon-text-item({
+      type: "img",
+      ico: require("../components/comment/murad-sarafanov.png").default,
+      title: "Мурад Сарафанов",
+      subtitle: "5 дней"
+    })
+    .comment__description
+        .comment__description-ico
+            +like-button({
+              classes: ["like-button", "like-button_active"],
+              ico: "favorite",
+              num: "12"
+            })
+        .comment__description-text
+            |Великолепный матрас на кровати в основной спальне!
+            |А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
+            |Выкрикивал комплименты повару — никто не жаловался из соседей.

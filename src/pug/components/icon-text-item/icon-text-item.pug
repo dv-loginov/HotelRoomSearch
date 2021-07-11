@@ -1,0 +1,11 @@
+mixin icon-text-item(args)
+    -   const mod=args.mod?' icon-text-item_' + args.mod : ""
+    div(class="icon-text-item" + mod)
+        .icon-text-item__ico
+            if args.type==="ico"
+                span(class="material-icons" style="font-size: 48px" )=args.ico
+            if args.type==="img"
+                img(src=args.ico alt="user")
+        .icon-text-item__descroption
+            .icon-text-item__title=args.title
+            .icon-text-item__subtitle=args.subtitle
