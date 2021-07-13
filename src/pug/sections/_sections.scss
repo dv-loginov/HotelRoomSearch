@@ -29,6 +29,7 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  padding-bottom: 100px;
 }
 
 .col{
@@ -43,7 +44,9 @@
 @import "../components/typography/typography";
 @import "../components/label/label";
 @import "../components/text-field/text-field";
-@import "../components/dropdown/dropdown";
+@import "../hoc/dropdown-def/dropdown-def";
+@import "../hoc/dropdown-furniture/dropdown-furniture";
+@import "../hoc/dropdown-guests/dropdown-guests";
 @import "../components/masked-text-field/masked-text-field";
 @import "../components/date-dropdown/date-dropdown";
 @import "../components/filter-date-dropdown/filter-date-dropdown";

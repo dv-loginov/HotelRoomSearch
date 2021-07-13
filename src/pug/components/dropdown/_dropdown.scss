@@ -1,22 +1,20 @@
 .dropdown{
   width: 320px;
-  padding-bottom: 20px;
-  &__label{
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $dark_shade_100;
-    padding-bottom: 5px;
+
+  &__wrap-options {
+    border: 1px solid $dark_shade_25;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    //display: none;
   }
+
   &__wrap-input{
     display: flex;
     justify-content: space-between;
     background: #FFFFFF;
-
     border: 1px solid $dark_shade_25;;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
     padding-left: 12px;
   }
   &__input{
@@ -38,8 +36,19 @@
     width: 44px;
     height: 44px;
     cursor: pointer;
-    &_default{
+    &_def{
       color: $dark_shade_50;
     }
   }
+
+  &_def{
+    .dropdown__wrap-input{
+      border: 1px solid $dark_shade_25;;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+  }
+
 }
+
+@import "../dropdown-option/dropdown-option";
