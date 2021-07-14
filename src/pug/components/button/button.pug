@@ -9,4 +9,4 @@ mixin button(args)
             span(class="btn-adv__label") перейти к оплате
             span(class="material-icons md-24 btn-adv__label-ico")="arrow_forward"
     if (type==="link")
-        a(class="btn-link") click me
+        button(class="btn-link")=args.text

@@ -1,11 +1,13 @@
 .dropdown{
   width: 320px;
+  position: relative;
 
   &__wrap-options {
     border: 1px solid $dark_shade_25;
     border-top: none;
     border-radius: 0 0 4px 4px;
-    //display: none;
+    position: absolute;
+    width: 318px;
   }
 
   &__wrap-input{
@@ -17,8 +19,9 @@
     border-radius: 4px 4px 0 0;
     padding-left: 12px;
   }
+
   &__input{
-    width: 100%;
+    width: 150px;
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
@@ -28,14 +31,20 @@
     &::placeholder{
       color: $dark_shade_75;
     }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+
   &__input-ico{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 44px;
     height: 44px;
+    user-select: none;
     cursor: pointer;
+
     &_def{
       color: $dark_shade_50;
     }
@@ -49,6 +58,12 @@
     }
   }
 
+  &__buttons{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-bottom: 13px;
+  }
 }
 
 @import "../dropdown-option/dropdown-option";

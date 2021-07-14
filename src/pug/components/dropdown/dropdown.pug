@@ -1,30 +1,32 @@
 include ../../components/label/label
 include ../../components/dropdown-option/dropdown-option
+include ../../components/button/button
 
 mixin dropdown(args)
     -   const mod=args.mod ? ' dropdown_'+args.mod : ''
     -   const modIco=args.modIco ?" dropdown__input-ico_" + args.modIco : ''
     -   const defValue=args.defValue ? args.defValue : ''
-    div(class="dropdown"+mod)
+    -   const id=args.id ? args.id : null
+    div(class="dropdown"+mod id=id)
         +label({text: args.label})
         .dropdown__wrap-input
             input(class="dropdown__input" placeholder=defValue readonly)
-            div(class="dropdown__input-ico"+modIco)
-                span(class="material-icons md-24")=args.ico
+            div(class="dropdown__input-ico"+modIco data-action="expand")
+                span(class="material-icons md-24" style="pointer-events: none")=args.ico
         if args.mod!=="def"
             .dropdown__wrap-options
                 if args.mod==="furniture"
                     +dropdown-option({
                       text: "спальни",
-                      value: "2"
+                      value: "7"
                     })
                     +dropdown-option({
                       text: "кровати",
-                      value: "2"
+                      value: "9"
                     })
                     +dropdown-option({
                       text: "ваные комнаты",
-                      value: "0"
+                      value: "12"
                     })
                 if args.mod === "guests"
                     +dropdown-option({
@@ -39,3 +41,12 @@ mixin dropdown(args)
                       text: "младенцы",
                       value: "0"
                     })
+                    .dropdown__buttons
+                        +button({
+                          type: "link",
+                          text: "очистить"
+                        })
+                        +button({
+                          type: "link",
+                          text: "применить"
+                        })

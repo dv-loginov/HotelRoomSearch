@@ -3,5 +3,5 @@ mixin dropdown-option(args)
         .dropdown-option_text=args.text
         .dropdown-option_counter
             .dropdown-option_counter-sub="-"
-            .dropdown-option_counter-value=args.value
+            .dropdown-option_counter-value(data-counter-value=args.value)=args.value
             .dropdown-option_counter-add="+"

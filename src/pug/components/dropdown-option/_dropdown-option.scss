@@ -19,7 +19,9 @@
     align-items: center;
     padding-right: 7px;
     &-value {
+      width: 1em;
       padding: 0 10px;
+      text-align: center;
     }
 
     &-sub, &-add {
@@ -31,6 +33,8 @@
       color: $dark_shade_25;
       border: 1px solid $dark_shade_25;
       border-radius: 50%;
+      user-select: none;
+      cursor: pointer;
     }
   }
 }
