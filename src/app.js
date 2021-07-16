@@ -12,3 +12,26 @@ dropdown({
   isExpand: true,
 });
 
+dropdown({
+  id: 'dropdown-guests-noinit',
+  initValue: [
+    {itemName: 'взрослые', value: 0},
+    {itemName: 'дети', value: 0},
+    {itemName: 'младенцы', value: 0}
+  ],
+  isExpand: true,
+  needButtons: true
+});
+
+dropdown({
+  id: 'dropdown-guests-init',
+  initValue: [
+    {itemName: 'взрослые', value: 2},
+    {itemName: 'дети', value: 1},
+    {itemName: 'младенцы', value: 0}
+  ],
+  isExpand: true,
+  needButtons: true
+});
+
+

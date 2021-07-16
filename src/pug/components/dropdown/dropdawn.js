@@ -1,9 +1,21 @@
-const dropdown=(args)=>{
-  let { id=null, initValue = [0,0,0], isExpand = false} = args;
+const dropdown = (args) => {
+
+  let {
+    id = null,
+    initValue = null,
+    isExpand = false,
+    needButtons = false
+  } = args;
+
   console.log(id, initValue, isExpand);
 
-  if (id===null) {
+  if (id === null) {
     console.log("id не задан");
+    return -1;
+  }
+
+  if (initValue === null) {
+    console.log("initValue не задан");
     return -1;
   }
 
@@ -12,26 +24,26 @@ const dropdown=(args)=>{
   const nodeCountersValue = nodeDropDown.querySelectorAll('[data-counter-value]');
   const nodeInput = nodeDropDown.querySelector('.dropdown__input');
 
-  console.log(nodeDropDown);
-  console.log(nodeOptions);
-  // console.log(nodeCountersValue);
+  const buttonClear = nodeDropDown.querySelector('[data-action=clear]')
+    ?nodeDropDown.querySelector('[data-action=clear]')
+    :null;
+
+  const buttonApply = nodeDropDown.querySelector('[data-action=apply]')
+    ?nodeDropDown.querySelector('[data-action=apply]')
+    :null;
 
   init();
 
-  function init(){
+  function init() {
     console.log(`Init ${id}`);
 
     isExpand
       ? nodeOptions.style.display = 'block'
       : nodeOptions.style.display = 'none';
 
-    for (let i = 0; i < nodeCountersValue.length; i++){
+    for (let i = 0; i < nodeCountersValue.length; i++) {
       nodeCountersValue[i].textContent = initValue[i].value;
       nodeCountersValue[i].dataset.counterValue = initValue[i].value;
-      nodeCountersValue[i].previousElementSibling.dataset.item = i;
-      nodeCountersValue[i].previousElementSibling.dataset.action = 'sub';
-      nodeCountersValue[i].nextElementSibling.dataset.item = i;
-      nodeCountersValue[i].nextElementSibling.dataset.action = 'add';
     }
 
     nodeDropDown.addEventListener('click', headerClick);
@@ -41,65 +53,110 @@ const dropdown=(args)=>{
   }
 
   function toggleExpand() {
+
     console.log('toggleExpand');
-    isExpand=!isExpand;
+    isExpand = !isExpand;
     isExpand
       ? nodeOptions.style.display = 'block'
       : nodeOptions.style.display = 'none';
+
   }
 
-  function headerClick(event){
+  function headerClick(event) {
 
     console.log(event.target);
     console.log(event.target.dataset);
 
-    event.target.dataset.action==='expand'
+    event.target.dataset.action === 'expand'
       ? toggleExpand()
       : null;
 
-    event.target.dataset.action==='add'
+    event.target.dataset.action === 'add'
       ? addValue(nodeCountersValue[event.target.dataset.item])
       : null;
 
-    event.target.dataset.action==='sub'
+    event.target.dataset.action === 'sub'
       ? subValue(nodeCountersValue[event.target.dataset.item])
       : null;
+
+    event.target.dataset.action === 'apply'
+      ? toggleExpand()
+      : null;
+
+    event.target.dataset.action === 'clear'
+      ? clearValue()
+      : null;
+
   }
 
+  function clearValue(){
+    console.log('clearValue');
+    for (let i = 0; i < nodeCountersValue.length; i++) {
+      initValue[i].value=0;
+      nodeCountersValue[i].textContent = 0;
+      nodeCountersValue[i].dataset.counterValue = 0;
+    }
+    viewInput();
+  }
 
   function subValue(node) {
 
     const value = Number(node.textContent);
-    console.log(value===0);
+    console.log(value === 0);
     value === 0
       ? null
       : node.textContent--;
-    node.dataset.counterValue=node.textContent;
+    node.dataset.counterValue = node.textContent;
     viewInput();
   }
 
   function addValue(node) {
+
     const value = Number(node.textContent);
-    console.log(value===0);
+    console.log(value === 0);
     value === 9
       ? null
       : node.textContent++;
-    node.dataset.counterValue=node.textContent;
+    node.dataset.counterValue = node.textContent;
     viewInput();
   }
 
-  function viewInput(){
-    console.log('viewInput');
-    let str='';
+  function viewInput() {
 
-    for (let i = 0; i < nodeCountersValue.length; i++){
-      str+=initValue[i].itemName+' '+nodeCountersValue[i].dataset.counterValue + ', '
+    console.log('viewInput');
+
+    if (needButtons) {
+      const value = getSumGuests(nodeCountersValue);
+      value===0
+        ? (
+          nodeInput.value = 'Сколько гостей',
+          buttonClear.style.visibility='hidden'
+        )
+        : (
+          nodeInput.value = `Гостей ${value}`,
+          buttonClear.style.visibility='visible'
+        )
+    } else {
+      nodeInput.value = getFurniture(nodeCountersValue);
     }
-    nodeInput.value=str;
   }
 
+  function getSumGuests(node){
+    let value = 0;
+    for (let i = 0; i < node.length; i++) {
+      value += Number(node[i].dataset.counterValue);
+    }
+    return value;
+  }
+
+  function getFurniture(node){
+    let str = '';
+    for (let i = 0; i < node.length; i++) {
+      str += initValue[i].itemName + ' ' + node[i].dataset.counterValue + ', '
+    }
+    return str;
+  }
 
 };
-
 
 export default dropdown;

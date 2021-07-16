@@ -15,38 +15,46 @@ mixin dropdown(args)
                 span(class="material-icons md-24" style="pointer-events: none")=args.ico
         if args.mod!=="def"
             .dropdown__wrap-options
-                if args.mod==="furniture"
+                if args.type==="furniture"
                     +dropdown-option({
                       text: "спальни",
-                      value: "7"
+                      value: "2",
+                      item: 0
                     })
                     +dropdown-option({
                       text: "кровати",
-                      value: "9"
+                      value: "2",
+                      item: 1
                     })
                     +dropdown-option({
-                      text: "ваные комнаты",
-                      value: "12"
+                      text: "ванные комнаты",
+                      value: "0",
+                      item: 2
                     })
-                if args.mod === "guests"
+                if args.type === "guests"
                     +dropdown-option({
                       text: "взрослые",
-                      value: "0"
+                      value: "0",
+                      item: 0
                     })
                     +dropdown-option({
                       text: "дети",
-                      value: "0"
+                      value: "0",
+                      item: 1
                     })
                     +dropdown-option({
                       text: "младенцы",
-                      value: "0"
+                      value: "0",
+                      item: 2
                     })
                     .dropdown__buttons
                         +button({
                           type: "link",
-                          text: "очистить"
+                          text: "очистить",
+                          action: "clear"
                         })
                         +button({
                           type: "link",
-                          text: "применить"
+                          text: "применить",
+                          action: "apply"
                         })
