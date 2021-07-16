@@ -1,14 +1,45 @@
+include ../components/dropdown/dropdown
+include ../components/text-field/text-field
+include ../components/masked-text-field/masked-text-field
+include ../components/subscription-text-field/subscription-text-field
+
+
 section.section.section_sec-form-elements
     include ../components/logo/logo
     .warp
-        .row
+        .row-in-sec
             .col
-                include ../components/text-field/text-field
-                include ../hoc/dropdown-def/dropdown-def
-                include ../components/masked-text-field/masked-text-field
-                include ../components/date-dropdown/date-dropdown
-                include ../components/filter-date-dropdown/filter-date-dropdown
-                include ../components/subscription-text-field/subscription-text-field
+                .row-in-col.row-in-col_20
+                    +text-field({
+                      label: "text-field",
+                      className: "text-field",
+                      type: "text",
+                      name: "name",
+                      defValue: "Email",
+                      id: "text-field"
+                    })
+                .row-in-col.row-in-col_20
+                    +dropdown({
+                        mod: "def",
+                        modIco: "def",
+                        label: "dropdown",
+                        defValue: "Сколько гостей",
+                        ico: "expand_more"
+                    })
+                .row-in-col.row-in-col_20
+                    +masked-text-field({label:"masked text field"})
+                .row-in-col.row-in-col_40
+                    include ../components/dropdown-date/dropdown-date
+                .row-in-col.row-in-col_40
+                    include ../components/dropdown-filter-date/dropdown-filter-date
+                .row-in-col
+                    +subscription-text-field({
+                        label: "subscription-text-field",
+                        defValue: "Email",
+                        ico: "arrow_forward",
+                        modIco:"subscription",
+                        mod: "subscription"
+                    })
             .col
                 include ../components/checkbox-buttons/checkbox-buttons
                 include ../components/radio-buttons/radio-buttons
@@ -17,21 +48,21 @@ section.section.section_sec-form-elements
                 include ../hoc/rate-buttons/rate-buttons
             .col
                 include ../hoc/buttons/buttons
-        .row
+        .row-in-sec
             .col
                 include ../hoc/dropdown-furniture/dropdown-furniture
             .col
                 include ../hoc/dropdown-guests-noinit/dropdown-guests-noinit
             .col
                 include ../hoc/dropdown-guests-init/dropdown-guests-init
-        .row
+        .row-in-sec
             .col
                 //include ../components/palette/palette
             .col
                 //include ../components/typography/typography
             .col
                 //include ../components/typography/typography
-        .row
+        .row-in-sec
             .col
                 include ../hoc/icon-text-list/icon-text-list
             .col-67

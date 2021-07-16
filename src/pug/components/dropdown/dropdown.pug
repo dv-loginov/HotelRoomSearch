@@ -13,7 +13,7 @@ mixin dropdown(args)
             input(class="dropdown__input" placeholder=defValue readonly)
             div(class="dropdown__input-ico"+modIco data-action="expand")
                 span(class="material-icons md-24" style="pointer-events: none")=args.ico
-        if args.mod!=="def"
+        if args.isOptions
             .dropdown__wrap-options
                 if args.type==="furniture"
                     +dropdown-option({

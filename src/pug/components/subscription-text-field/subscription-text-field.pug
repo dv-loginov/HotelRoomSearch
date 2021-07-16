@@ -1,3 +1,10 @@
-include ../../mixins/mix-dropdown
+include ../label/label
 
-+dropdown("subscription", "subscription text field", "Email", "arrow_forward")
+mixin subscription-text-field(args)
+    +dropdown({
+        label: args.label,
+        defValue: args.defValue,
+        ico: args.ico,
+        modIco: args.modIco,
+        mod: args.mod
+    })

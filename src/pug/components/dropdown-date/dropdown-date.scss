@@ -1,0 +1,13 @@
+.dropdowns-date{
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+}
+.dropdown_date{
+  width: 150px;
+  .dropdown__wrap-input{
+    border: 1px solid $dark_shade_25;;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+}

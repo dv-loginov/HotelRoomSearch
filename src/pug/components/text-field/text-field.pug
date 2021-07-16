@@ -1,5 +1,18 @@
-include ../../mixins/mix-text-field
+include ../label/label
 
-+text-field("text", "text-field", "text-field", "text-name", "Email")
+mixin text-field(args)
+    div(class = args.className)
+        +label({
+          text: args.label,
+          forAttr: args.id
+        })
+        input(
+            type = args.type
+            name = args.name
+            class = args.className + "_input"
+            placeholder=args.defValue,
+            id = args.id
+        )
+
 
 

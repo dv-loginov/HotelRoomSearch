@@ -1,7 +1,10 @@
-.masked-text-field
-    label(class = "masked-text-field_label")="masked text field"
-    input(
-        type = "text"
-        class = "masked-text-field_input"
-        placeholder="ДД.ММ.ГГГГ"
-    )
+include ../label/label
+
+mixin masked-text-field(args)
+    .masked-text-field
+        +label({text: args.label})
+        input(
+            type = "text"
+            class = "masked-text-field_input"
+            placeholder="ДД.ММ.ГГГГ"
+        )
