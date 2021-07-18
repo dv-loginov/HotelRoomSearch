@@ -1,28 +1,23 @@
+include ../../components/label/label
+include ../../components/checkbox-item/checkbox-item
+
 .checkbox-buttons
-    label(class="checkbox-buttons__label")="checkbox buttons"
-    .checkbox-buttons__item
-        label(class="checkbox-buttons__item-label")
-            input(
-                class="checkbox-buttons__input"
-                type="checkbox"
-                name="isSmoke"
-                value="no")
-            span(class="checkbox-buttons__flag")="Можно курить"
-    .checkbox-buttons__item
-        label(class="checkbox-buttons__item-label")
-            input(
-                class="checkbox-buttons__input"
-                type="checkbox"
-                name="isPet"
-                checked=true
-                value="yes")
-            span(class="checkbox-buttons__flag")="Можно с питомцами"
-    .checkbox-buttons__item
-        label(class="checkbox-buttons__item-label")
-            input(
-                class="checkbox-buttons__input"
-                type="checkbox"
-                name="isSmoke"
-                checked=true
-                value="yes")
-            span(class="checkbox-buttons__flag")="Можно пригласить гостей (до 10 человек)"
+    +label({text: "checkbox buttons"})
+    +checkbox-item({
+      name: "isSmoke",
+      text: "Можно курить",
+      value: "no",
+      checked: false
+    })
+    +checkbox-item({
+      name: "isPet",
+      text: "Можно с питомцами",
+      value: "yes",
+      checked: true
+    })
+    +checkbox-item({
+      name: "isSmoke",
+      text: "Можно пригласить гостей (до 10 человек)",
+      value: "yes",
+      checked: true
+    })

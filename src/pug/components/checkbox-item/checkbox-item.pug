@@ -1,0 +1,10 @@
+mixin checkbox-item(args)
+    .checkbox-item
+        label(class="checkbox-item__label")
+            input(
+                class="checkbox-item__input"
+                type="checkbox"
+                checked=args.checked
+                name=args.name
+                value=args.value)
+            span(class="checkbox-item__flag")=args.text
