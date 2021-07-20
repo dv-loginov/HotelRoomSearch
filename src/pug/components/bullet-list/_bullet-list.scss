@@ -1,0 +1,30 @@
+.bullet-list{
+  padding-inline-start: 0;
+  list-style-position: inside;
+  width: 260px;
+  margin: 0;
+  list-style: none;
+
+  &_item{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark_shade_75;
+    display: flex;
+    align-items: baseline;
+    padding: 12px 0;
+    letter-spacing: 1px;
+    &::before {
+      content: " ";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 10px;
+      color: $dark_shade_25;
+      background-color: $dark_shade_25;
+      display: inline-block;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  }
+}

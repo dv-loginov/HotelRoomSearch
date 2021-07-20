@@ -1,0 +1,10 @@
+include ../label/label
+
+mixin bullet-list(args)
+
+    -   const items=args.items
+
+    ul(class="bullet-list")
+        +label({text: args.name})
+        each item in items
+            li(class="bullet-list_item")=item.text

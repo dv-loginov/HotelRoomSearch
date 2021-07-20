@@ -6,6 +6,7 @@ include ../components/radio-buttons/radio-buttons
 include ../components/label/label
 include ../components/toggle/toggle
 include ../components/checkbox-list/checkbox-list
+include ../components/bullet-list/bullet-list
 
 section.section.section_sec-form-elements
     include ../components/logo/logo
@@ -135,7 +136,14 @@ section.section.section_sec-form-elements
             .col
                 //include ../components/typography/typography
             .col
-                //include ../components/typography/typography
+                +bullet-list({
+                  name: "bullet list",
+                  items: [
+                    {text: "Нельзя с питомцами"},
+                    {text: "Без вечеринок и мероприятий"},
+                    {text: "Время прибытия - после 13:00, а выезд до 12:00"}
+                  ]
+                })
         .row-in-sec
             .col
                 include ../hoc/icon-text-list/icon-text-list
