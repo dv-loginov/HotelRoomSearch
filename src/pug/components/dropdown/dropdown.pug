@@ -13,48 +13,47 @@ mixin dropdown(args)
             input(class="dropdown__input" placeholder=defValue readonly)
             div(class="dropdown__input-ico"+modIco data-action="expand")
                 span(class="material-icons md-24" style="pointer-events: none")=args.ico
-        if args.isOptions
-            .dropdown__wrap-options
-                if args.type==="furniture"
-                    +dropdown-option({
-                      text: "спальни",
-                      value: "2",
-                      item: 0
+        .dropdown__wrap-options
+            if args.type==="furniture"
+                +dropdown-option({
+                    text: "спальни",
+                    value: "2",
+                    item: 0
+                })
+                +dropdown-option({
+                    text: "кровати",
+                    value: "2",
+                    item: 1
+                })
+                +dropdown-option({
+                    text: "ванные комнаты",
+                    value: "0",
+                    item: 2
+                })
+            if args.type === "guests"
+                +dropdown-option({
+                    text: "взрослые",
+                    value: "0",
+                    item: 0
+                })
+                +dropdown-option({
+                    text: "дети",
+                    value: "0",
+                    item: 1
+                })
+                +dropdown-option({
+                    text: "младенцы",
+                    value: "0",
+                    item: 2
+                })
+                .dropdown__buttons
+                    +button({
+                        type: "link",
+                        text: "очистить",
+                        action: "clear"
                     })
-                    +dropdown-option({
-                      text: "кровати",
-                      value: "2",
-                      item: 1
+                    +button({
+                        type: "link",
+                        text: "применить",
+                        action: "apply"
                     })
-                    +dropdown-option({
-                      text: "ванные комнаты",
-                      value: "0",
-                      item: 2
-                    })
-                if args.type === "guests"
-                    +dropdown-option({
-                      text: "взрослые",
-                      value: "0",
-                      item: 0
-                    })
-                    +dropdown-option({
-                      text: "дети",
-                      value: "0",
-                      item: 1
-                    })
-                    +dropdown-option({
-                      text: "младенцы",
-                      value: "0",
-                      item: 2
-                    })
-                    .dropdown__buttons
-                        +button({
-                          type: "link",
-                          text: "очистить",
-                          action: "clear"
-                        })
-                        +button({
-                          type: "link",
-                          text: "применить",
-                          action: "apply"
-                        })

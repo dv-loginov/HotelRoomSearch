@@ -9,7 +9,7 @@ dropdown({
     {itemName: 'кровати', value: 2},
     {itemName: 'ванные комнаты', value: 0}
   ],
-  isExpand: true,
+  isExpand: false,
 });
 
 dropdown({
@@ -19,7 +19,7 @@ dropdown({
     {itemName: 'дети', value: 0},
     {itemName: 'младенцы', value: 0}
   ],
-  isExpand: true,
+  isExpand: false,
   needButtons: true
 });
 
@@ -30,7 +30,7 @@ dropdown({
     {itemName: 'дети', value: 1},
     {itemName: 'младенцы', value: 0}
   ],
-  isExpand: true,
+  isExpand: false,
   needButtons: true
 });
 

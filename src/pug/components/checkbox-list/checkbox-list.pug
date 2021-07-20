@@ -1,0 +1,19 @@
+include ../label/label
+include ../checkbox-item/checkbox-item
+
+mixin checkbox-list(args)
+    -   const items=args.items
+    .checkbox-list
+        .checkbox-list__header
+            .checkbox-list__name
+                +label({text: args.name})
+            .checkbox-list__ico(data-action="expand")
+                span(class="material-icons md-24" style="pointer-events: none")="expand_more"
+        .checkbox-list__items
+            each item in items
+                +checkbox-item({
+                  name: item.name,
+                  text: item.text,
+                  value: item.value,
+                  checked: item.checked
+                })

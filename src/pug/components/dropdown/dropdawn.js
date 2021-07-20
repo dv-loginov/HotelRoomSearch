@@ -7,7 +7,7 @@ const dropdown = (args) => {
     needButtons = false
   } = args;
 
-  console.log(id, initValue, isExpand);
+  console.log("isExpand=",isExpand);
 
   if (id === null) {
     console.log("id не задан");
@@ -36,10 +36,11 @@ const dropdown = (args) => {
 
   function init() {
     console.log(`Init ${id}`);
+    console.log(isExpand);
 
     isExpand
-      ? nodeOptions.style.display = 'block'
-      : nodeOptions.style.display = 'none';
+      ? nodeOptions.style.display = "block"
+      : nodeOptions.style.display = "none";
 
     for (let i = 0; i < nodeCountersValue.length; i++) {
       nodeCountersValue[i].textContent = initValue[i].value;
@@ -56,10 +57,10 @@ const dropdown = (args) => {
 
     console.log('toggleExpand');
     isExpand = !isExpand;
-    isExpand
-      ? nodeOptions.style.display = 'block'
-      : nodeOptions.style.display = 'none';
 
+    isExpand
+      ? nodeOptions.style.display = "block"
+      : nodeOptions.style.display = "none";
   }
 
   function headerClick(event) {

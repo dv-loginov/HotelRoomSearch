@@ -1,0 +1,22 @@
+.checkbox-list{
+  width: 266px;
+  &__header{
+    padding-bottom: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    //height: 40px;
+  }
+
+  &__ico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    user-select: none;
+    cursor: pointer;
+    transform: rotate(-180deg);
+  }
+}

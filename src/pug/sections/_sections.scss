@@ -53,8 +53,7 @@
 @import "../components/typography/typography";
 @import "../components/label/label";
 @import "../components/text-field/text-field";
-@import "../hoc/dropdown-furniture/dropdown-furniture";
-@import "../hoc/dropdown-guests-noinit/dropdown-guests-noinit";
+@import "../components/dropdown/dropdown";
 @import "../components/masked-text-field/masked-text-field";
 @import "../components/dropdown-date/dropdown-date";
 @import "../components/dropdown-filter-date/dropdown-filter-date";
@@ -67,3 +66,4 @@
 @import "../hoc/buttons/buttons";
 @import "../hoc/icon-text-list/icon-text-list";
 @import "../hoc/comments/comments";
+@import "../components/checkbox-list/checkbox-list";
