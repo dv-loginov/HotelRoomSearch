@@ -1,9 +1,10 @@
 include ../label/label
-include ../checkbox-item/checkbox-item
+include ../checkbox-button/checkbox-button
 
 mixin checkbox-list(args)
     -   const items=args.items
-    .checkbox-list
+    -   const id=args.id?args.id:null
+    .checkbox-list(id=id)
         .checkbox-list__header
             .checkbox-list__name
                 +label({text: args.name})
@@ -11,7 +12,7 @@ mixin checkbox-list(args)
                 span(class="material-icons md-24" style="pointer-events: none")="expand_more"
         .checkbox-list__items
             each item in items
-                +checkbox-item({
+                +checkbox-button({
                   name: item.name,
                   text: item.text,
                   value: item.value,

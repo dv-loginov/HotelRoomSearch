@@ -1,5 +1,5 @@
 .like-button{
-  display: flex;
+  display: inline-flex;
   width: 40px;
   height: 20px;
   align-items: center;
@@ -8,6 +8,7 @@
   color: $dark_shade_25;
   box-sizing: border-box;
   border-radius: 10px;
+  margin-right: 10px;
   &__ico{
     padding-left: 5px;
   }

@@ -1,7 +1,25 @@
-.checkbox-item {
+.checkbox-button {
   padding: 5px 0;
 
   &__label {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark_shade_50;
+    cursor: pointer;
+
+    &_rich{
+      font-weight: 700;
+      color: $dark_shade_75;
+    }
+  }
+
+  &__desc{
+    display: block;
+    padding-left: 33px;
+    width: 240px;
+    user-select: none;
+    margin-top: -5px;
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
@@ -28,6 +46,7 @@
       background-position: center center;
       background-size: 50% 50%;
     }
+
   }
 
   &__input {
@@ -59,7 +78,7 @@
   /* стили для чекбокса, находящегося в состоянии checked */
   &__input:checked + &__flag::before {
     border-color: #BC9CFF;
-    background-image: url("../pug/components/checkbox-item/check.png");
+    background-image: url("../pug/components/checkbox-button/check.png");
   }
 
   /* стили для чекбокса, находящегося в состоянии disabled */

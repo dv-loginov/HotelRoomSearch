@@ -7,8 +7,6 @@ const dropdown = (args) => {
     needButtons = false
   } = args;
 
-  console.log("isExpand=",isExpand);
-
   if (id === null) {
     console.log("id не задан");
     return -1;
@@ -35,8 +33,6 @@ const dropdown = (args) => {
   init();
 
   function init() {
-    console.log(`Init ${id}`);
-    console.log(isExpand);
 
     isExpand
       ? nodeOptions.style.display = "block"
@@ -54,19 +50,13 @@ const dropdown = (args) => {
   }
 
   function toggleExpand() {
-
-    console.log('toggleExpand');
     isExpand = !isExpand;
-
     isExpand
       ? nodeOptions.style.display = "block"
       : nodeOptions.style.display = "none";
   }
 
   function headerClick(event) {
-
-    console.log(event.target);
-    console.log(event.target.dataset);
 
     event.target.dataset.action === 'expand'
       ? toggleExpand()
@@ -91,7 +81,6 @@ const dropdown = (args) => {
   }
 
   function clearValue(){
-    console.log('clearValue');
     for (let i = 0; i < nodeCountersValue.length; i++) {
       initValue[i].value=0;
       nodeCountersValue[i].textContent = 0;
@@ -101,7 +90,6 @@ const dropdown = (args) => {
   }
 
   function subValue(node) {
-
     const value = Number(node.textContent);
     console.log(value === 0);
     value === 0
@@ -112,7 +100,6 @@ const dropdown = (args) => {
   }
 
   function addValue(node) {
-
     const value = Number(node.textContent);
     console.log(value === 0);
     value === 9
@@ -123,9 +110,6 @@ const dropdown = (args) => {
   }
 
   function viewInput() {
-
-    console.log('viewInput');
-
     if (needButtons) {
       const value = getSumGuests(nodeCountersValue);
       value===0

@@ -7,6 +7,11 @@ include ../components/label/label
 include ../components/toggle/toggle
 include ../components/checkbox-list/checkbox-list
 include ../components/bullet-list/bullet-list
+include ../components/like-button/like-button
+include ../components/rate-button/rate-button
+include ../components/icon-text/icon-text
+include ../components/checkbox-button/checkbox-button
+include ../components/rich-checkbox-buttons/rich-checkbox-buttons
 
 section.section.section_sec-form-elements
     include ../components/logo/logo
@@ -46,7 +51,25 @@ section.section.section_sec-form-elements
                     })
             .col
                 .row-in-col.row-in-col_40
-                    include ../components/checkbox-buttons/checkbox-buttons
+                    +label({text:"checkbox buttons"})
+                    +checkbox-button({
+                      name: "smoke",
+                      text: "Можно курить",
+                      value: "no",
+                      checked: false
+                    })
+                    +checkbox-button({
+                      name: "pet",
+                      text: "Можно с питомцами",
+                      value: "yes",
+                      checked: true
+                    })
+                    +checkbox-button({
+                      name: "guests",
+                      text: "Можно пригласить гостей (до 10 человек)",
+                      value: "yes",
+                      checked: true
+                    })
                 .row-in-col.row-in-col_40
                     +radio-buttons({showLabel: true})
                 .row-in-col.row-in-col_40
@@ -61,9 +84,20 @@ section.section.section_sec-form-elements
                         id: "toggle-2",
                     })
                 .row-in-col.row-in-col_40
-                    include ../hoc/like-buttons/like-buttons
+                    +label({text: "like button"})
+                    +like-button({
+                      ico: "favorite_border",
+                      num: "2"
+                    })
+                    +like-button({
+                        classes: ["like-button", "like-button_active"],
+                        ico: "favorite",
+                        num: "12"
+                    })
                 .row-in-col.row-in-col_40
-                    include ../hoc/rate-buttons/rate-buttons
+                    +label({text:"rate button"})
+                    +rate-button(4)
+                    +rate-button(5)
             .col
                 include ../hoc/buttons/buttons
         .row-in-sec
@@ -94,6 +128,7 @@ section.section.section_sec-form-elements
             .col
                 +checkbox-list({
                   name: "checkbox list",
+                  id: "checkbox-list",
                   items: [
                     {
                       name: "breakfast",
@@ -134,7 +169,22 @@ section.section.section_sec-form-elements
                   ]
                 })
             .col
-                //include ../components/typography/typography
+                +rich-checkbox-buttons({
+                  name:"rech checkbox buttons",
+                  items: [{
+                    name: "wideCorridor",
+                    checked: false,
+                    value: "no",
+                    title: "Широкий коридор",
+                    subtitle: "Ширина коридоров в номере не менее 91 см."
+                  },{
+                    name: "helper",
+                    checked: false,
+                    value: "no",
+                    title: "Помошник для инвалидов",
+                    subtitle: "На 1 этаже вас встретит специалист и проводит до номера"
+                  }]
+                })
             .col
                 +bullet-list({
                   name: "bullet list",
@@ -146,6 +196,19 @@ section.section.section_sec-form-elements
                 })
         .row-in-sec
             .col
-                include ../hoc/icon-text-list/icon-text-list
+                +icon-text({
+                  type: "ico",
+                  mod: "list",
+                  ico: "insert_emoticon",
+                  title: "Комфорт",
+                  subtitle: "Шумопоглощающие стены"
+                })
+                +icon-text({
+                    type: "ico",
+                    mod: "list",
+                    ico: "location_city",
+                    title: "Удобство",
+                    subtitle: "Окно в каждой из спален"
+                })
             .col-67
                 include ../hoc/comments/comments

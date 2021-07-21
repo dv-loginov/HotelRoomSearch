@@ -1,5 +1,6 @@
 import './scss/main.scss';
 import dropdown from './pug/components/dropdown/dropdawn';
+import checkBoxList from "src/pug/components/checkbox-list/checkBoxList";
 console.log('start run');
 
 dropdown({
@@ -32,6 +33,11 @@ dropdown({
   ],
   isExpand: false,
   needButtons: true
+});
+
+checkBoxList({
+  id:"checkbox-list",
+  // isExpand: true,
 });
 
 
