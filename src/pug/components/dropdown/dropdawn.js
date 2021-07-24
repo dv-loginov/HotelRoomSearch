@@ -1,11 +1,11 @@
-const dropdown = (args) => {
+const dropdown = (state) => {
 
   let {
     id = null,
     initValue = null,
     isExpand = false,
     needButtons = false
-  } = args;
+  } = state;
 
   if (id === null) {
     console.log("id не задан");

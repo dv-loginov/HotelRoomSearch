@@ -1,6 +1,7 @@
 import './scss/main.scss';
 import dropdown from './pug/components/dropdown/dropdawn';
 import checkBoxList from "src/pug/components/checkbox-list/checkBoxList";
+import rangeSlider from "src/pug/components/range-slider/range-slider";
 console.log('start run');
 
 dropdown({
@@ -39,5 +40,7 @@ checkBoxList({
   id:"checkbox-list",
   // isExpand: true,
 });
+
+rangeSlider({});
 
 

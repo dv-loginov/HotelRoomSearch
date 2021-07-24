@@ -1,0 +1,51 @@
+.range-slider {
+
+  &__info {
+  }
+
+  &__scale {
+    width: 266px;
+    height: 6px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid $dark_shade_25;
+    display:flex;
+    align-items: center;
+    z-index: 0;
+  }
+
+  &__range {
+    position: absolute;
+    left: 6px;
+    width: 252px;
+    height: 6px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 8px;
+    top: -1px;
+    z-index: 1;
+  }
+
+
+  &__left, &__right {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__left {
+    left: -1px;
+  }
+
+  &__right {
+    left: 249px;
+  }
+
+}
+
+

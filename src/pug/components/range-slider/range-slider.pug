@@ -1,0 +1,11 @@
+include ../label/label
+
+mixin range-slider(args)
+    .range-slider
+        .range-slider__info
+            +label({text: args.text, forAttr: args.forAttr})
+            .range-slider__input
+        .range-slider__scale
+            .range-slider__left
+            .range-slider__range
+            .range-slider__right
