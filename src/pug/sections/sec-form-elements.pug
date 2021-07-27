@@ -101,7 +101,10 @@ section.section.section_sec-form-elements
                     +rate-button(5)
             .col
                 .row-in-col.row-in-col_40
-                    +range-slider({text: "range slider", forAttr: "rangeSlider"})
+                    +range-slider({
+                      text:"range slider",
+                      id:"range-slider"
+                    })
                 .row-in-col.row-in-col_40
                     include ../hoc/buttons/buttons
         .row-in-sec

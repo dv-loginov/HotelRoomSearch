@@ -2,6 +2,7 @@ import './scss/main.scss';
 import dropdown from './pug/components/dropdown/dropdawn';
 import checkBoxList from "src/pug/components/checkbox-list/checkBoxList";
 import rangeSlider from "src/pug/components/range-slider/range-slider";
+
 console.log('start run');
 
 dropdown({
@@ -41,6 +42,12 @@ checkBoxList({
   // isExpand: true,
 });
 
-rangeSlider({});
-
-
+rangeSlider({
+  id:'range-slider',
+  step: 500,
+  range:{
+    'min':0,
+    'max':20000,
+  },
+  start:[4000, 10000]
+});

@@ -1,51 +1,77 @@
+@import "~nouislider/dist/nouislider.css";
+
 .range-slider {
+  width: 266px;
+
 
   &__info {
+    padding-bottom: 20px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    &>.label{
+      padding: 0;
+    }
   }
 
-  &__scale {
-    width: 266px;
-    height: 6px;
-    position: relative;
-    box-sizing: border-box;
-    border-radius: 3px;
-    border: 1px solid $dark_shade_25;
-    display:flex;
-    align-items: center;
-    z-index: 0;
+  &__wrap-input{
+    display: flex;
+    justify-content: end;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $dark_shade_50;
   }
 
-  &__range {
-    position: absolute;
-    left: 6px;
-    width: 252px;
-    height: 6px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border-radius: 8px;
-    top: -1px;
-    z-index: 1;
+  &__input-value{
+    max-width: 6em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:after{
+      content: "₽";
+      padding-left: 1px;
+    }
   }
 
-
-  &__left, &__right {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border: 2px solid #FFFFFF;
-    border-radius: 10px;
-    z-index: 2;
-    cursor: pointer;
+  &__input{
+  display: none;
   }
 
-  &__left {
-    left: -1px;
+  &__input-separator{
+    padding: 0 5px;
   }
-
-  &__right {
-    left: 249px;
-  }
-
 }
 
+.noUi-target {
+  height: 6px;
+  border-radius: 3px;
+  box-shadow: none;
+}
 
+.noUi-base {
+  height: 6px;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 17px;
+  height: 17px;
+  right: -5px;
+  top: -6px;
+}
+
+.noUi-handle {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:before, &:after {
+    display: none;
+  }
+}
+
+.noUi-connect {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
