@@ -1,7 +1,8 @@
 import './scss/main.scss';
 import dropdown from './pug/components/dropdown/dropdawn';
-import checkBoxList from "src/pug/components/checkbox-list/checkBoxList";
-import rangeSlider from "src/pug/components/range-slider/range-slider";
+import checkBoxList from "./pug/components/checkbox-list/checkBoxList";
+import rangeSlider from "./pug/components/range-slider/range-slider";
+import pag from "./pug/components/pag/pag"
 
 console.log('start run');
 
@@ -51,3 +52,5 @@ rangeSlider({
   },
   start:[4000, 10000]
 });
+
+pag();

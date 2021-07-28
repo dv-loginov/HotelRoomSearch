@@ -13,6 +13,7 @@ include ../components/icon-text/icon-text
 include ../components/checkbox-button/checkbox-button
 include ../components/rich-checkbox-buttons/rich-checkbox-buttons
 include ../components/range-slider/range-slider
+include ../components/pag/pag
 
 section.section.section_sec-form-elements
     include ../components/logo/logo
@@ -107,6 +108,8 @@ section.section.section_sec-form-elements
                     })
                 .row-in-col.row-in-col_40
                     include ../hoc/buttons/buttons
+                .row-in-col.row-in-col_40
+                    +pagination({text:"pagination"})
         .row-in-sec
             .col
                 +dropdown({
