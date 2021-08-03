@@ -23,7 +23,7 @@ const pag = () => {
     autoHideNext: true,
     callback: function (data, pagination) {
       // console.log('data',data);
-       console.log('pagination', pagination);
+      //  console.log('pagination', pagination);
       // const html = `<span>${data}<\span>`;
       // $('#data-container').html(html);
     },

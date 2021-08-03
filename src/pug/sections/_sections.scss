@@ -40,7 +40,13 @@
     padding-bottom: 40px;
   }
 }
-
+.row{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 320px;
+}
 .col{
   flex: 1 1 30%;
 }

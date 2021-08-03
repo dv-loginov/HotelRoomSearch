@@ -1,8 +1,9 @@
 import './scss/main.scss';
 import dropdown from './pug/components/dropdown/dropdawn';
-import checkBoxList from "./pug/components/checkbox-list/checkBoxList";
-import rangeSlider from "./pug/components/range-slider/range-slider";
-import pag from "./pug/components/pag/pag"
+import checkBoxList from './pug/components/checkbox-list/checkBoxList';
+import rangeSlider from './pug/components/range-slider/range-slider';
+import pag from './pug/components/pag/pag'
+import dropdownDate from './pug/components/dropdown-date/dropdownDate'
 
 console.log('start run');
 
@@ -54,3 +55,12 @@ rangeSlider({
 });
 
 pag();
+
+dropdownDate({id:'dropdown-date-1'});
+dropdownDate({id:'dropdown-date-2'});
+dropdownDate({
+  id:'calendar',
+  inline:true,
+  range: true,
+});
+
