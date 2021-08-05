@@ -63,4 +63,8 @@ dropdownDate({
   inline:true,
   range: true,
 });
-
+dropdownDate({
+  id:'dropdown-date-filter',
+  range: true,
+  dateFormat: 'd M',
+});

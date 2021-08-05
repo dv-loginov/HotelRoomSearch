@@ -1,17 +1,20 @@
 import datepicker from 'air-datepicker';
 
-const dropdownDate=(state)=>{
+const dropdownDate=(props)=>{
   console.log('start dropdownDate');
-  const nodeDropdownDate=document.querySelector(`#${state.id}`);
+  const nodeDropdownDate=document.querySelector(`#${props.id}`);
 
-  let dataInput =$(`#${state.id}`).find('[data-action="input-date"]');
+  let dataInput =$(`#${props.id}`).find('[data-action="input-date"]');
   if(dataInput.length===0) dataInput=dataInput.prevObject;
-  console.log(dataInput);
 
   let expand=false;
 
+  const dateFormat = props.dateFormat
+    ? props.dateFormat
+    :'';
+
   dataInput.datepicker({
-    inline: state.inline,
+    inline: props.inline,
     autoClose:true,
     navTitles: {
       days: 'MM yyyy',
@@ -30,7 +33,7 @@ const dropdownDate=(state)=>{
             class="material-icons md-24" 
             >arrow_forward
         </span>`,
-    range: state.range,
+    range: props.range,
     onRenderCell: function(date, cellType) {
       return {
           html: `<span>${date.getDate()}</span>`,
@@ -43,7 +46,7 @@ const dropdownDate=(state)=>{
     // multipleDatesSeparator: ' - ',
     // minDate: new Date(),
     // language: 'ru',
-    // dateFormat: 'yyyy-mm-dd',
+    dateFormat: dateFormat,
     // firstDay: 0,
     /*toggleSelected: false,
     range: true,
@@ -53,7 +56,8 @@ const dropdownDate=(state)=>{
     minutesStep: 5,*/
     // view: 'months',
     clearButton: true,
-    todayButton: true,
+    multipleDatesSeparator: ' - ',
+    // todayButton: true,
     // onSelect(formattedDate, date, inst) {
     //   inst.hide();
     //   // alert(date);
@@ -62,6 +66,8 @@ const dropdownDate=(state)=>{
     // altFieldDateFormat: 'yyyy-mm-dd'
     // position: 'bottom left'
   });
+
+  addButtonAplly();
 
   nodeDropdownDate.addEventListener("click", headerClick);
 
@@ -72,6 +78,26 @@ const dropdownDate=(state)=>{
         ?dataInput.datepicker().data('datepicker').show()
         :dataInput.datepicker().data('datepicker').hide();
     }
+
+    if (events.target.dataset.action==='apply') {
+      console.log("кнопка применить");
+    }
+    console.log(events.target.dataset);
   }
+
+  function addButtonAplly(){
+    const buttons=$('.datepicker--buttons');
+    buttons.each((index)=>{
+      const col=$(buttons[index]).find('.datepicker--button_apply').length;
+      if (col===0) {
+        $(buttons[index]).append('<span class="datepicker--button_apply" data-action="apply">Применить</span>')
+        $(buttons[index]).click(headerClick);
+      }
+    });
+  }
+
+
 };
 export default dropdownDate;
+
+//<span class="datepicker--button" data-action="clear">Очистить</span>

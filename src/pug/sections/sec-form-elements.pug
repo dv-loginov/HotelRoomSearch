@@ -55,7 +55,12 @@ section.section.section_sec-form-elements
                         id: "dropdown-date-2",
                     })
                 .row-in-col.row-in-col_40
-                    include ../components/dropdown-filter-date/dropdown-filter-date
+                    +dropdown-date({
+                      text: "filter date dropdown",
+                      ico: "expand_more",
+                      id: "dropdown-date-filter",
+                      mod:"filter",
+                    })
                 .row-in-col
                     +subscription-text-field({
                         label: "subscription-text-field",

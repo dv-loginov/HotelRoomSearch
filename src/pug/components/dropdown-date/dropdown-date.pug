@@ -1,7 +1,11 @@
 include ../label/label
 
 mixin dropdown-date(args)
-    .dropdown-date(id=args.id)
+    - const mod = args.mod ? "dropdown-date_" + args.mod : ""
+    div(
+        class="dropdown-date "+mod
+        id=args.id
+        )
         +label({text: args.text})
         .dropdown-date__wrap-input
             input(

@@ -5,6 +5,10 @@
   flex-direction: column;
   user-select: none;
 
+  &_filter {
+    width: 266px;
+  }
+
   &__wrap-input {
     display: flex;
     justify-content: space-between;
@@ -129,18 +133,41 @@
           color: #FFFFFF;
         }
       }
-
-      &-day {
-      }
     }
 
     &--buttons {
       border: none;
-      [data-action="today"]{
+
+      [data-action="apply"] {
         order: 2;
+        justify-content: flex-end;
+        padding-right: 20px;
       }
-      [data-action="clear"]{
+
+      [data-action="clear"] {
         order: 1;
+        justify-content: flex-start;
+        padding-left: 20px;
+      }
+    }
+
+    &--button, &--button_apply {
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #BC9CFF;
+    }
+
+    &--button_apply {
+      cursor: pointer;
+      border-radius: 4px;
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+
+      &:hover {
+        background: #f0f0f0;
       }
     }
   }
@@ -157,9 +184,18 @@
     background: linear-gradient(180deg, rgba(188, 156, 255, .25) 0%, rgba(139, 164, 249, .25) 100%);
   }
 
+  .datepicker--cell.-selected- {
+    background: #FFFFFF;
+    span {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: #FFFFFF;
+      }
+    }
+
   .datepicker--cell.-range-from-.-selected- {
     background: linear-gradient(180deg, rgba(188, 156, 255, .25) 0%, rgba(139, 164, 249, .25) 100%);
     border-radius: 22px 0 0 22px;
+
     span {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       border-radius: 22px;
@@ -170,12 +206,14 @@
   .datepicker--cell.-range-to-.-selected- {
     background: linear-gradient(180deg, rgba(188, 156, 255, .25) 0%, rgba(139, 164, 249, .25) 100%);
     border-radius: 0 22px 22px 0;
+
     span {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       border-radius: 22px;
       color: #FFFFFF;
     }
   }
+
   .datepicker--cell.-focus- {
     background-color: transparent;
   }
@@ -183,12 +221,19 @@
   .datepicker--cell.-range-from-.-focus- {
     background: linear-gradient(180deg, rgba(188, 156, 255, .25) 0%, rgba(139, 164, 249, .25) 100%);
     border-radius: 22px 0 0 22px;
-    border:none;
+    border: none;
   }
 
   .datepicker--cell.-range-to-.-focus- {
     background: linear-gradient(180deg, rgba(188, 156, 255, .25) 0%, rgba(139, 164, 249, .25) 100%);
     border-radius: 0 22px 22px 0;
-    border:none;
+    border: none;
   }
+
+  .datepicker--cells-days .-other-month- {
+    span {
+      color: rgba(31, 32, 65, 0.25);
+    }
+  }
+
 }
