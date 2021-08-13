@@ -1,18 +1,60 @@
-.section{
+.sections {
   max-width: 1440px;
-  width: 100vw;
+  width: 100%;
+}
 
-  &_sec-colors-type{
-    background-color: #FFFFFF;
-    padding-bottom: 125px;
+.section {
+  border-bottom: #1F2041 solid 2px;
 
-    >.warp{
-      display: flex;
-      justify-content: space-between;
-      padding: 67px 150px;
+  &_sec-colors-type {
+  }
+
+  &_sec-form-elements {
+    .col {
+      max-width: 350px;
+      width: 100%;
+
+
     }
+    .col-wide {
+      max-width: 67%;
+      width: 100%;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 67px 150px 0 150px;
+    justify-content: space-between;
+  }
+  .wrap-element{
+    padding-bottom: 20px;
+  }
+  .wrap-element-wide{
+    padding-bottom: 40px;
   }
 }
 
 @import "../components/palette/palette";
 @import "../components/typography/typography";
+@import "../components/label/label";
+@import "../components/text-field/text-field";
+@import "../components/dropdown/dropdown";
+@import "../components/masked-text-field/masked-text-field";
+@import "../components/dropdown-date-range/dropdown-date-range";
+@import "../components/dropdown-date-filter/dropdown-date-filter";
+@import "../components/subscription-text-field/subscription-text-field";
+@import "../components/radio-buttons/radio-buttons";
+@import "../components/toggle/toggle";
+@import "../components/rate-button/rate-button";
+@import "../components/button/button";
+@import "../components/icon-text/icon-text";
+@import "../components/comment/comment";
+@import "../components/checkbox-list/checkbox-list";
+@import "../components/bullet-list/bullet-list";
+@import "../components/like-button/like-button";
+@import "../components/checkbox-button/checkbox-button";
+@import "../components/rich-checkbox-buttons/rich-checkbox-buttons";
+@import "../components/range-slider/range-slider";
+@import "../components/pag/pag";

@@ -1,0 +1,25 @@
+include ../label/label
+
+mixin dropdown-date(args)
+    - const mod = args.mod ? "dropdown-date_" + args.mod : ""
+    div(
+        class="dropdown-date "+mod
+        id=args.id
+        )
+        +label({text: args.text})
+        .dropdown-date__wrap-input
+            input(
+                input type="text"
+                class="dropdown-date__datepicker"
+                placeholder=args.placeholder
+                data-action="input-date"
+                readonly
+            )
+            div(
+                class="dropdown-date__input-ico"
+                data-action="expand"
+            )
+                span(
+                    class="material-icons md-24"
+                    style="pointer-events: none"
+                )=args.ico

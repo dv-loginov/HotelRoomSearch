@@ -1,0 +1,7 @@
+mixin rate-button(rating)
+
+    -   const onStar='star', offStar='star_border'
+
+    .rate-button(data-rating=rating)
+        -   for(let i=0;i<5;i++)
+            span( class = "material-icons md-24")=i<rating ? onStar : offStar

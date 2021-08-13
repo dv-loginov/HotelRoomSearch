@@ -1,0 +1,18 @@
+include ../label/label
+
+mixin text-field(args)
+    div(class = args.className)
+        +label({
+          text: args.label,
+          forAttr: args.id
+        })
+        input(
+            type = args.type
+            name = args.name
+            class = args.className + "_input"
+            placeholder=args.defValue,
+            id = args.id
+        )
+
+
+

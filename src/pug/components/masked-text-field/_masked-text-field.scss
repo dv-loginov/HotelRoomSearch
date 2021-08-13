@@ -1,0 +1,24 @@
+.masked-text-field{
+  width: 320px;
+  &_input {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $dark_shade_25;
+    width: 100%;
+    padding: 13px 15px;
+    background: #FFFFFF;
+    border: 1px solid $dark_shade_25;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $dark_shade_25;
+    }
+  }
+}

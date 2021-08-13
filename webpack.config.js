@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const fs = require('fs');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -64,10 +65,6 @@ module.exports = {
           from: path.resolve(__dirname,'src/static/favicon.ico'),
           to: PATH_DIST
         },
-        {
-          from: path.resolve(__dirname,'src/assets/img/'),
-          to: PATH_DIST
-        }
       ]
     }),
 
@@ -76,6 +73,12 @@ module.exports = {
         filename: fileName('css')
       }
     ),
+
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      "window.jQuery": 'jquery',
+    }),
 
   ],
 
@@ -113,6 +116,14 @@ module.exports = {
 
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
+      },
+
+      {
+        test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]'

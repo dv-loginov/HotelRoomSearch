@@ -1,0 +1,13 @@
+mixin checkbox-button(args)
+    -   const mod=args.mod?' checkbox-button__label_'+args.mod:''
+    .checkbox-button
+        label(class="checkbox-button__label"+mod)
+            input(
+                class="checkbox-button__input"
+                type="checkbox"
+                checked=args.checked
+                name=args.name
+                value=args.value)
+            span(class="checkbox-button__flag")=args.text
+            if args.desc
+                span(class="checkbox-button__desc")=args.desc
