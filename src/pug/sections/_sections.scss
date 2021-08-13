@@ -1,58 +1,39 @@
-.section{
+.sections {
   max-width: 1440px;
-  width: 100vw;
-
-  &_sec-colors-type{
-    background-color: #FFFFFF;
-    padding-bottom: 125px;
-
-    &>.warp{
-      display: flex;
-      justify-content: space-between;
-      padding: 67px 150px;
-    }
-  }
-
-  &_sec-form-elements{
-    background-color: #FFFFFF;
-
-    &>.warp{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 67px 150px;
-    }
-  }
-}
-
-.row-in-sec{
-  display: flex;
   width: 100%;
-  flex-wrap: wrap;
-  padding-bottom: 100px;
 }
 
-.row-in-col{
-  &_20{
+.section {
+  border-bottom: #1F2041 solid 2px;
+
+  &_sec-colors-type {
+  }
+
+  &_sec-form-elements {
+    .col {
+      max-width: 350px;
+      width: 100%;
+
+
+    }
+    .col-wide {
+      max-width: 67%;
+      width: 100%;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 67px 150px 0 150px;
+    justify-content: space-between;
+  }
+  .wrap-element{
     padding-bottom: 20px;
   }
-  &_40{
+  .wrap-element-wide{
     padding-bottom: 40px;
   }
-}
-.row{
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 320px;
-}
-.col{
-  flex: 1 1 30%;
-}
-
-.col-67{
-  flex: 1 1 70%;
 }
 
 @import "../components/palette/palette";
@@ -61,15 +42,15 @@
 @import "../components/text-field/text-field";
 @import "../components/dropdown/dropdown";
 @import "../components/masked-text-field/masked-text-field";
-@import "../components/dropdown-date/dropdown-date";
+@import "../components/dropdown-date-range/dropdown-date-range";
 @import "../components/dropdown-date-filter/dropdown-date-filter";
 @import "../components/subscription-text-field/subscription-text-field";
 @import "../components/radio-buttons/radio-buttons";
 @import "../components/toggle/toggle";
 @import "../components/rate-button/rate-button";
-@import "../hoc/buttons/buttons";
+@import "../components/button/button";
 @import "../components/icon-text/icon-text";
-@import "../hoc/comments/comments";
+@import "../components/comment/comment";
 @import "../components/checkbox-list/checkbox-list";
 @import "../components/bullet-list/bullet-list";
 @import "../components/like-button/like-button";

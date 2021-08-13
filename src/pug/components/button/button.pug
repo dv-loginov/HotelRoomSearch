@@ -4,10 +4,10 @@ mixin button(args)
     - const action = args.action ? args.action : null
     if (type==="def")
         button(class="btn-def"+modClass data-action = action)
-            span(class="btn-def__label") click me
+            span(class="btn-def__label")=args.text
     if (type==="adv")
         button(class="btn-adv" data-action = action)
-            span(class="btn-adv__label") перейти к оплате
+            span(class="btn-adv__label")=args.text
             span(class="material-icons md-24 btn-adv__label-ico")="arrow_forward"
     if (type==="link")
         button(class="btn-link" data-action = action)=args.text
