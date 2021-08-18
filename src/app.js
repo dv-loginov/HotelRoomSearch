@@ -29,6 +29,17 @@ dropdown({
 });
 
 dropdown({
+  id: 'form-search-guests',
+  initValue: [
+    {itemName: 'взрослые', value: 0},
+    {itemName: 'дети', value: 0},
+    {itemName: 'младенцы', value: 0}
+  ],
+  isExpand: false,
+  needButtons: true
+});
+
+dropdown({
   id: 'dropdown-guests-init',
   initValue: [
     {itemName: 'взрослые', value: 2},
@@ -68,3 +79,6 @@ dropdownDate({
   range: true,
   dateFormat: 'd M',
 });
+
+dropdownDate({id:'form-search-start'});
+dropdownDate({id:'form-search-end'});

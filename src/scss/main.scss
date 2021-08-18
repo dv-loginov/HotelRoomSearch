@@ -10,11 +10,13 @@ body{
   align-items: center;
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+  font-weight: 300;
+  color: $dark_shade_75;
 }
 
 @import "../pug/components/logo/logo";
 @import "../pug/sections/sections";
+@import "../pug/forms/forms";
 
