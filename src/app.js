@@ -82,3 +82,4 @@ dropdownDate({
 
 dropdownDate({id:'form-search-start'});
 dropdownDate({id:'form-search-end'});
+dropdownDate({id:'date-of-birth'});
