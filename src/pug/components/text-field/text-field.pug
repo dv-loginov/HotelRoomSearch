@@ -1,7 +1,7 @@
 include ../label/label
 
 mixin text-field(args)
-    div(class = args.className)
+    div(class = "text-field")
         if (args.label)
             +label({
               text: args.label,
@@ -10,7 +10,7 @@ mixin text-field(args)
         input(
             type = args.type
             name = args.name
-            class = args.className + "_input"
+            class = "text-field__input"
             placeholder=args.defValue,
             id = args.id
         )
