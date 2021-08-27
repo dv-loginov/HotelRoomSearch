@@ -83,3 +83,17 @@ dropdownDate({
 dropdownDate({id:'form-search-start'});
 dropdownDate({id:'form-search-end'});
 dropdownDate({id:'date-of-birth'});
+
+dropdownDate({id:'form-booking-start'});
+dropdownDate({id:'form-booking-end'});
+
+dropdown({
+  id: 'form-booking-guests',
+  initValue: [
+    {itemName: 'взрослые', value: 2},
+    {itemName: 'дети', value: 1},
+    {itemName: 'младенцы', value: 0}
+  ],
+  isExpand: false,
+  needButtons: true
+});
