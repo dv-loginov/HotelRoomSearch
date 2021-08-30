@@ -29,7 +29,6 @@
     "pug-loader": "^2.4.0",
     "sass": "^1.35.1",
     "sass-loader": "^12.1.0",
-    "swiper": "^7.0.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2",
@@ -38,6 +37,7 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "jquery": "^3.6.0",
-    "nouislider": "^15.2.0"
+    "nouislider": "^15.2.0",
+    "swiper": "^7.0.1"
   }
 }

@@ -1,5 +1,6 @@
 @import "~normalize.css";
 @import "~air-datepicker/dist/css/datepicker.css";
+@import "../../node_modules/swiper/swiper-bundle.css";
 @import "fonts";
 @import "colors";
 
@@ -16,7 +17,7 @@ body{
   color: $dark_shade_75;
 }
 
-@import "../pug/components/logo/logo";
+@import "../pug/components/components";
 @import "../pug/sections/sections";
 @import "../pug/forms/forms";
-
+@import "../pug/cards/cards";

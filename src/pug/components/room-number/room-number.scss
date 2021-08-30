@@ -1,0 +1,21 @@
+.room-number{
+  &__sign,&__num,&__isLux{
+    font-weight: bold;
+  }
+  &__sign,&__num{
+    color: #1F2041;
+  }
+  &__sign{
+    font-size: 14px;
+    padding-right: 3px;
+  }
+  &__num{
+    font-size: 19px;
+  }
+  &__isLux{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #BC9CFF;
+    padding-left: 3px;
+  }
+}

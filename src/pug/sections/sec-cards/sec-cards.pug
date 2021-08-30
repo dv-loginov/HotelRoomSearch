@@ -1,3 +1,5 @@
+include ../../cards/room/room
+
 section.section.section_sec-cards
     include ../../components/logo/logo
     .row
@@ -14,3 +16,5 @@ section.section.section_sec-cards
         .col
             .wrap-element-wide
                 #calendar
+            .wrap-element-wide
+                +room(555, true, "2 345", 3, 145, urlImg)

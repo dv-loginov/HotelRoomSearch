@@ -2,8 +2,10 @@ import './scss/main.scss';
 import dropdown from './pug/components/dropdown/dropdawn';
 import checkBoxList from './pug/components/checkbox-list/checkBoxList';
 import rangeSlider from './pug/components/range-slider/range-slider';
-import pag from './pug/components/pag/pag'
-import dropdownDate from './pug/components/dropdown-date/dropdownDate'
+import pag from './pug/components/pag/pag';
+import dropdownDate from './pug/components/dropdown-date/dropdownDate';
+import roomSlider from "./pug/components/room-slider/room-slider";
+
 
 console.log('start run');
 
@@ -97,3 +99,5 @@ dropdown({
   isExpand: false,
   needButtons: true
 });
+
+roomSlider();

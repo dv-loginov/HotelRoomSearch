@@ -1,0 +1,13 @@
+.recall{
+  &__num,&__legend{
+    font-size: 14px;
+    color: $dark_shade_50;
+  }
+  &__num{
+    font-weight: bold;
+  }
+  &__legend{
+    padding-left: 3px;
+    font-weight: normal;
+  }
+}

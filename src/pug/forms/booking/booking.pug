@@ -1,10 +1,9 @@
+include ../../components/room-number/room-number
+
 form(class="form form-booking" id="form-booking")
     .form-booking__header
-        span(class="form-booking__sign-num") №
-        span(class="form-booking__num") 888
-        span(class="form-booking__type") люкс
-        span(class="form-booking__cost") 9 990₽
-        span(class="form-booking__desc") в сутки
+        +room-number(888, true)
+        +room-price("9 990")
     .form-booking__range
         +dropdown-date-range({
           labelStart: "прибытие",
