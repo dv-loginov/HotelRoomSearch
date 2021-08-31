@@ -2,8 +2,11 @@ import './scss/main.scss';
 import dropdown from './pug/components/dropdown/dropdawn';
 import checkBoxList from './pug/components/checkbox-list/checkBoxList';
 import rangeSlider from './pug/components/range-slider/range-slider';
-import pag from './pug/components/pag/pag'
-import dropdownDate from './pug/components/dropdown-date/dropdownDate'
+import pag from './pug/components/pag/pag';
+import dropdownDate from './pug/components/dropdown-date/dropdownDate';
+import roomSlider from "./pug/components/room-slider/room-slider";
+import rateButton from "src/pug/components/rate-button/rateButton";
+
 
 console.log('start run');
 
@@ -19,6 +22,17 @@ dropdown({
 
 dropdown({
   id: 'dropdown-guests-noinit',
+  initValue: [
+    {itemName: 'взрослые', value: 0},
+    {itemName: 'дети', value: 0},
+    {itemName: 'младенцы', value: 0}
+  ],
+  isExpand: false,
+  needButtons: true
+});
+
+dropdown({
+  id: 'form-search-guests',
   initValue: [
     {itemName: 'взрослые', value: 0},
     {itemName: 'дети', value: 0},
@@ -68,3 +82,25 @@ dropdownDate({
   range: true,
   dateFormat: 'd M',
 });
+
+dropdownDate({id:'form-search-start'});
+dropdownDate({id:'form-search-end'});
+dropdownDate({id:'date-of-birth'});
+
+dropdownDate({id:'form-booking-start'});
+dropdownDate({id:'form-booking-end'});
+
+dropdown({
+  id: 'form-booking-guests',
+  initValue: [
+    {itemName: 'взрослые', value: 2},
+    {itemName: 'дети', value: 1},
+    {itemName: 'младенцы', value: 0}
+  ],
+  isExpand: false,
+  needButtons: true
+});
+
+roomSlider();
+
+rateButton();

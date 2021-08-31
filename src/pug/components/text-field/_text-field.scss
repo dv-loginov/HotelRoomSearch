@@ -2,15 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 320px;
-  //&_label{
-  //  font-weight: 700;
-  //  font-size: 12px;
-  //  line-height: 15px;
-  //  text-transform: uppercase;
-  //  color: $dark_shade_100;
-  //  padding-bottom: 5px;
-  //}
-  &_input{
+
+  &__input{
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;

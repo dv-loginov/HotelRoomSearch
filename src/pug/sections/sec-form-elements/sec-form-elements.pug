@@ -1,6 +1,7 @@
 include ../../components/dropdown/dropdown
 include ../../components/text-field/text-field
 include ../../components/masked-text-field/masked-text-field
+include ../../components/dropdown-date-range/dropdown-date-range
 include ../../components/subscription-text-field/subscription-text-field
 include ../../components/radio-buttons/radio-buttons
 include ../../components/label/label
@@ -40,7 +41,14 @@ section.section.section_sec-form-elements
             .wrap-element-wide
                 +masked-text-field({label: "masked text field"})
             .wrap-element-wide
-                include ../../components/dropdown-date-range/dropdown-date-range
+                +dropdown-date-range({
+                  labelStart: "date dropdown",
+                  labelEnd: "date dropdown",
+                  placeholderStart: "ДД.ММ.ГГГГ",
+                  placeholderEnd: "19.08.2019",
+                  idStart: "dropdown-date-1",
+                  idEnd: "dropdown-date-2",
+                })
             .wrap-element-wide
                 +dropdown-date({
                   text: "filter date dropdown",

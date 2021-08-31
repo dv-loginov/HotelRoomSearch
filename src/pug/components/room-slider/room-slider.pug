@@ -1,0 +1,16 @@
+mixin room-slider(num)
+    .swiper.swiper-room(id=`swiper-room-${num}`)
+        .swiper-wrapper
+            .swiper-slide
+                img(src=`./img/room/${num}/slide-1.png`)
+            .swiper-slide
+                img(src="https://via.placeholder.com/270x150")
+            .swiper-slide
+                img(src="https://via.placeholder.com/270x150")
+            .swiper-slide
+                img(src="https://via.placeholder.com/270x150")
+        .swiper-button-prev
+            span(class="material-icons" style={transform: 'rotate(90deg)'}) expand_more
+        .swiper-button-next
+            span(class="material-icons" style={transform: 'rotate(-90deg)'}) expand_more
+        .swiper-pagination

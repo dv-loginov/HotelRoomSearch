@@ -65,6 +65,10 @@ module.exports = {
           from: path.resolve(__dirname,'src/static/favicon.ico'),
           to: PATH_DIST
         },
+        {
+          from: path.resolve(__dirname,'src/assets/img/'),
+          to: 'img'
+        }
       ]
     }),
 

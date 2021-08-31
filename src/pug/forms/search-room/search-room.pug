@@ -1,0 +1,25 @@
+form(class="form form-search" id="form-search")
+    .form-search__header
+        h1 Найдём номера под ваши пожелания
+    .form-search__range
+        +dropdown-date-range({
+          labelStart: "прибытие",
+          labelEnd: "выезд",
+          placeholderStart: "ДД.ММ.ГГГГ",
+          placeholderEnd: "ДД.ММ.ГГГГ",
+          idStart: "form-search-start",
+          idEnd: "form-search-end",
+        })
+    .form-search__guests
+        +dropdown({
+          type: "guests",
+          label: "гости",
+          defValue: "Сколько гостей",
+          ico: "expand_more",
+          id: "form-search-guests"
+        })
+    .form-search__button
+        +button({
+          type: "adv",
+          text: "подобрать номер"
+        })
