@@ -1,26 +1,22 @@
-import sliderRoom from "swiper";
+import Swiper, {Navigation, Pagination} from 'swiper';
 
 const roomSlider = () => {
   console.log('run roomSlider');
 
-  const slider = new sliderRoom('.swiper-room', {
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+  Swiper.use([Navigation, Pagination]);
+
+  const slider = new Swiper('.swiper-room', {
+    loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      modifierClass: 'room-'
     },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    observer: true,
-    observeParents: true,
-
-  });
+   });
 
 
 };

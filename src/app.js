@@ -5,6 +5,7 @@ import rangeSlider from './pug/components/range-slider/range-slider';
 import pag from './pug/components/pag/pag';
 import dropdownDate from './pug/components/dropdown-date/dropdownDate';
 import roomSlider from "./pug/components/room-slider/room-slider";
+import rateButton from "src/pug/components/rate-button/rateButton";
 
 
 console.log('start run');
@@ -101,3 +102,5 @@ dropdown({
 });
 
 roomSlider();
+
+rateButton();
