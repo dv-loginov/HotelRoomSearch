@@ -5,11 +5,25 @@
 
 .section {
   border-bottom: #1F2041 solid 2px;
+  padding: 0 150px 145px 150px;
 
-  &_sec-colors-type {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .wrap-element{
+    padding-bottom: 20px;
+  }
+  .wrap-element-wide{
+    padding-bottom: 40px;
   }
 
-  &_sec-form-elements {
+
+  &-colors-type {
+  }
+
+  &-form-elements {
     .col {
       max-width: 350px;
       width: 100%;
@@ -22,16 +36,11 @@
     }
   }
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 67px 150px 0 150px;
-    justify-content: space-between;
-  }
-  .wrap-element{
-    padding-bottom: 20px;
-  }
-  .wrap-element-wide{
-    padding-bottom: 40px;
+  &-headers-footers {
+    padding: 0 0 140px 0;
+
+    .row{
+      padding-bottom: 40px;
+    }
   }
 }
