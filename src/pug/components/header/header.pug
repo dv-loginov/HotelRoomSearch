@@ -1,0 +1,22 @@
+
+mixin header(args)
+    -   const mod=args.isLogin?"header-authorized":""
+    header(class=`header ${mod}`)
+        .header__logo
+            +logo({isBig:true})
+        nav.header__nav
+           +menu-header({})
+        .header__buttons
+            .header__button-login
+                +button({
+                  type: "def",
+                  mod: "secondary",
+                  text: "войти"
+                })
+            .header__button-register
+                +button({
+                  type: "adv",
+                  text: "зарегистрироваться"
+                })
+        .header__accaunt
+            span.header__accaunt-name="Юлий Цезарь"
