@@ -1,14 +1,45 @@
-.dropdown_subscription{
-  width: 266px;
-  .dropdown__input{
+.sub-field {
+  max-width: 266px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid $dark_shade_25;;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 12px;
+
+  &__input {
     color: $dark_shade_25;
-    &::placeholder{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &::placeholder {
       color: $dark_shade_25;
     }
   }
-  .dropdown__input-ico_subscription{
+
+  &__input-ico {
     background: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    span{
+      font-size: 24px;
+      width: 100%;
+      cursor: pointer;
+    }
   }
 }

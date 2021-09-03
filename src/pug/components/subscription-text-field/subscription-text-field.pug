@@ -1,10 +1,5 @@
-include ../label/label
-
-mixin subscription-text-field(args)
-    +dropdown({
-        label: args.label,
-        defValue: args.defValue,
-        ico: args.ico,
-        modIco: args.modIco,
-        mod: args.mod
-    })
+mixin sub-field(args)
+    .sub-field
+        input(class="sub-field__input" placeholder="Email")
+        div(class="sub-field__input-ico" data-action="send")
+            span(class="material-icons")="arrow_forward"

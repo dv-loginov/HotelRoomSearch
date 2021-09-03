@@ -38,13 +38,8 @@ section.section.section-form-elements
                   mod: "filter",
                 })
             .wrap-element-wide
-                +subscription-text-field({
-                  label: "subscription-text-field",
-                  defValue: "Email",
-                  ico: "arrow_forward",
-                  modIco: "subscription",
-                  mod: "subscription"
-                })
+                +label({text: "subscription text field"})
+                +sub-field({})
         .col
             .wrap-element-wide
                 +label({text: "checkbox buttons"})

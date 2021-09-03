@@ -1,0 +1,77 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  padding-top: 85px;
+
+
+  &__top, &__bottom {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__top {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark_shade_75;
+
+  }
+
+  &__bottom {
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  }
+  &__line{
+    height: 1px;
+    box-shadow: 0 1px 0 rgba(31, 32, 65, 0.1);
+  }
+  &__description, &__subscription {
+    max-width: 260px;
+    width: 100%;
+  }
+
+  &__description {
+
+  }
+
+  &__text {
+    padding-top: 5px;
+    letter-spacing: 1px;
+  }
+
+  &__menu {
+    max-width: 550px;
+    width: 100%;
+  }
+
+  &__subscription {
+    .footer__text {
+      padding: 20px 0;
+    }
+  }
+
+  &__copyright {
+    font-weight: normal;
+    font-size: 14px;
+    color: $dark_shade_75;
+  }
+
+  a {
+    i {
+      background: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 23px 0 23px 20px;
+      font-size: 24px;
+    }
+  }
+}
