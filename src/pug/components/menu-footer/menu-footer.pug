@@ -1,0 +1,36 @@
+mixin menu-footer(args)
+    +menu({
+      menuHeader: "навигация",
+      items:[
+        {text:"О нас", href:"#"},
+        {text:"Новости", href:"#"},
+        {text:"Служба поддержки", href:"#"},
+        {text:"Услуги", href:"#"}
+      ],
+      classMenu: "menu-footer",
+      classItem: "menu-footer__item",
+      classLink: "menu-footer__link",
+    })
+    +menu({
+      menuHeader: "о нас",
+      items: [
+        {text: "О сервисе", href: "#"},
+        {text: "Наша команда", href: "#"},
+        {text: "Вакансии", href: "#"},
+        {text: "Инвесторы", href: "#"}
+      ],
+      classMenu: "menu-footer",
+      classItem: "menu-footer__item",
+      classLink: "menu-footer__link",
+    })
+    +menu({
+      menuHeader: "служба поддержки",
+      items: [
+        {text: "Соглашения", href: "#"},
+        {text: "Сообщества", href: "#"},
+        {text: "Связь с нами", href: "#"},
+      ],
+      classMenu: "menu-footer",
+      classItem: "menu-footer__item",
+      classLink: "menu-footer__link",
+    })
