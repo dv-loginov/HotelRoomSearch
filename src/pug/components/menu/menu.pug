@@ -3,7 +3,8 @@ mixin menu(args)
         const items=args.items
         const indexActive=args.indexActive?args.indexActive:false
 
-    ul(class=args.classMenu)=args.menuHeader
+    ul(class=args.classMenu)
+        h3=args.menuHeader
         each item, index in items
             if (index===indexActive)
                 li(class=args.classItem + " active")

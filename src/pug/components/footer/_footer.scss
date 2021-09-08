@@ -28,12 +28,14 @@
 
   &__bottom {
     align-items: center;
-    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   }
-  &__line{
+
+  &__line {
+    padding-top: 100px;
     height: 1px;
     box-shadow: 0 1px 0 rgba(31, 32, 65, 0.1);
   }
+
   &__description, &__subscription {
     max-width: 260px;
     width: 100%;
@@ -72,6 +74,54 @@
       -webkit-text-fill-color: transparent;
       padding: 23px 0 23px 20px;
       font-size: 24px;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+}
+
+@media screen and (max-width: 1180px) {
+
+  .footer {
+    max-width: 768px;
+    padding: 120px 0;
+    margin: 0 auto;
+
+    &__top {
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__description {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__copyright {
+      padding: 20px 0 25px 0;
+    }
+
+    &__line,
+    &__nav,
+    &__text,
+    &__subscription {
+      display: none;
+    }
+
+    &__bottom {
+      flex-direction: column;
+    }
+
+    a {
+      i {
+        padding: 0 10px;
+      }
     }
   }
 }
