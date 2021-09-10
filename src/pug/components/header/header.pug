@@ -1,11 +1,10 @@
-
 mixin header(args)
     -   const mod=args.isLogin?"header-authorized":""
     header(class=`header ${mod}`)
         .header__logo
             +logo({isBig:true})
         nav.header__nav
-           +menu-header({})
+           //+menu-header({})
         .header__buttons
             .header__button-login
                 +button({
