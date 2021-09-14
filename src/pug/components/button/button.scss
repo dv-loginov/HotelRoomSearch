@@ -15,7 +15,7 @@
       border-radius: 22px;
       padding: 0;
       letter-spacing: 1px;
-      transition: 200ms ease-in-out;
+      transition: 500ms ease-in-out;
       border: none;
     }
 
@@ -37,7 +37,7 @@
       padding: 2px;
       border: none;
 
-      .btn-def__label {
+        .btn-def__label {
         background: #fff;
         display: block;
         padding: 13px 15px;
@@ -52,12 +52,13 @@
     &_secondary-narrow{
       width: 87px;
       height: 34px;
+      padding: 2px;
 
       .btn-def__label {
         background: #fff;
         display: block;
-        padding: 6px 15px;
-        border-radius: 20px;
+        padding: 7px 10px;
+        border-radius: 22px;
       }
     }
 
