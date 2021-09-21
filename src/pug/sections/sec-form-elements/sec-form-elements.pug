@@ -1,24 +1,5 @@
-include ../../components/dropdown/dropdown
-include ../../components/text-field/text-field
-include ../../components/masked-text-field/masked-text-field
-include ../../components/dropdown-date-range/dropdown-date-range
-include ../../components/subscription-text-field/subscription-text-field
-include ../../components/radio-buttons/radio-buttons
-include ../../components/label/label
-include ../../components/toggle/toggle
-include ../../components/checkbox-list/checkbox-list
-include ../../components/bullet-list/bullet-list
-include ../../components/like-button/like-button
-include ../../components/rate-button/rate-button
-include ../../components/icon-text/icon-text
-include ../../components/checkbox-button/checkbox-button
-include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
-include ../../components/button/button
-include ../../components/range-slider/range-slider
-include ../../components/pag/pag
-
-section.section.section_sec-form-elements
-    include ../../components/logo/logo
++logo({})
+section.section.section-form-elements
     .row
         .col
             .wrap-element
@@ -57,16 +38,11 @@ section.section.section_sec-form-elements
                   mod: "filter",
                 })
             .wrap-element-wide
-                +subscription-text-field({
-                  label: "subscription-text-field",
-                  defValue: "Email",
-                  ico: "arrow_forward",
-                  modIco: "subscription",
-                  mod: "subscription"
-                })
+                +subheading({text: "subscription text field"})
+                +sub-field({})
         .col
             .wrap-element-wide
-                +label({text: "checkbox buttons"})
+                +subheading({text: "checkbox buttons"})
                 +checkbox-button({
                   name: "smoke",
                   text: "Можно курить",
@@ -110,7 +86,7 @@ section.section.section_sec-form-elements
                   num: "12"
                 })
             .wrap-element-wide
-                +label({text: "rate button"})
+                +subheading({text: "rate button"})
                 +rate-button(4)
                 +rate-button(5)
         .col
@@ -120,7 +96,7 @@ section.section.section_sec-form-elements
                   id: "range-slider"
                 })
             .wrap-element-wide
-                +label({text:"buttons"})
+                +subheading({text:"buttons"})
                 .wrap-element
                     +button({
                       type: "def",

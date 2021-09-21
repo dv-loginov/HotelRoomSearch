@@ -1,8 +1,8 @@
 @import "~normalize.css";
 @import "~air-datepicker/dist/css/datepicker.css";
 @import "../../node_modules/swiper/swiper-bundle.css";
-@import "fonts";
 @import "colors";
+@import "fonts";
 
 body{
   display: flex;
@@ -21,3 +21,4 @@ body{
 @import "../pug/sections/sections";
 @import "../pug/forms/forms";
 @import "../pug/cards/cards";
+@import "../pug/pages/pages";
