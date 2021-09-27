@@ -1,0 +1,77 @@
+@import "../../../node_modules/nouislider/dist/nouislider.css";
+
+.range-slider {
+  width: 266px;
+
+
+  &__info {
+    padding-bottom: 20px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    &>.label{
+      padding: 0;
+    }
+  }
+
+  &__wrap-input{
+    display: flex;
+    justify-content: end;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $dark_shade_50;
+  }
+
+  &__input-value{
+    max-width: 6em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:after{
+      content: "₽";
+      padding-left: 1px;
+    }
+  }
+
+  &__input{
+  display: none;
+  }
+
+  &__input-separator{
+    padding: 0 5px;
+  }
+}
+
+.noUi-target {
+  height: 6px;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.noUi-base {
+  height: 6px;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 17px;
+  height: 17px;
+  right: -5px;
+  top: -6px;
+}
+
+.noUi-handle {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:before, &:after {
+    display: none;
+  }
+}
+
+.noUi-connect {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}

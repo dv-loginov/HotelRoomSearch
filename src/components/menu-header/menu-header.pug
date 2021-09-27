@@ -1,0 +1,28 @@
+-
+    const menu=[
+      {text:"О нас", link:"#"},
+      {text:"Услуги", link: false, type: "vertical",
+        sub:[
+          {text:"Услуги-1", link:"#"},
+          {text:"Услуги-2", link:"#"}
+        ]
+      },
+      {text:"Вакансии", link:"#"},
+      {text:"Новости", link:"#"},
+      {text:"Соглашения", link: false, type: "vertical",
+          sub:[
+            {text:"Соглашение-1", link:"#"},
+            {text:"Соглашение-2", link:"#"}
+          ]
+      },
+    ]
+
+mixin menu-header(args)
+    ul.menu-header
+        each item in menu
+            li.menu-header__item
+                if item.link
+                    a(href=item.link).menu-header__link=item.text
+                else
+                    a(href=item.link).menu-header__link=item.text
+                        span.material-icons.md-24 expand_more

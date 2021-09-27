@@ -1,0 +1,111 @@
+.btn {
+  &-def, &-adv, &-adv-no-ico, &-link {
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+  }
+
+  &-def {
+
+    &_primary, &_secondary {
+      width: 99px;
+      height: 45px;
+      border-radius: 22px;
+      padding: 0;
+      //letter-spacing: 1px;
+      transition: 500ms ease-in-out;
+      border: none;
+    }
+
+    &_primary {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      border: none;
+      color: #FFFFFF;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &_secondary,&_secondary-narrow {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      border-radius: 22px;
+      color: #BC9CFF;
+      display: inline-block;
+      padding: 2px;
+      border: none;
+
+        .btn-def__label {
+        background: #fff;
+        display: block;
+        padding: 13px 15px;
+        border-radius: 20px;
+      }
+
+      &:hover {
+        background: linear-gradient(180deg, rgba(188, 156, 255, .5) 0%, rgba(139, 164, 249, .5) 100%);
+      }
+    }
+
+    &_secondary-narrow{
+      width: 87px;
+      height: 34px;
+      padding: 2px;
+
+      .btn-def__label {
+        background: #fff;
+        display: block;
+        padding: 7px 10px;
+        border-radius: 22px;
+      }
+    }
+
+  }
+
+  &-adv,&-adv-no-ico{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    color: #FFFFFF;
+    border: none;
+  }
+  &-adv {
+    justify-content: space-between;
+    width: 320px;
+    height: 44px;
+    padding: 15px 10px;
+    &__label{
+      width: 90%;
+    }
+    &__label-ico{
+      width: 10%;
+    }
+  }
+
+  &-adv-no-ico{
+    justify-content: center;
+    width: 196px;
+    height: 34px;
+    padding: 9px 19px;
+    &__label{
+      width: 100%;
+    }
+  }
+
+  &-link {
+    color: #BC9CFF;
+    border: none;
+    background-color: transparent;
+    &:hover{
+      color: rgba(31, 32, 65, 0.5);
+
+    }
+  }
+
+}
+
+

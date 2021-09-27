@@ -1,0 +1,25 @@
+//@import "~normalize.css";
+//@import "~air-datepicker/dist/css/datepicker.css";
+//@import "../../node_modules/swiper/swiper-bundle.css";
+@import "colors";
+////@import "fonts";
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat, Arial, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: $dark_shade_75;
+}
+//
+//@import "../pug/components/components";
+//@import "../pug/sections/sections";
+//@import "../pug/forms/forms";
+//@import "../pug/components/room/room";
+//@import "../pug/pages/index/pages";

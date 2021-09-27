@@ -1,0 +1,16 @@
+include ../room-number/room-number
+include ../room-price/room-price
+include ../recall/recall
+include ../room-slider/room-slider
+
+mixin room(num, isLux, price, rating, recall)
+    .room(id=`room-${num}`)
+        +room-slider(num)
+        .room__header
+            +room-number(num, isLux)
+            +room-price(price)
+        .room__footer
+            .room__rating
+                +rate-button(rating)
+            .room__recall
+                +recall(recall)
