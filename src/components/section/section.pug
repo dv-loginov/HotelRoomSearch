@@ -1,7 +1,12 @@
 include ../logo/logo
-mixin section()
-    section.section
+mixin section(args)
+    if !args
+        - args = {}
+
+    -
+        const modClass = args.modClass ? 'section-'+args.modClass :''
+    section.section(class=modClass)
         .section__header
-            +logo({})
+            +logo()
         .section__content
             block

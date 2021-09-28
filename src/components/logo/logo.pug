@@ -2,6 +2,9 @@
     args.isBig - boolean (true - большой логотип)
 
 mixin logo(args)
+    if !args
+        - args = {}
+
     if args.isBig
         img(
             class='logo logo-big'

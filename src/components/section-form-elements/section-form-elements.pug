@@ -1,0 +1,242 @@
+include ../section/section
++section()
+    block section
+        .section__element
+
+
+
+//+logo({})
+//section.section.section-form-elements
+//    .row
+//        .col
+//            .wrap-element
+//                +text-field({
+//                  label: "text-field",
+//                  className: "text-field",
+//                  type: "text",
+//                  name: "name",
+//                  defValue: "Email",
+//                  id: "text-field"
+//                })
+//            .wrap-element
+//                +dropdown({
+//                  mod: "def",
+//                  modIco: "def",
+//                  label: "dropdown",
+//                  defValue: "Сколько гостей",
+//                  ico: "expand_more"
+//                })
+//            .wrap-element-wide
+//                +masked-text-field({label: "masked text field"})
+//            .wrap-element-wide
+//                +dropdown-date-range({
+//                  labelStart: "date dropdown",
+//                  labelEnd: "date dropdown",
+//                  placeholderStart: "ДД.ММ.ГГГГ",
+//                  placeholderEnd: "19.08.2019",
+//                  idStart: "dropdown-date-1",
+//                  idEnd: "dropdown-date-2",
+//                })
+//            .wrap-element-wide
+//                +dropdown-date({
+//                  text: "filter date dropdown",
+//                  ico: "expand_more",
+//                  id: "dropdown-date-filter",
+//                  mod: "filter",
+//                })
+//            .wrap-element-wide
+//                +subheading({text: "subscription text field"})
+//                +sub-field({})
+//        .col
+//            .wrap-element-wide
+//                +subheading({text: "checkbox buttons"})
+//                +checkbox-button({
+//                  name: "smoke",
+//                  text: "Можно курить",
+//                  value: "no",
+//                  checked: false
+//                })
+//                +checkbox-button({
+//                  name: "pet",
+//                  text: "Можно с питомцами",
+//                  value: "yes",
+//                  checked: true
+//                })
+//                +checkbox-button({
+//                  name: "guests",
+//                  text: "Можно пригласить гостей (до 10 человек)",
+//                  value: "yes",
+//                  checked: true
+//                })
+//            .wrap-element-wide
+//                +radio-buttons({showLabel: true})
+//            .wrap-element-wide
+//                +label({text: "toggle"})
+//                +toggle({
+//                  text: "Получать спецпредложения",
+//                  id: "toggle-1",
+//                  checked: true
+//                })
+//                +toggle({
+//                  text: "Получать спецпредложения",
+//                  id: "toggle-2",
+//                })
+//            .wrap-element-wide
+//                +label({text: "like button"})
+//                +like-button({
+//                  ico: "favorite_border",
+//                  num: "2"
+//                })
+//                +like-button({
+//                  classes: ["like-button", "like-button_active"],
+//                  ico: "favorite",
+//                  num: "12"
+//                })
+//            .wrap-element-wide
+//                +subheading({text: "rate button"})
+//                +rate-button(4)
+//                +rate-button(5)
+//        .col
+//            .wrap-element-wide
+//                +range-slider({
+//                  text: "range slider",
+//                  id: "range-slider"
+//                })
+//            .wrap-element-wide
+//                +subheading({text:"buttons"})
+//                .wrap-element
+//                    +button({
+//                      type: "def",
+//                      mod: "primary",
+//                      text: "click me"
+//                    })
+//                .wrap-element
+//                    +button({
+//                      type: "def",
+//                      mod: "secondary",
+//                      text: "click me"
+//                    })
+//                .wrap-element
+//                    +button({
+//                      type: "link",
+//                      text: "click me"
+//                    })
+//                .wrap-element
+//                    +button({
+//                      type: "adv",
+//                      text: "перейти к оплате"
+//                    })
+//            .wrap-element-wide
+//                +pagination({text: "pagination"})
+//    .row
+//        .col
+//            +dropdown({
+//              type: "furniture",
+//              label: "dropdown",
+//              ico: "expand_more",
+//              id: "dropdown-furniture"
+//            })
+//        .col
+//            +dropdown({
+//              type: "guests",
+//              label: "dropdown",
+//              defValue: "",
+//              ico: "expand_more",
+//              id: "dropdown-guests-noinit"
+//            })
+//        .col
+//            +dropdown({
+//              type: "guests",
+//              label: "dropdown",
+//              defValue: "",
+//              ico: "expand_more",
+//              id: "dropdown-guests-init"
+//            })
+//    .row
+//        .col
+//            +checkbox-list({
+//              name: "checkbox list",
+//              id: "checkbox-list",
+//              items: [
+//                {
+//                  name: "breakfast",
+//                  text: "Завтрак",
+//                  value: "no",
+//                  checked: false
+//                },
+//                {
+//                  name: "desk",
+//                  text: "Письменный стол",
+//                  value: "yes",
+//                  checked: true
+//                },
+//                {
+//                  name: "feedingСhair",
+//                  text: "Стул для кормления",
+//                  value: "yes",
+//                  checked: true
+//                },
+//                {
+//                  name: "crib",
+//                  text: "Кроватка",
+//                  value: "yes",
+//                  checked: true
+//                },
+//                {
+//                  name: "television",
+//                  text: "Телевизор",
+//                  value: "no",
+//                  checked: false
+//                },
+//                {
+//                  name: "shampoo",
+//                  text: "Шампунь",
+//                  value: "no",
+//                  checked: false
+//                }
+//              ]
+//            })
+//        .col
+//            +rich-checkbox-buttons({
+//              name: "rich checkbox buttons",
+//              items: [{
+//                name: "wideCorridor",
+//                checked: false,
+//                value: "no",
+//                title: "Широкий коридор",
+//                subtitle: "Ширина коридоров в номере не менее 91 см."
+//              }, {
+//                name: "helper",
+//                checked: false,
+//                value: "no",
+//                title: "Помошник для инвалидов",
+//                subtitle: "На 1 этаже вас встретит специалист и проводит до номера"
+//              }]
+//            })
+//        .col
+//            +bullet-list({
+//              name: "bullet list",
+//              items: [
+//                {text: "Нельзя с питомцами"},
+//                {text: "Без вечеринок и мероприятий"},
+//                {text: "Время прибытия - после 13:00, а выезд до 12:00"}
+//              ]
+//            })
+//    .row
+//        .col
+//            +icon-text({
+//              type: "ico",
+//              mod: "list",
+//              ico: "insert_emoticon",
+//              title: "Комфорт",
+//              subtitle: "Шумопоглощающие стены"
+//            })
+//            +icon-text({
+//              type: "ico",
+//              mod: "list",
+//              ico: "location_city",
+//              title: "Удобство",
+//              subtitle: "Окно в каждой из спален"
+//            })
+//        .col-wide
+//            include ../comment/comment
