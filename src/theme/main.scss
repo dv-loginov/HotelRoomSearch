@@ -4,18 +4,17 @@
 @import "colors";
 ////@import "fonts";
 //@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: Montserrat, Arial, sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 300;
+body {
+  //display: flex;
+  //flex-direction: column;
   color: $dark_shade_75;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 24px;
+  //justify-content: center;
+  //align-items: center;
 }
 //
 //@import "../pug/components/components";

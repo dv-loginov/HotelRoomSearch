@@ -101,7 +101,16 @@ module.exports = {
           }
         }
       },
-
+      {
+        test: /\.css/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {}
+          },
+          'css-loader',
+        ],
+      },
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -131,7 +140,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'img/[name].[ext]'
+          name: '[path][name].[ext]'
         }
       },
 

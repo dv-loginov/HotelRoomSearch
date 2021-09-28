@@ -1,13 +1,16 @@
+//-
+    args.isBig - boolean (true - большой логотип)
+
 mixin logo(args)
     if args.isBig
         img(
-            class="logo logo-big"
-            alt="logo"
-            src=require('../components/logo/logo-big.png').default
-        )
+            class='logo logo-big'
+            alt='logo'
+            src=require('../../components/logo/img/logo-big.png').default
+            )
     else
         img(
             class="logo"
             alt="logo"
-            src=require('../components/logo/logo.png').default)
-
+            src=require('../../components/logo/img/logo-big.png').default
+            )

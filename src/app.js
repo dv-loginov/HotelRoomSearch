@@ -1,4 +1,4 @@
-// import '~normalize.css';
+import 'normalize.css';
 import './theme/main.scss';
 
 // import dropdown from './pug/components/dropdown/dropdawn';
