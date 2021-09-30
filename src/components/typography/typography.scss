@@ -1,0 +1,36 @@
+@import '../../theme/colors';
+
+.typography {
+  &__item {
+    display: flex;
+    margin-bottom: 51px;
+    align-items: baseline;
+  }
+
+  &__heading {
+    width: 37px;
+    padding-right: 30px;
+    text-align: right;
+    color: $dark_shade_25;
+
+    &_h1 {
+      font-size: 24px;
+    }
+
+    &_h2 {
+      font-size: 19px;
+    }
+
+    &_h3 {
+      font-size: 12px;
+    }
+
+    &_body {
+      font-size: 14px;
+    }
+  }
+
+  &__example {
+    display: flex;
+  }
+}
