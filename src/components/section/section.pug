@@ -4,7 +4,7 @@ mixin section(args)
         - args = {}
 
     -
-        const modClass = args.modClass ? 'section-'+args.modClass :''
+        const modClass = args.modClass ? 'section_'+args.modClass :''
     section.section(class=modClass)
         .section__header
             +logo()

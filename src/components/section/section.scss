@@ -1,6 +1,22 @@
 .section {
-  &__header {
-  }
+  background-color: #fff;
+
   &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_darker {
+    background-color: #f4f4f6;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  &__col {
+    flex: 0 1 auto;
   }
 }
