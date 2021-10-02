@@ -1,8 +1,12 @@
 mixin like-button(args)
-    - const className = args.classes ? args.classes.join(" ") : "like-button"
+    - const className = args.isActive ? "like-button like-button_active" : "like-button"
+
     div(class=className)
         .like-button__ico
-            span(class="material-icons" style="font-size: 10px")= args.ico
+            if args.isActive
+                include ./img/favorite.svg
+            else
+                include ./img/favorite_border.svg
         .like-button__num
             span=args.num
 
