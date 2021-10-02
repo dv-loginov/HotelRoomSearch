@@ -1,7 +1,56 @@
 include ../section/section
+include ../subheading/subheading
+include ../like-button/like-button
+
 +section()
     block section
-        .section__element
+        .section__row
+            .section__col
+                .section__element
+                .section__element
+                .section__element
+                .section__element
+                .section__element
+            .section__col
+                .section__element
+                .section__element
+                .section__element
+                .section__element
+                .section__element
+            .section__col
+                .section__element
+                .section__element
+                .section__element
+                .section__element
+                .section__element
+                    +subheading({text:'LIKE BUTTON'})
+                    +like-button({
+                        isActive: false,
+                        num: "2"
+                    })
+                    +like-button({
+                        isActive: true,
+                        num: "12"
+                    })
+                .section__element
+                    +subheading({text:'RATE BUTTON'})
+        .section__row
+            .section__col
+            .section__col
+            .section__col
+        .section__row
+            .section__col
+            .section__col
+            .section__col
+        .section__row
+            .section__col
+                .section__element
+
+                .section__element
+
+            .section__col
+                .section__element
+
 
 
 
