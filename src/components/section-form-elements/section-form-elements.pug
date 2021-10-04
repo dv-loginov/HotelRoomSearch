@@ -1,16 +1,11 @@
 include ../section/section
 include ../subheading/subheading
 include ../like-button/like-button
+include ../rate-button/rate-button
 
 +section()
     block section
         .section__row
-            .section__col
-                .section__element
-                .section__element
-                .section__element
-                .section__element
-                .section__element
             .section__col
                 .section__element
                 .section__element
@@ -34,6 +29,14 @@ include ../like-button/like-button
                     })
                 .section__element
                     +subheading({text:'RATE BUTTON'})
+                    +rate-button(4)
+                    +rate-button(5)
+            .section__col
+                .section__element
+                .section__element
+                .section__element
+                .section__element
+                .section__element
         .section__row
             .section__col
             .section__col
@@ -130,17 +133,7 @@ include ../like-button/like-button
 //                  text: "Получать спецпредложения",
 //                  id: "toggle-2",
 //                })
-//            .wrap-element-wide
-//                +label({text: "like button"})
-//                +like-button({
-//                  ico: "favorite_border",
-//                  num: "2"
-//                })
-//                +like-button({
-//                  classes: ["like-button", "like-button_active"],
-//                  ico: "favorite",
-//                  num: "12"
-//                })
+//
 //            .wrap-element-wide
 //                +subheading({text: "rate button"})
 //                +rate-button(4)

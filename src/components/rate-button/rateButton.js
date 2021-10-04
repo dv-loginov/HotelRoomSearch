@@ -1,3 +1,5 @@
+import './rate-button.scss'
+
 const rateButton = () => {
   console.log('run rateButton');
 
