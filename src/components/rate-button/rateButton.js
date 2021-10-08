@@ -1,27 +1,20 @@
 import './rate-button.scss'
+import StarImg from './img/star.svg';
+import StarBorderImg from './img/star_border.svg';
 
-const rateButton = () => {
-  console.log('run rateButton');
-
-  const rateButtonsAll=document.querySelectorAll('[data-type="rating"]');
-
-  rateButtonsAll.forEach(rateButton=>{
-     rateButton.onclick=handleRateButtonClick;
-  });
-
-  function handleRateButtonClick(event){
-    const selectStar=event.target.dataset.numstar;
-    const parent=event.target.parentNode;
-    const stars=parent.querySelectorAll("span");
-
-    stars.forEach(star=>{
-      star.dataset.numstar<=selectStar
-        ?star.textContent='star'
-        :star.textContent='star_border';
-    })
-
-  }
-
+const rateButton = (node) => {
+  node.onclick = (event) => {
+    const numStars = event.target.dataset.numstar;
+    const starsNode = node.querySelectorAll('span');
+    starsNode.forEach( (star, index) => {
+      index <= numStars
+        ? star.innerHTML = StarImg
+        : star.innerHTML = StarBorderImg;
+    });
+  };
 };
 
-export default rateButton;
+(()=>{
+  const rateButtonsNodes=document.querySelectorAll('[data-type="rating"]');
+  rateButtonsNodes.forEach(((rateButtonsNode)=>rateButton(rateButtonsNode)));
+})();
