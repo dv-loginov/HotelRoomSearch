@@ -1,7 +1,7 @@
 mixin like-button(args)
-    - const className = args.isActive ? "like-button like-button_active" : "like-button"
+    - const className = args.isActive ? "like-button like-button_like" : "like-button"
 
-    div(class=className)
+    div(class=className data-type='like')
         .like-button__ico
             if args.isActive
                 include ./img/favorite.svg
