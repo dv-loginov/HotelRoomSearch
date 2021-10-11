@@ -1,11 +1,10 @@
 mixin icon-text(args)
-    -   const mod=args.mod?' icon-text_' + args.mod : ""
+    -   const mod=args.mod?' icon-text_' + args.mod : ''
     div(class="icon-text" + mod)
         .icon-text__ico
-            if args.type==="ico"
-                span(class="material-icons" style="font-size: 48px" )=args.ico
-            if args.type==="img"
-                img(src=args.ico alt="user")
+            img(
+                src=require(`../../components/icon-text/img/${args.img}`).default
+                alt='img')
         .icon-text__descroption
             .icon-text__title=args.title
             .icon-text__subtitle=args.subtitle
