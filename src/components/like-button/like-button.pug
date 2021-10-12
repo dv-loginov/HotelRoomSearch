@@ -1,9 +1,9 @@
 mixin like-button(args)
-    - const className = args.isActive ? "like-button like-button_like" : "like-button"
+    - const className = args.isLike ? "like-button like-button_like" : "like-button"
 
     div(class=className data-type='like')
         .like-button__ico
-            if args.isActive
+            if args.isLike
                 include ./img/favorite.svg
             else
                 include ./img/favorite_border.svg

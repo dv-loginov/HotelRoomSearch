@@ -3,6 +3,7 @@ include ../subheading/subheading
 include ../like-button/like-button
 include ../rate-button/rate-button
 include ../icon-text-list/icon-text-list
+include ../comment/comment
 
 +section()
     block section
@@ -21,11 +22,11 @@ include ../icon-text-list/icon-text-list
                 .section__element
                     +subheading({text:'LIKE BUTTON'})
                     +like-button({
-                        isActive: false,
+                        isLike: false,
                         num: "2"
                     })
                     +like-button({
-                        isActive: true,
+                        isLike: true,
                         num: "12"
                     })
                 .section__element
@@ -52,7 +53,9 @@ include ../icon-text-list/icon-text-list
                     +icon-text-list()
             .section__col
                 .section__element
+                    +comment({
 
+                    })
 
 
 
