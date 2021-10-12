@@ -1,21 +1,17 @@
 include ../icon-text/icon-text
 include ../like-button/like-button
 
-.comment
-    +icon-text({
-      type: "img",
-      ico: require("../components/comment/murad-sarafanov.png").default,
-      title: "Мурад Сарафанов",
-      subtitle: "5 дней"
-    })
-    .comment__description
-        .comment__description-ico
-            +like-button({
-              classes: ["like-button", "like-button_active"],
-              ico: "favorite",
-              num: "12"
-            })
-        .comment__description-text
-            |Великолепный матрас на кровати в основной спальне!
-            |А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
-            |Выкрикивал комплименты повару — никто не жаловался из соседей.
+mixin comment(args)
+    .comment
+        +icon-text({
+          img: args.iconText.img,
+          title: args.iconText.title,
+          subtitle: args.iconText.subtitle
+        })
+        .comment__description
+            .comment__description-ico
+                +like-button({
+                  isLike: args.likeButton.isLike,
+                  num: args.likeButton.num
+                })
+            .comment__description-text=args.descText

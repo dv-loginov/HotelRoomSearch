@@ -23,11 +23,11 @@ include ../comment/comment
                     +subheading({text:'LIKE BUTTON'})
                     +like-button({
                         isLike: false,
-                        num: "2"
+                        num: '2'
                     })
                     +like-button({
                         isLike: true,
-                        num: "12"
+                        num: '12'
                     })
                 .section__element
                     +subheading({text:'RATE BUTTON'})
@@ -54,10 +54,20 @@ include ../comment/comment
             .section__col
                 .section__element
                     +comment({
-
+                        iconText:{
+                          img: require('../../components/comment/img/user.png').default,
+                          title: 'Мурад Сарафанов',
+                          subtitle: '5 дней'
+                        },
+                        likeButton:{
+                          isLike: true,
+                          num: '12'
+                        },
+                        descText:
+                          `Великолепный матрас на кровати в основной спальне!
+                          А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
+                          Выкрикивал комплименты повару — никто не жаловался из соседей.`
                     })
-
-
 
 //+logo({})
 //section.section.section-form-elements
