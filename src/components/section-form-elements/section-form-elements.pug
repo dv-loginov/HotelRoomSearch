@@ -5,6 +5,7 @@ include ../rate-button/rate-button
 include ../icon-text-list/icon-text-list
 include ../comment/comment
 include ../checkbox-button/checkbox-button
+include ../bullet-list/bullet-list
 
 +section()
     block section
@@ -83,6 +84,15 @@ include ../checkbox-button/checkbox-button
                       mod: "rich"
                     })
             .section__col
+                .section__element
+                    +subheading({text: 'BULLET LIST'})
+                    +bullet-list({
+                                  items: [
+                                    {text: "Нельзя с питомцами"},
+                                    {text: "Без вечеринок и мероприятий"},
+                                    {text: "Время прибытия - после 13:00, а выезд до 12:00"}
+                                  ]
+                            })
         .section__row
             .section__col
                 .section__element
@@ -148,26 +158,7 @@ include ../checkbox-button/checkbox-button
 //                +subheading({text: "subscription text field"})
 //                +sub-field({})
 //        .col
-//            .wrap-element-wide
-//                +subheading({text: "checkbox buttons"})
-//                +checkbox-button({
-//                  name: "smoke",
-//                  text: "Можно курить",
-//                  value: "no",
-//                  checked: false
-//                })
-//                +checkbox-button({
-//                  name: "pet",
-//                  text: "Можно с питомцами",
-//                  value: "yes",
-//                  checked: true
-//                })
-//                +checkbox-button({
-//                  name: "guests",
-//                  text: "Можно пригласить гостей (до 10 человек)",
-//                  value: "yes",
-//                  checked: true
-//                })
+//
 //            .wrap-element-wide
 //                +radio-buttons({showLabel: true})
 //            .wrap-element-wide
@@ -286,32 +277,9 @@ include ../checkbox-button/checkbox-button
 //                }
 //              ]
 //            })
+//
 //        .col
-//            +rich-checkbox-buttons({
-//              name: "rich checkbox buttons",
-//              items: [{
-//                name: "wideCorridor",
-//                checked: false,
-//                value: "no",
-//                title: "Широкий коридор",
-//                subtitle: "Ширина коридоров в номере не менее 91 см."
-//              }, {
-//                name: "helper",
-//                checked: false,
-//                value: "no",
-//                title: "Помошник для инвалидов",
-//                subtitle: "На 1 этаже вас встретит специалист и проводит до номера"
-//              }]
-//            })
-//        .col
-//            +bullet-list({
-//              name: "bullet list",
-//              items: [
-//                {text: "Нельзя с питомцами"},
-//                {text: "Без вечеринок и мероприятий"},
-//                {text: "Время прибытия - после 13:00, а выезд до 12:00"}
-//              ]
-//            })
+//
 //    .row
 //        .col
 //            +icon-text({
