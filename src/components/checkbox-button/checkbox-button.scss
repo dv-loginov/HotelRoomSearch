@@ -1,52 +1,53 @@
+@import "../../theme/colors";
+
 .checkbox-button {
   padding: 5px 0;
 
   &__label {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
-    color: $dark_shade_50;
     cursor: pointer;
+    color: $dark_shade_50;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
 
-    &_rich{
-      font-weight: 700;
+    &_rich {
       color: $dark_shade_75;
+      font-weight: 700;
     }
   }
 
-  &__desc{
+  &__desc {
     display: block;
-    padding-left: 33px;
-    width: 240px;
-    user-select: none;
+    max-width: 260px;
     margin-top: -5px;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
-    color: $dark_shade_50;
+    padding-left: 33px;
     cursor: pointer;
+    user-select: none;
+    color: $dark_shade_50;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
   }
 
   &__flag {
     display: inline-flex;
-    align-items: center;
     user-select: none;
+    align-items: center;
 
     &::before {
-      content: '';
       display: inline-block;
       width: 20px;
       height: 20px;
-      flex-shrink: 0;
-      flex-grow: 0;
+      margin-right: 10px;
+      content: '';
       border: 1px solid $dark_shade_25;
       border-radius: 4px;
-      margin-right: 10px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%;
+      flex-shrink: 0;
+      flex-grow: 0;
     }
-
   }
 
   &__input {
@@ -57,12 +58,12 @@
 
   /* стили при наведении курсора на checkbox */
   &__input:not(:disabled):not(:checked) + &__flag:hover::before {
-    border-color: #BC9CFF;
+    border-color: #bc9cff;
   }
 
   /* стили для активного чекбокса (при нажатии на него) */
   &__input:not(:disabled):active + &__flag::before {
-    background-color: #BC9CFF;
+    background-color: #bc9cff;
   }
 
   /* стили для чекбокса, находящегося в фокусе */
@@ -77,8 +78,8 @@
 
   /* стили для чекбокса, находящегося в состоянии checked */
   &__input:checked + &__flag::before {
-    border-color: #BC9CFF;
-    background-image: url("../pug/components/checkbox-button/check.png");
+    border-color: #bc9cff;
+    background-image: url("../checkbox-button/img/check.png");
   }
 
   /* стили для чекбокса, находящегося в состоянии disabled */

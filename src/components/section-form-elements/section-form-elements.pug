@@ -4,6 +4,7 @@ include ../like-button/like-button
 include ../rate-button/rate-button
 include ../icon-text-list/icon-text-list
 include ../comment/comment
+include ../checkbox-button/checkbox-button
 
 +section()
     block section
@@ -16,9 +17,26 @@ include ../comment/comment
                 .section__element
             .section__col
                 .section__element
+                    +subheading({text:'CHECKBOX BUTTONS'})
+                    +checkbox-button({
+                      name: "smoke",
+                      text: "Можно курить",
+                      checked: false
+                    })
+                    +checkbox-button({
+                      name: "pet",
+                      text: "Можно с питомцами",
+                      checked: true
+                    })
+                    +checkbox-button({
+                      name: "guests",
+                      text: "Можно пригласить гостей (до 10 человек)",
+                      checked: true
+                    })
                 .section__element
+                    +subheading({text:'RADIO BUTTONS'})
                 .section__element
-                .section__element
+                    +subheading({text:'TOGGLE'})
                 .section__element
                     +subheading({text:'LIKE BUTTON'})
                     +like-button({
@@ -36,9 +54,11 @@ include ../comment/comment
             .section__col
                 .section__element
                 .section__element
+                    +subheading({text:'BUTTONS'})
                 .section__element
                 .section__element
                 .section__element
+                    +subheading({text:'PAGINATION'})
         .section__row
             .section__col
             .section__col
@@ -46,6 +66,22 @@ include ../comment/comment
         .section__row
             .section__col
             .section__col
+                .section__element
+                    +subheading({text: 'RICH CHECKBOX BUTTONS'})
+                    +checkbox-button({
+                      name: "wideCorridor",
+                      text: "Широкий коридор",
+                      desc: "Ширина коридоров в номере не менее 91 см.",
+                      checked: false,
+                      mod: "rich"
+                    })
+                    +checkbox-button({
+                      name: "helper",
+                      text: "Помошник для инвалидов",
+                      desc: "На 1 этаже вас встретит специалист и проводит до номера",
+                      checked: false,
+                      mod: "rich"
+                    })
             .section__col
         .section__row
             .section__col
