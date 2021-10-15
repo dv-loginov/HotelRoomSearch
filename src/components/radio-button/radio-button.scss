@@ -1,63 +1,69 @@
-.radio-buttons{
+@import "../../theme/colors";
+
+.radio-button {
+  display: flex;
   width: 220px;
-  &__item-wrap{
-    display: flex;
-    justify-content: space-between;
-  }
-  &__label{
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
+  justify-content: space-between;
+
+  &__label {
+    margin-bottom: 17px;
     text-transform: uppercase;
     color: $dark_shade_100;
-    margin-bottom: 17px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
   }
 
-  &__item-label{
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
-    color: $dark_shade_75;
+  &__item-label {
     cursor: pointer;
+    color: $dark_shade_75;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
   }
 
-  &__flag{
+  &__flag {
     display: inline-flex;
-    align-items: center;
     user-select: none;
+    align-items: center;
+
     &::before {
-      content: '';
       display: inline-block;
       width: 20px;
       height: 20px;
-      flex-shrink: 0;
-      flex-grow: 0;
+      margin-right: 10px;
+      content: '';
       border: 1px solid $dark_shade_25;
       border-radius: 50%;
-      margin-right: 10px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%;
+      flex-shrink: 0;
+      flex-grow: 0;
     }
   }
 
-  &__input{
+  &__input {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
+
   /* стили при наведении курсора на checkbox */
   &__input:not(:disabled):not(:checked) + &__flag:hover::before {
-    border-color: #BC9CFF;
+    border-color: $purple;
   }
+
   /* стили для активного чекбокса (при нажатии на него) */
   &__input:not(:disabled):active + &__flag::before {
-    background-color: #BC9CFF;
+    background-color: $purple;
   }
+
   /* стили для чекбокса, находящегося в фокусе */
   &__input:focus + &__flag::before {
     box-shadow: 0 0 0 0.1rem $dark_shade_25;
   }
+
   /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
   &__input:focus:not(:checked) + &__flag::before {
     border-color: $dark_shade_50;
@@ -65,10 +71,10 @@
 
   /* стили для чекбокса, находящегося в состоянии checked */
   &__input:checked + &__flag::before {
-    border-color: #BC9CFF;
-    background-image: url("../pug/components/radio-buttons/radio-button-dot.png");
-    background-size: 12px 12px;
+    border-color: $purple;
+    background-image: url("../radio-button/img/radio-button-dot.png");
     background-position: center;
+    background-size: 12px 12px;
   }
 
   /* стили для чекбокса, находящегося в состоянии disabled */
