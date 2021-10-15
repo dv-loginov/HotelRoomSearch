@@ -6,6 +6,7 @@ include ../icon-text-list/icon-text-list
 include ../comment/comment
 include ../checkbox-button/checkbox-button
 include ../bullet-list/bullet-list
+include ../checkbox-list/checkbox-list
 
 +section()
     block section
@@ -66,6 +67,18 @@ include ../bullet-list/bullet-list
             .section__col
         .section__row
             .section__col
+                .section__element
+                    +checkbox-list({
+                        name: "EXPANDABLE CHECKBOX LIST",
+                        items: [
+                          {name: "breakfast", text: "Завтрак", checked: false},
+                          {name: "desk", text: "Письменный стол", checked: true},
+                          {name: "feeding-chair", text: "Стул для кормления", checked: true},
+                          {name: "crib", text: "Кроватка", checked: true},
+                          {name: "television", text: "Телевизор", checked: false},
+                          {name: "shampoo", text: "Шампунь", checked: false}
+                        ]
+                    })
             .section__col
                 .section__element
                     +subheading({text: 'RICH CHECKBOX BUTTONS'})
@@ -280,21 +293,3 @@ include ../bullet-list/bullet-list
 //
 //        .col
 //
-//    .row
-//        .col
-//            +icon-text({
-//              type: "ico",
-//              mod: "list",
-//              ico: "insert_emoticon",
-//              title: "Комфорт",
-//              subtitle: "Шумопоглощающие стены"
-//            })
-//            +icon-text({
-//              type: "ico",
-//              mod: "list",
-//              ico: "location_city",
-//              title: "Удобство",
-//              subtitle: "Окно в каждой из спален"
-//            })
-//        .col-wide
-//            include ../comment/comment

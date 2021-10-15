@@ -1,0 +1,46 @@
+@import "../../theme/colors";
+
+.checkbox-list {
+  width: 266px;
+
+  &__header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__ico {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+
+    &_up {
+      transform: rotate(-180deg);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+      fill: $dark_shade_50;
+    }
+  }
+
+  &__items {
+    position: absolute;
+    z-index: 1000;
+    display: block;
+    width: 100%;
+    max-width: 266px;
+    background-color: #fff;
+
+    &_hide {
+      display: none;
+    }
+  }
+}

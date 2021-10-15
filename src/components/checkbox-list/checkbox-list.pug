@@ -1,20 +1,18 @@
 include ../label/label
 include ../checkbox-button/checkbox-button
+include ../subheading/subheading
 
 mixin checkbox-list(args)
     -   const items=args.items
-    -   const id=args.id?args.id:null
-    .checkbox-list(id=id)
+    .checkbox-list(data-type="checkbox-list")
         .checkbox-list__header
-            .checkbox-list__name
-                +label({text: args.name})
+            .checkbox-list__name.sta-text=args.name
             .checkbox-list__ico(data-action="expand")
-                span(class="material-icons md-24" style="pointer-events: none")="expand_more"
-        .checkbox-list__items
+                include ./img/expand_more.svg
+        .checkbox-list__items.checkbox-list__items_hide(data-action="expand-list")
             each item in items
                 +checkbox-button({
                   name: item.name,
                   text: item.text,
-                  value: item.value,
                   checked: item.checked
                 })
