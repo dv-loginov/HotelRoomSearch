@@ -58,12 +58,12 @@
 
   /* стили при наведении курсора на checkbox */
   &__input:not(:disabled):not(:checked) + &__flag:hover::before {
-    border-color: #bc9cff;
+    border-color: $purple;
   }
 
   /* стили для активного чекбокса (при нажатии на него) */
   &__input:not(:disabled):active + &__flag::before {
-    background-color: #bc9cff;
+    background-color: $purple;
   }
 
   /* стили для чекбокса, находящегося в фокусе */
@@ -78,7 +78,7 @@
 
   /* стили для чекбокса, находящегося в состоянии checked */
   &__input:checked + &__flag::before {
-    border-color: #bc9cff;
+    border-color: $purple;
     background-image: url("../checkbox-button/img/check.png");
   }
 

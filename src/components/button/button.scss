@@ -21,7 +21,7 @@
     }
 
     &_primary {
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
       border: none;
       color: #FFFFFF;
 
@@ -31,9 +31,9 @@
     }
 
     &_secondary,&_secondary-narrow {
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
       border-radius: 22px;
-      color: #BC9CFF;
+      color: $purple;
       display: inline-block;
       padding: 2px;
       border: none;
@@ -68,7 +68,7 @@
   &-adv,&-adv-no-ico{
     display: flex;
     align-items: center;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
     border-radius: 22px;
     color: #FFFFFF;
     border: none;
@@ -97,7 +97,7 @@
   }
 
   &-link {
-    color: #BC9CFF;
+    color: $purple;
     border: none;
     background-color: transparent;
     &:hover{

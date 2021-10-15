@@ -11,14 +11,14 @@
   }
 
   &__input:checked + &__input-label {
-    border: 1px solid #BC9CFF;
+    border: 1px solid $purple;
     transition: 500ms;
   }
 
   &__input:checked + &__input-label:after {
     left: calc(100% - 4px);
     transform: translateX(-100%);
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
 
   }
 

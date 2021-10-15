@@ -96,7 +96,7 @@
       font-weight: bold;
       font-size: 12px;
       text-align: center;
-      color: #BC9CFF;
+      color: $purple;
       padding: 10px 0;
       text-transform: none;
     }
@@ -129,7 +129,7 @@
         margin: 10px 0;
 
         &:hover {
-          background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+          background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
           color: #FFFFFF;
         }
       }
@@ -155,7 +155,7 @@
       font-weight: bold;
       font-size: 12px;
       text-transform: uppercase;
-      color: #BC9CFF;
+      color: $purple;
     }
 
     &--button_apply {
@@ -187,7 +187,7 @@
   .datepicker--cell.-selected- {
     background: #FFFFFF;
     span {
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
         color: #FFFFFF;
       }
     }
@@ -197,7 +197,7 @@
     border-radius: 22px 0 0 22px;
 
     span {
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
       border-radius: 22px;
       color: #FFFFFF;
     }
@@ -208,7 +208,7 @@
     border-radius: 0 22px 22px 0;
 
     span {
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
       border-radius: 22px;
       color: #FFFFFF;
     }
