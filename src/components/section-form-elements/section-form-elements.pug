@@ -8,6 +8,7 @@ include ../checkbox-button/checkbox-button
 include ../bullet-list/bullet-list
 include ../checkbox-list/checkbox-list
 include ../radio-button/radio-button
+include ../toggle/toggle
 
 +section()
     block section
@@ -41,6 +42,15 @@ include ../radio-button/radio-button
                     +radio-button()
                 .section__element
                     +subheading({text:'TOGGLE'})
+                    +toggle({
+                        text: "Получать спецпредложения",
+                        name: "special-offer",
+                        checked: true
+                    })
+                    +toggle({
+                        text: "Получать спецпредложения",
+                        name: "special-offer",
+                    })
                 .section__element
                     +subheading({text:'LIKE BUTTON'})
                     +like-button({

@@ -1,0 +1,76 @@
+@import "../../theme/colors";
+
+$toggle-indicator-size: 12px; // changing this number will resize the whole toggle
+$track-height: 18px;
+$track-width: 40px;
+
+// Toggle specific styles
+.toggle-wrap {
+  display: flex;
+}
+
+.toggle {
+  display: flex;
+  border-radius: 10px;
+  font-weight: 700;
+  align-items: center;
+}
+
+// Since we can't style the checkbox directly, we "hide" it so we can draw the toggle.
+.toggle__input {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip-path: inset(50%);
+
+  &:disabled + .toggle-track {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+.toggle-track {
+  position: relative;
+  display: flex;
+  width: $track-width;
+  height: $track-height;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid $dark_shade_25;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.toggle-indicator {
+  position: absolute;
+  bottom: 3px;
+  left: 2px;
+  display: flex;
+  width: $toggle-indicator-size;
+  height: $toggle-indicator-size;
+  transition: 500ms;
+  border-radius: $toggle-indicator-size;
+  background: $dark_shade_25;
+  align-items: center;
+  justify-content: center;
+}
+
+// The check mark is optional
+.checkMark {
+  width: $toggle-indicator-size - 4;
+  height: $toggle-indicator-size - 4;
+  transition: opacity 700ms ease-in-out;
+  opacity: 0;
+}
+
+.toggle__input:checked + .toggle-track {
+  border: 1px solid $purple;
+}
+
+.toggle__input:checked + .toggle-track .toggle-indicator {
+  transform: translateX($track-width - $track-height);
+  background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+}
