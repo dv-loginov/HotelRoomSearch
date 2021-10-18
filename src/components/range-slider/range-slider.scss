@@ -1,44 +1,47 @@
-@import "../../../node_modules/nouislider/dist/nouislider.css";
+@import "../../theme/colors";
 
 .range-slider {
   width: 266px;
 
-
   &__info {
-    padding-bottom: 20px;
-    width: 100%;
     display: inline-flex;
+    width: 100%;
+    padding-bottom: 20px;
     justify-content: space-between;
-    &>.label{
+    align-items: baseline;
+
+    & > .label {
       padding: 0;
+      text-transform: uppercase;
     }
   }
 
-  &__wrap-input{
+  &__wrap-input {
     display: flex;
-    justify-content: end;
-    font-weight: 300;
-    font-size: 12px;
     text-transform: uppercase;
     color: $dark_shade_50;
+    font-size: 12px;
+    font-weight: 300;
+    justify-content: end;
   }
 
-  &__input-value{
+  &__input-value {
+    overflow: hidden;
     max-width: 6em;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
-    &:after{
-      content: "₽";
+
+    &::after {
       padding-left: 1px;
+      content: "₽";
     }
   }
 
-  &__input{
-  display: none;
+  &__input {
+    display: none;
   }
 
-  &__input-separator{
+  &__input-separator {
     padding: 0 5px;
   }
 }
@@ -54,24 +57,25 @@
 }
 
 .noUi-horizontal .noUi-handle {
+  top: -6px;
+  right: -5px;
   width: 17px;
   height: 17px;
-  right: -5px;
-  top: -6px;
 }
 
 .noUi-handle {
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  border: 2px solid #FFFFFF;
-  border-radius: 10px;
-  box-shadow: none;
   cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  box-shadow: none;
 
-  &:before, &:after {
+  &::before,
+  &::after {
     display: none;
   }
 }
 
 .noUi-connect {
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 }

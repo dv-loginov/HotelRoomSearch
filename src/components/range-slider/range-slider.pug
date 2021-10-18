@@ -1,29 +1,34 @@
 include ../label/label
 
 mixin range-slider(args)
-    .range-slider
+    .range-slider(
+        data-type = 'range-slider'
+        data-start = args.start
+        data-end = args.end
+        data-step = args.step
+        data-range-min = args.rangeMin
+        data-range-max = args.rangeMax
+        )
         .range-slider__info
             +label({text: args.text})
             .range-slider__wrap-input
                 input(
                     type="number"
                     class="range-slider__input"
-                    name=args.id+"--min"
-                    id=args.id+"--min"
+                    name="slider-input-min"
                 )
                 input(
                     type="number"
                     class="range-slider__input"
-                    name=args.id+"--max"
-                    id=args.id+"--max"
+                    name="slider-input-max"
                 )
                 div(
                     class="range-slider__input-value"
                     data-range-slider-value="min"
-                ) 5000
+                )
                 span(class="range-slider__input-separator")="-"
                 div(
                     class="range-slider__input-value"
                     data-range-slider-value="max"
-                ) 10000
-        .range-slider__scale(id=args.id)
+                )
+        .range-slider__scale(data-type='range-slider-scale')

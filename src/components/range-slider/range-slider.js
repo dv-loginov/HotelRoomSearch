@@ -1,32 +1,35 @@
+import '../../../node_modules/nouislider/dist/nouislider.css';
+import './range-slider.scss'
 import noUiSlider from 'nouislider';
 
-const rangeSlider = (state) => {
-  const range = state.range;
-  const id = state.id;
-  const step = state.step;
-  let start = state.start;
+const rangeSlider = (node) => {
 
-  const inputMin = document.getElementById("range-slider--min");
-  const inputMax = document.getElementById("range-slider--max");
+  const scale=node.querySelector('[data-type="range-slider-scale"]');
 
+  const rangeMin = initValue(node.dataset.rangeMin, 0);
+  const rangeMax = initValue(node.dataset.rangeMax, 10000);
+  const step = initValue(node.dataset.step,10);
+  const start = initValue(node.dataset.start, rangeMin);
+  const end = initValue(node.dataset.end,rangeMax);
+
+  const inputMin = node.querySelector('[name="slider-input-min"]');
+  const inputMax = node.querySelector('[name="slider-input-max"]');
   const viewMin = document.querySelector('[data-range-slider-value=min]');
   const viewMax = document.querySelector('[data-range-slider-value=max]');
 
-  const slider = document.getElementById(id);
+  inputMin.value = start;
+  inputMax.value = end;
+  viewMin.innerText = start;
+  viewMax.innerText = end;
 
-  inputMin.value = start[0];
-  inputMax.value = start[1];
-  viewMin.innerText = start[0];
-  viewMax.innerText = start[1];
-
-  noUiSlider.create(slider, {
-    start,
+  noUiSlider.create(scale, {
+    start:[start,end],
     step: step,
     connect: true,
-    range,
+    range: {'min': rangeMin,'max': rangeMax},
   });
 
-  slider.noUiSlider.on('update', (values, handle) => {
+  scale.noUiSlider.on('update', (values, handle) => {
     if (handle) {
       inputMax.value = Math.trunc( values[handle] );
       viewMax.innerText = Math.trunc( values[handle] ) ;
@@ -37,4 +40,13 @@ const rangeSlider = (state) => {
   });
 };
 
-export default rangeSlider;
+function initValue(value,defValue) {
+  return isNaN(parseInt(value))
+    ? defValue
+    : parseInt(value);
+}
+
+(()=>{
+  const sliderNodes=document.querySelectorAll('[data-type="range-slider"]');
+  sliderNodes.forEach(((sliderNode)=>rangeSlider(sliderNode)));
+})();
