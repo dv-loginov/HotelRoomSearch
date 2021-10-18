@@ -10,6 +10,7 @@ include ../checkbox-list/checkbox-list
 include ../radio-button/radio-button
 include ../toggle/toggle
 include ../range-slider/range-slider
+include ../button/button
 
 +section()
     block section
@@ -78,8 +79,27 @@ include ../range-slider/range-slider
                     })
                 .section__element
                     +subheading({text:'BUTTONS'})
+                    +button({
+                        type: "def",
+                        mod: "primary",
+                        text: "click me"
+                    })
                 .section__element
+                    +button({
+                      type: "def",
+                      mod: "secondary",
+                      text: "click me"
+                    })
                 .section__element
+                    +button({
+                      type: "link",
+                      text: "click me"
+                    })
+                .section__element
+                    +button({
+                      type: "adv",
+                      text: "перейти к оплате"
+                    })
                 .section__element
                     +subheading({text:'PAGINATION'})
         .section__row
@@ -191,38 +211,10 @@ include ../range-slider/range-slider
 //            .wrap-element-wide
 //                +subheading({text: "subscription text field"})
 //                +sub-field({})
-//        .col
-//
-//        .col
-//            .wrap-element-wide
-//                +range-slider({
-//                  text: "range slider",
-//                  id: "range-slider"
-//                })
+
 //            .wrap-element-wide
 //                +subheading({text:"buttons"})
-//                .wrap-element
-//                    +button({
-//                      type: "def",
-//                      mod: "primary",
-//                      text: "click me"
-//                    })
-//                .wrap-element
-//                    +button({
-//                      type: "def",
-//                      mod: "secondary",
-//                      text: "click me"
-//                    })
-//                .wrap-element
-//                    +button({
-//                      type: "link",
-//                      text: "click me"
-//                    })
-//                .wrap-element
-//                    +button({
-//                      type: "adv",
-//                      text: "перейти к оплате"
-//                    })
+//
 //            .wrap-element-wide
 //                +pagination({text: "pagination"})
 //    .row

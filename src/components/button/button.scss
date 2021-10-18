@@ -1,97 +1,108 @@
+@import "../../theme/colors";
+$gradien: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+
 .btn {
-  &-def, &-adv, &-adv-no-ico, &-link {
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1.1px;
+  &-def,
+  &-adv,
+  &-adv-no-ico,
+  &-link {
     cursor: pointer;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 15px;
   }
 
   &-def {
-
-    &_primary, &_secondary {
+    &_primary,
+    &_secondary {
       width: 99px;
       height: 45px;
-      border-radius: 22px;
       padding: 0;
-      //letter-spacing: 1px;
       transition: 500ms ease-in-out;
+      letter-spacing: 1px;
       border: none;
+      border-radius: 22px;
     }
 
     &_primary {
-      background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+      color: #fff;
       border: none;
-      color: #FFFFFF;
+      background: $gradien;
 
       &:hover {
         opacity: 0.5;
       }
     }
 
-    &_secondary,&_secondary-narrow {
-      background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-      border-radius: 22px;
-      color: $purple;
+    &_secondary,
+    &_secondary-narrow {
       display: inline-block;
       padding: 2px;
+      color: $purple;
       border: none;
+      border-radius: 22px;
+      background: $gradien;
 
-        .btn-def__label {
-        background: #fff;
+      .btn-def__label {
         display: block;
         padding: 13px 15px;
         border-radius: 20px;
+        background: #fff;
       }
 
       &:hover {
-        background: linear-gradient(180deg, rgba(188, 156, 255, .5) 0%, rgba(139, 164, 249, .5) 100%);
+        background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
       }
     }
 
-    &_secondary-narrow{
+    &_secondary-narrow {
       width: 87px;
       height: 34px;
       padding: 2px;
 
       .btn-def__label {
-        background: #fff;
         display: block;
         padding: 7px 10px;
         border-radius: 22px;
+        background: #fff;
       }
     }
-
   }
 
-  &-adv,&-adv-no-ico{
+  &-adv,
+  &-adv-no-ico {
     display: flex;
-    align-items: center;
-    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-    border-radius: 22px;
-    color: #FFFFFF;
+    color: #fff;
     border: none;
+    border-radius: 22px;
+    background: $gradien;
+    align-items: center;
   }
+
   &-adv {
-    justify-content: space-between;
     width: 320px;
     height: 44px;
     padding: 15px 10px;
-    &__label{
-      width: 90%;
+    justify-content: space-between;
+
+    svg {
+      fill: #fff;
     }
-    &__label-ico{
-      width: 10%;
+
+    &__label {
+      width: 90%;
     }
   }
 
-  &-adv-no-ico{
-    justify-content: center;
+  &-adv-no-ico {
     width: 196px;
     height: 34px;
     padding: 9px 19px;
-    &__label{
+    justify-content: center;
+
+    &__label {
       width: 100%;
     }
   }
@@ -100,12 +111,9 @@
     color: $purple;
     border: none;
     background-color: transparent;
-    &:hover{
-      color: rgba(31, 32, 65, 0.5);
 
+    &:hover {
+      color: $dark_shade_50;
     }
   }
-
 }
-
-

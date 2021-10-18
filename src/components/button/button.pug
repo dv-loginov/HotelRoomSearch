@@ -8,7 +8,7 @@ mixin button(args)
     if (type==="adv")
         button(class="btn-adv" data-action = action)
             span(class="btn-adv__label")=args.text
-            span(class="material-icons md-24 btn-adv__label-ico")="arrow_forward"
+            include ./img/arrow_forward.svg
     if (type==="link")
         button(class="btn-link" data-action = action)=args.text
     if (type === "adv-no-ico")
