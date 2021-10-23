@@ -1,5 +1,4 @@
-include ../label/label
-mixin pagination(args)
-    +label({text:args.text})
-    #data-container
-    #pag-container
+mixin pag(args)
+    .pag(data-type="pagination")
+        .data-container(data-page-size=args.pageSize)
+        .pagination-container

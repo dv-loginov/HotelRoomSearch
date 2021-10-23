@@ -1,54 +1,57 @@
-const pag = () => {
-  console.log('run pag');
+import 'paginationjs/dist/pagination.css';
+import './pag.scss';
+import forwardSvg from './img/arrow_forward.svg';
+import backSvg from './img/arrow_back.svg';
 
-  const container = $('#pag-container');
+const pag = (node) => {
+  const containerPag = node.querySelector('.pagination-container');
+  const containerData = node.querySelector('.data-container');
 
-  container.pagination({
+  const pageSize = isNaN(parseInt(containerData.dataset.pageSize))
+    ? 1
+    : parseInt(containerData.dataset.pageSize);
+
+  $(containerPag).pagination({
     dataSource: function (done) {
-      var result = [];
-      for (var i = 1; i < 220; i++) {
+      let result = [];
+      for (let i = 1; i < 220; i++) {
         result.push(i);
       }
       done(result);
     },
-    pageSize: 12,
+    pageSize: pageSize,
     pageRange: 1,
-    prevText: '<span class="material-icons" style="transform: rotate(180deg)">arrow_forward</span>',
-    nextText: '<span class="material-icons">arrow_forward</span>',
+    prevText: backSvg,
+    nextText: forwardSvg,
     showPrevious: true,
     showNext: true,
     autoHidePrevious: true,
     autoHideNext: true,
-    callback: function (data, pagination) {
-      // console.log('data',data);
-      //  console.log('pagination', pagination);
-      // const html = `<span>${data}<\span>`;
-      // $('#data-container').html(html);
-    },
-    footer:function(currentPage, totalPage, totalNumber,pagination){
-      const pageSize= Math.round(totalNumber/totalPage);
+    // callback: function (data, pag) {
+    //   const html = `<span>${data}<\span>`;
+    //   $(containerData).html(html);
+    // },
+    footer: function (currentPage, totalPage, totalNumber, pag) {
+      const pageSize = Math.round(totalNumber / totalPage);
 
-      const start = (currentPage*pageSize-pageSize)+1;
-      const end = currentPage*pageSize > totalNumber
-                  ?totalNumber
-                  :currentPage*pageSize;
+      const start = (currentPage * pageSize - pageSize) + 1;
+      const end = currentPage * pageSize > totalNumber
+        ? totalNumber
+        : currentPage * pageSize;
 
-      return(`      
-        <div class="paginationjs__footer">
-            <span>${start}</span>
-            <span>-</span>
-            <span>${end}</span>
-            <span> из ${totalNumber} выриантов</span>
-        </div>
-      `);
+      return (`
+          <div class="paginationjs__footer">
+              <span>${start}</span>
+              <span>-</span>
+              <span>${end}</span>
+              <span> из ${totalNumber > 100 ? '100+' : totalNumber} выриантов</span>
+          </div>
+        `);
     },
   });
-
-  container.addHook('afterRender', function () {
-    // function body
-
-  });
-
 };
 
-export default pag;
+(() => {
+  const paginationNodes = document.querySelectorAll('[data-type="pagination"]');
+  paginationNodes.forEach(((paginationNode) => pag(paginationNode)));
+})();

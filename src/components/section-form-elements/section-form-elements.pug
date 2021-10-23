@@ -11,7 +11,7 @@ include ../radio-button/radio-button
 include ../toggle/toggle
 include ../range-slider/range-slider
 include ../button/button
-
+include ../pag/pag
 +section()
     block section
         .section__row
@@ -102,6 +102,7 @@ include ../button/button
                     })
                 .section__element
                     +subheading({text:'PAGINATION'})
+                    +pag({pageSize:12})
         .section__row
             .section__col
             .section__col
