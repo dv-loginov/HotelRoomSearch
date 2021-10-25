@@ -8,7 +8,7 @@ const roomSlider = () => {
   const slider = new Swiper('.swiper-room', {
     loop: true,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-pag",
       clickable: true,
       modifierClass: 'room-'
     },

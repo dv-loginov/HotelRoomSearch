@@ -12,10 +12,21 @@ include ../toggle/toggle
 include ../range-slider/range-slider
 include ../button/button
 include ../pag/pag
+include ../dropdown/dropdown
+
 +section()
     block section
         .section__row
             .section__col
+                .section__element
+                    +dropdown({
+                      mod: "def",
+                      modIco: "def",
+                      label: "dropdown",
+                      defValue: "Сколько гостей",
+                      ico: "expand_more"
+                    })
+                .section__element
                 .section__element
                 .section__element
                 .section__element
