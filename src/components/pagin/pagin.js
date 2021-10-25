@@ -1,9 +1,10 @@
+import pagination from 'paginationjs';
 import 'paginationjs/dist/pagination.css';
-import './pag.scss';
+import './pagin.scss';
 import forwardSvg from './img/arrow_forward.svg';
 import backSvg from './img/arrow_back.svg';
 
-const pag = (node) => {
+const pagin = (node) => {
   const containerPag = node.querySelector('.pagination-container');
   const containerData = node.querySelector('.data-container');
 
@@ -27,7 +28,7 @@ const pag = (node) => {
     showNext: true,
     autoHidePrevious: true,
     autoHideNext: true,
-    // callback: function (data, pag) {
+    // callback: function (data, pagin) {
     //   const html = `<span>${data}<\span>`;
     //   $(containerData).html(html);
     // },
@@ -53,5 +54,5 @@ const pag = (node) => {
 
 (() => {
   const paginationNodes = document.querySelectorAll('[data-type="pagination"]');
-  paginationNodes.forEach(((paginationNode) => pag(paginationNode)));
+  paginationNodes.forEach(((paginationNode) => pagin(paginationNode)));
 })();
