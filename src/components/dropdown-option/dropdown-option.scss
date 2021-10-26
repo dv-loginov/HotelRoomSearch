@@ -1,40 +1,43 @@
+@import "../../theme/colors";
+
 .dropdown-option {
   display: flex;
+  padding: 11px 0;
+  text-transform: uppercase;
+  color: #1f2041;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
   align-items: center;
   justify-content: space-between;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041;
-  padding: 11px 0;
 
   &_text {
     padding-left: 15px;
-
   }
 
   &_counter {
     display: flex;
-    align-items: center;
     padding-right: 7px;
+    align-items: center;
+
     &-value {
       width: 1em;
       padding: 0 10px;
       text-align: center;
     }
 
-    &-sub, &-add {
+    &-sub,
+    &-add {
+      display: flex;
       width: 30px;
       height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      cursor: pointer;
+      user-select: none;
       color: $dark_shade_25;
       border: 1px solid $dark_shade_25;
       border-radius: 50%;
-      user-select: none;
-      cursor: pointer;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

@@ -19,15 +19,13 @@ include ../dropdown/dropdown
         .section__row
             .section__col
                 .section__element
+                .section__element
+                .section__element
                     +dropdown({
-                      mod: "def",
-                      modIco: "def",
-                      label: "dropdown",
+                      label: "DROPDOWN",
                       defValue: "Сколько гостей",
-                      ico: "expand_more"
+                      options: null,
                     })
-                .section__element
-                .section__element
                 .section__element
                 .section__element
                 .section__element
@@ -116,8 +114,38 @@ include ../dropdown/dropdown
                     +pagin({pageSize:12})
         .section__row
             .section__col
+                .section__element
+                    +dropdown({
+                      label: "DROPDOWN",
+                      variant: "things",
+                      options: [
+                        {text: "спальни", value: 2},
+                        {text: "кровати", value: 2},
+                        {text: "ванные комнаты", value: 0}
+                      ]
+                    })
             .section__col
+                .section__element
+                    +dropdown({
+                      label: "DROPDOWN",
+                      variant: "people",
+                      options: [
+                        {text: "взрослые", value: 0},
+                        {text: "дети", value: 0},
+                        {text: "младенцы", value: 0}
+                      ]
+                    })
             .section__col
+                .section__element
+                    +dropdown({
+                      label: "DROPDOWN",
+                      variant: "people",
+                      options: [
+                        {text: "взрослые", value: 2},
+                        {text: "дети", value: 1},
+                        {text: "младенцы", value: 0}
+                      ]
+                    })
         .section__row
             .section__col
                 .section__element

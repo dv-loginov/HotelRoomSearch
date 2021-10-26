@@ -1,72 +1,84 @@
-.dropdown{
-  width: 320px;
+@import '../../theme/colors';
+
+.dropdown {
   position: relative;
+  width: 320px;
 
   &__wrap-options {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    width: 318px;
     border: 1px solid $dark_shade_25;
     border-top: none;
     border-radius: 0 0 4px 4px;
-    position: absolute;
-    width: 318px;
-    background-color: #FFFFFF;
-    z-index: 1000;
-    display: none;
+    background-color: #fff;
+
+    &-open {
+      display: block;
+    }
   }
 
-  &__wrap-input{
+  &__wrap-input {
     display: flex;
-    justify-content: space-between;
-    background: #FFFFFF;
-    border: 1px solid $dark_shade_25;;
     box-sizing: border-box;
-    border-radius: 4px 4px 0 0;
     padding-left: 12px;
+    border: 1px solid $dark_shade_25;
+    border-radius: 4px;
+    background: #fff;
+    justify-content: space-between;
   }
 
-  &__input{
+  &__input {
+    overflow: hidden;
     width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $dark_shade_75;
+    border: none;
+    outline: none;
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
-    color: $dark_shade_75;
-    outline: none;
-    border: none;
-    &::placeholder{
+
+    &::placeholder {
       color: $dark_shade_75;
     }
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
-  &__input-ico{
+  &__ico {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 44px;
     height: 44px;
-    user-select: none;
     cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
 
-    &_def{
-      color: $dark_shade_50;
+    svg {
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+      fill: $dark_shade_50;
     }
   }
 
-  &_def{
-    .dropdown__wrap-input{
-      border: 1px solid $dark_shade_25;;
-      box-sizing: border-box;
-      border-radius: 4px;
+  &-with-options {
+    .dropdown__wrap-input {
+      border-radius: 4px 4px 0 0;
+    }
+
+    .dropdown__ico {
+      svg {
+        fill: $dark_shade_75;
+      }
     }
   }
 
-  &__buttons{
+  &__buttons {
     display: flex;
-    justify-content: space-between;
-    padding-left: 10px;
     padding-bottom: 13px;
+    padding-left: 10px;
+    justify-content: space-between;
   }
 }
-
-@import "../dropdown-option/dropdown-option";
