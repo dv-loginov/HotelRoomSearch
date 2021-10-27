@@ -3,14 +3,14 @@ mixin button(args)
     - const modClass=args.mod?" btn-def_"+args.mod:null
     - const action = args.action ? args.action : null
     if (type==="def")
-        button(class="btn-def"+modClass data-action = action)
+        button(class="btn-def"+modClass data-action-button = action)
             span(class="btn-def__label")=args.text
     if (type==="adv")
-        button(class="btn-adv" data-action = action)
+        button(class="btn-adv" data-action-button = action)
             span(class="btn-adv__label")=args.text
             include ./img/arrow_forward.svg
     if (type==="link")
-        button(class="btn-link" data-action = action)=args.text
+        button(class="btn-link" data-action-button = action)=args.text
     if (type === "adv-no-ico")
-        button(class="btn-adv-no-ico" data-action = action)
+        button(class="btn-adv-no-ico" data-action-button = action)
             span(class="btn-adv-no-ico__label")=args.text
