@@ -4,7 +4,7 @@ export class DropDownThings extends DropDown {
   constructor(node) {
     super(node);
     this.name = 'DropDownThings';
-   }
+  }
 
   setInputValue() {
     const bedroom = this.getCounterValue(this.nodeCountersValue[0]);
@@ -21,11 +21,6 @@ export class DropDownThings extends DropDown {
       ['кровать', 'кровати', 'кроватей'],
       ['ванная комната', 'ванные комнаты', 'ванных комнат'],
     ];
-
-    return numbers.map((number, index) => {
-      if (number === 1) return words[index][0];
-      if (number > 1 && number < 5) return words[index][1];
-      if ((number === 0) || (number >= 5 && number < 10)) return words[index][2];
-    });
+    return this.selectWord(numbers, words);
   }
 }

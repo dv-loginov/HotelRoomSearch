@@ -10,7 +10,7 @@ export class DropDownPeople extends DropDown {
     let str = 'Сколько гостей';
     const sum = this.sumPeople(this.nodeCountersValue);
     if (sum > 0) {
-      const word = this.decline(sum);
+      const word = this.decline([sum]);
       str = `${sum} ${word}`;
     }
     this.nodeInput.value = str;
@@ -24,12 +24,11 @@ export class DropDownPeople extends DropDown {
     return sum;
   }
 
-  decline(number) {
-    let str = '';
-    if (number === 1 || number === 21) str = 'гость';
-    if ((number > 1 && number < 5) || (number > 21 && number < 25)) str = 'гостя';
-    if ((number >=5 && number < 21) || (number >=25 && number <=30)) str = 'гостей';
-    return str;
+  decline(numbers) {
+    const words = [
+      ['гость', 'гостя', 'гостей'],
+    ];
+    return this.selectWord(numbers, words);
   }
 
   closeOptions() {

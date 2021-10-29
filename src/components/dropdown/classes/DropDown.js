@@ -52,8 +52,24 @@ export class DropDown {
     node.textContent = value;
   }
 
+  selectWord(numbers, words) {
+    return numbers.map((number, index) => {
+      if (number === 1 || number === 21) return words[index][0];
+      if ((number > 1 && number < 5) || (number > 21 && number < 25)) return words[index][1];
+      if ((number === 0) || (number >= 5 && number < 21) || (number >= 25 && number <= 30)) return words[index][2];
+    });
+  }
+
   setInputValue() {
-    console.log('вывод в инпут');
+
+  }
+
+  clearCounter() {
+
+  }
+
+  closeOptions() {
+
   }
 }
 
