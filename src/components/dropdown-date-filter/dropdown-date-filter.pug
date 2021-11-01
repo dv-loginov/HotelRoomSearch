@@ -1,9 +1,11 @@
 include ../dropdown/dropdown
 
-+dropdown({
-    label: "filter date dropdown",
-    mod: "filter-date",
-    defValue: "19 авг - 23 авг",
-    ico: "expand_more",
-    isOptions: false
-})
+mixin dropdown-date-filter(args)
+    if !args
+        - args = {}
+    +dropdown({
+      label: "filter date dropdown",
+      defValue: args.defValue || "19 авг - 23 авг",
+      mod: "dropdown__date-filter",
+      type: "date-filter"
+    })

@@ -2,15 +2,12 @@ include ../dropdown-date/dropdown-date
 
 mixin dropdown-date-range(args)
     .dropdown-date-range
+        if !args
+            - args = {}
         +dropdown-date({
-          text: args.labelStart,
-          placeholder: args.placeholderStart,
-          ico: "expand_more",
-          id: args.idStart,
+          label: "date dropdown",
         })
         +dropdown-date({
-            text: args.labelEnd,
-            placeholder: args.placeholderEnd,
-            ico: "expand_more",
-            id: args.idEnd,
+          label: "date dropdown",
+          defValue: "19.08.2019"
         })

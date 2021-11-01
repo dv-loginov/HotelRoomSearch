@@ -13,6 +13,9 @@ include ../range-slider/range-slider
 include ../button/button
 include ../pagin/pagin
 include ../dropdown/dropdown
+include ../dropdown-date-range/dropdown-date-range
+include ../dropdown-date-filter/dropdown-date-filter
+include ../dropdown-select/dropdown-select
 
 +section()
     block section
@@ -20,15 +23,17 @@ include ../dropdown/dropdown
             .section__col
                 .section__element
                 .section__element
-                .section__element
                     +dropdown({
-                      label: "DROPDOWN",
+                      label: "dropdown",
                       defValue: "Сколько гостей",
-                      options: null,
                     })
                 .section__element
                 .section__element
+                    +dropdown-date-range()
+                    //+dropdown-date()
                 .section__element
+                .section__element
+                    +dropdown-date-filter()
                 .section__element
             .section__col
                 .section__element
@@ -115,8 +120,8 @@ include ../dropdown/dropdown
         .section__row
             .section__col
                 .section__element
-                    +dropdown({
-                      label: "DROPDOWN",
+                    +dropdown-select({
+                      label: "dropdown",
                       variant: "things",
                       options: [
                         {text: "спальни", value: 2},
@@ -126,18 +131,18 @@ include ../dropdown/dropdown
                     })
             .section__col
                 .section__element
-                    +dropdown({
-                      label: "DROPDOWN",
-                      variant: "people",
-                      options: [
-                        {text: "взрослые", value: 0},
-                        {text: "дети", value: 0},
-                        {text: "младенцы", value: 0}
-                      ]
+                    +dropdown-select({
+                        label: "DROPDOWN",
+                        variant: "people",
+                        options: [
+                            {text: "взрослые", value: 0},
+                            {text: "дети", value: 0},
+                            {text: "младенцы", value: 0}
+                        ]
                     })
             .section__col
                 .section__element
-                    +dropdown({
+                    +dropdown-select({
                       label: "DROPDOWN",
                       variant: "people",
                       options: [

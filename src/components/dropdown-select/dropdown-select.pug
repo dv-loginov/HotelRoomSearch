@@ -1,0 +1,33 @@
+include ../dropdown/dropdown
+include ../button/button
+include ../dropdown-option/dropdown-option
+
+mixin dropdown-select(args)
+    if !args
+        - args = {}
+    +dropdown({
+      label: args.label||"dropdown",
+      mod: "dropdown__with-options",
+      type: 'dropdown-select',
+      variant: args.variant
+    })
+        if args.options
+            .dropdown__wrap-options
+                each option, index in args.options
+                    +dropdown-option({
+                      text: option.text,
+                      value: option.value,
+                      item: index
+                    })
+                if args.variant === "people"
+                    .dropdown__buttons
+                        +button({
+                          type: "link",
+                          text: "очистить",
+                          action: "clear"
+                        })
+                        +button({
+                          type: "link",
+                          text: "применить",
+                          action: "apply"
+                        })

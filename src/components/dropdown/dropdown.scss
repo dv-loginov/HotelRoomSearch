@@ -63,7 +63,7 @@
     }
   }
 
-  &-with-options {
+  &__with-options {
     .dropdown__wrap-input {
       border-radius: 4px 4px 0 0;
     }
@@ -73,6 +73,19 @@
         fill: $dark_shade_75;
       }
     }
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    cursor: pointer;
+    user-select: none;
+    justify-content: space-between;
+  }
+
+  &__date-filter {
+    width: 266px;
   }
 
   &__buttons {
