@@ -1,7 +1,21 @@
 include ../section/section
+include ../calendar/calendar
+
 +section({modClass:'darker'})
     block section
         .section__element
+            .section__row
+                .section__col
+                    .section__element
+                    .section__element
+                .section__col
+                    .section__element
+                    .section__element
+                .section__col
+                    .section__element
+                        +calendar()
+                    .section__element
+                    .section__element
 //+logo({})
 //section.section.section-cards
 //    .row

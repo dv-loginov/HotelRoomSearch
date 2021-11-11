@@ -1339,12 +1339,10 @@ acorn@^8.2.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.4.0.tgz#af53266e698d7cffa416714b503066a82221be60"
   integrity sha512-ULr0LDaEqQrMFGyQ3bhJkLsbtrQ8QibAseGZeaSUiT/6zb9IvIkomWHJIvgvwad+hinRAgsI51JcWk2yvwyL+w==
 
-air-datepicker@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/air-datepicker/-/air-datepicker-2.2.3.tgz#9dbb6bc6bc8c9d9db380475091370dad82c2f787"
-  integrity sha1-nbtrxryMnZ2zgEdQkTcNrYLC94c=
-  dependencies:
-    jquery ">=2.0.0 <4.0.0"
+air-datepicker@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/air-datepicker/-/air-datepicker-3.0.1.tgz#a01b780b536d5ece709093bf699135a29c35a733"
+  integrity sha512-Pv6SN8FHGYpsnoaOq7uSpb/8iu61Fyzo3VqeXTPWmnI4Ctk78xTnoI0oZk5l8sJB8I0vO+3Bu2ISshBVJNnlPg==
 
 ajv-errors@^1.0.0:
   version "1.0.1"
@@ -3623,7 +3621,7 @@ jest-worker@^27.0.2:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
-"jquery@>=2.0.0 <4.0.0", jquery@^3.6.0:
+jquery@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
