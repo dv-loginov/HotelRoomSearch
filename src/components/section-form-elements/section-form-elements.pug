@@ -16,12 +16,19 @@ include ../dropdown/dropdown
 include ../dropdown-date-range/dropdown-date-range
 include ../dropdown-date-filter/dropdown-date-filter
 include ../dropdown-select/dropdown-select
+include ../text-field/text-field
 
 +section()
     block section
         .section__row
             .section__col
                 .section__element
+                    +text-field({
+                        label: "text-field",
+                        type: "text",
+                        name: "text-field",
+                        defValue: "Email",
+                    })
                 .section__element
                     +dropdown({
                       label: "dropdown",
