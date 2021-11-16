@@ -4,7 +4,7 @@ import './calendar.scss';
 import svgArrowBack from './img/arrow_back.svg';
 import svgArrowForward from './img/arrow_forward.svg';
 
-const calendar = (node, opt = {range: true,}) => {
+const calendar = (node, opt = {range:true}) => {
 
   let button = {
     content: 'Применить',
