@@ -1,14 +1,15 @@
+
 .form-search {
-  &__header{
+  &__header {
     padding-right: 20px;
     padding-top: 10px;
   }
+
   &__range,
-  &__guests{
+  &__guests {
     padding-top: 20px;
   }
-  &__guests{}
-  &__button{
+  &__button {
     padding-top: 30px;
   }
 }

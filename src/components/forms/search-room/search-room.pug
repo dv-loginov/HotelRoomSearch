@@ -7,16 +7,16 @@ form(class="form form-search" id="form-search")
           labelEnd: "выезд",
           placeholderStart: "ДД.ММ.ГГГГ",
           placeholderEnd: "ДД.ММ.ГГГГ",
-          idStart: "form-search-start",
-          idEnd: "form-search-end",
         })
     .form-search__guests
-        +dropdown({
-          type: "guests",
-          label: "гости",
-          defValue: "Сколько гостей",
-          ico: "expand_more",
-          id: "form-search-guests"
+        +dropdown-select({
+          label: "Гости",
+          variant: "people",
+          options: [
+            {text: "взрослые", value: 0},
+            {text: "дети", value: 0},
+            {text: "младенцы", value: 0}
+          ]
         })
     .form-search__button
         +button({

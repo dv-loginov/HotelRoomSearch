@@ -9,6 +9,8 @@ export class DropDown {
   };
 
   headerClick(event) {
+    event.preventDefault();
+
     const actionCounter = event.target.dataset.actionCounter;
     const actionButton = event.target.dataset.actionButton;
 
