@@ -52,7 +52,6 @@ const dateRange=(node) => {
 
 };
 
-
 (() => {
   const dateRangeNodes = document.querySelectorAll('[data-type="date-range"]');
   dateRangeNodes.forEach(((node) => dateRange(node)));
