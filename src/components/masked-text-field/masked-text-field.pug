@@ -1,11 +1,14 @@
 include ../label/label
 
 mixin masked-text-field(args)
+    if !args
+        - args = {}
+    +label({text: args.label})
     .masked-text-field
-        +label({text: args.label})
         input(
             type = "text"
             class = "masked-text-field_input"
             placeholder="ДД.ММ.ГГГГ"
-            id = args.id
+            data-type="masked-text"
+            data-subtype="date"
         )
