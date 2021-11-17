@@ -1,0 +1,45 @@
+@import "../../theme/colors";
+
+.sub-field {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 266px;
+  padding-left: 12px;
+  border: 1px solid $dark_shade_25;
+  border-radius: 4px;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+
+  &__input {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $dark_shade_25;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    &::placeholder {
+      color: $dark_shade_25;
+    }
+  }
+
+  &__input-ico {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
