@@ -1,0 +1,18 @@
+@import '../../theme/colors';
+
+.recall {
+  &__num,
+  &__legend {
+    color: $dark_shade_50;
+    font-size: 14px;
+  }
+
+  &__num {
+    font-weight: bold;
+  }
+
+  &__legend {
+    padding-left: 3px;
+    font-weight: normal;
+  }
+}

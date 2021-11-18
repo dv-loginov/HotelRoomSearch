@@ -1,21 +1,30 @@
-.room-number{
-  &__sign,&__num,&__isLux{
+@import "../../theme/colors";
+
+.room-number {
+  &__sign,
+  &__num,
+  &__isLux {
     font-weight: bold;
   }
-  &__sign,&__num{
-    color: #1F2041;
+
+  &__sign,
+  &__num {
+    color: #1f2041;
   }
-  &__sign{
-    font-size: 14px;
+
+  &__sign {
     padding-right: 3px;
+    font-size: 14px;
   }
-  &__num{
+
+  &__num {
     font-size: 19px;
   }
-  &__isLux{
-    font-size: 12px;
+
+  &__isLux {
+    padding-left: 3px;
     text-transform: uppercase;
     color: $purple;
-    padding-left: 3px;
+    font-size: 12px;
   }
 }

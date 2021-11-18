@@ -4,7 +4,7 @@ include ../recall/recall
 include ../room-slider/room-slider
 
 mixin room(num, isLux, price, rating, recall)
-    .room(id=`room-${num}`)
+    .room()
         +room-slider(num)
         .room__header
             +room-number(num, isLux)
