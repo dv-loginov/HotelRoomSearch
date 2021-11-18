@@ -4,11 +4,13 @@ import svgArrowBack from "src/components/calendar/img/arrow_back.svg";
 import svgArrowForward from "src/components/calendar/img/arrow_forward.svg";
 
 const dateRange=(node) => {
-  let dpMin, dpMax;
 
+  const expandNode = node.querySelectorAll('[data-action="expand"]');
   const inputNodes = node.querySelectorAll('input');
   const inputNodeMin = inputNodes[0];
   const inputNodeMax = inputNodes[1];
+
+  let dpMin, dpMax;
 
   let button = {
     content: 'Применить',
@@ -31,7 +33,7 @@ const dateRange=(node) => {
       }
     },
     buttons: ['clear', button],
-
+    autoClose: true,
   };
 
   dpMin = new AirDatepicker(inputNodeMin,{...optionsDef,
@@ -50,6 +52,15 @@ const dateRange=(node) => {
     }
   });
 
+  expandNode[0].onclick = (event) => {
+    dpMax.hide();
+    dpMin.show();
+  };
+
+  expandNode[1].onclick = (event) => {
+    dpMin.hide();
+    dpMax.show();
+  }
 };
 
 (() => {

@@ -1,4 +1,5 @@
 include ../../room-number/room-number
+include ../../room-price/room-price
 
 form(class="form form-booking" id="form-booking")
     .form-booking__header
@@ -14,12 +15,14 @@ form(class="form form-booking" id="form-booking")
           idEnd: "form-booking-end",
         })
     .form-booking__guests
-        +dropdown({
-          type: "guests",
-          label: "гости",
-          defValue: "3 гостя",
-          ico: "expand_more",
-          id: "form-booking-guests"
+        +dropdown-select({
+          label: "Гости",
+          variant: "people",
+          options: [
+            {text: "взрослые", value: 0},
+            {text: "дети", value: 0},
+            {text: "младенцы", value: 0}
+          ]
         })
     .form-booking__items
         .item-price

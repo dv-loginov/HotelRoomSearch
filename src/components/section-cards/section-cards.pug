@@ -1,6 +1,6 @@
 include ../section/section
 include ../calendar/calendar
-
+include ../room/room
 +section({modClass:'darker'})
     block section
         .section__element
@@ -9,31 +9,16 @@ include ../calendar/calendar
                     .section__element
                         include ../forms/search-room/search-room
                     .section__element
+                        include ../forms/account-registration/account-registration
                 .section__col
                     .section__element
+                        include ../forms/booking/booking
                     .section__element
+                        include ../forms/login/login
                 .section__col
                     .section__element
                         +calendar()
                     .section__element
+                        +room("888", true, "9 990", 5, 145)
                     .section__element
-//+logo({})
-//section.section.section-cards
-//    .row
-//        .col
-//            .wrap-element-wide
-//                include ../forms/search-room/search-room
-//            .wrap-element-wide
-//                include ../forms/account-registration/account-registration
-//        .col
-//            .wrap-element-wide
-//                include ../forms/booking/booking
-//            .wrap-element-wide
-//                include ../forms/login/login
-//        .col
-//            .wrap-element-wide
-//                #calendar
-//            .wrap-element-wide
-//                +room("888", true, "9 990", 5, 145)
-//            .wrap-element-wide
-//                +room("840", true, "9 990", 4, 65)
+                        +room("888", true, "9 990", 5, 145)

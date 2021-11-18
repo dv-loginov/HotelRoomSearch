@@ -16,11 +16,10 @@ form(class="form form-reg" id="form-reg")
           defValue: "Фамилия",
         })
     .form-reg__checkbox
-        +radio-buttons({showLabel: false})
+        +radio-button()
     .form-reg__date-of-birth
         +masked-text-field({
           label: "дата рождения",
-          id: "date-of-birth"
         })
 
     .form-reg__login-details
@@ -42,7 +41,6 @@ form(class="form form-reg" id="form-reg")
     .form-reg__radio
         +toggle({
           text: "Получать спецпредложения",
-          id: "special-offer",
         })
     .form-reg__button
         +button({

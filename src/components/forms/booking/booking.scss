@@ -1,9 +1,10 @@
-.form-booking {
+@import "../../../theme/colors";
 
+.form-booking {
   &__header {
-    padding-right: 20px;
-    padding-top: 10px;
     display: flex;
+    padding-top: 10px;
+    padding-right: 20px;
     justify-content: space-between;
     align-items: flex-end;
   }
@@ -22,30 +23,31 @@
 
   .item-price {
     display: flex;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    color: $dark_shade_75;
     margin-bottom: 10px;
+    color: $dark_shade_75;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 18px;
 
     &__text {
-      max-width: 210px;
       width: 100%;
+      max-width: 220px;
     }
 
     &__ico {
       display: flex;
-      align-items: center;
-      justify-content: center;
       width: 20px;
       height: 20px;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 14px;
+      cursor: pointer;
       color: $dark_shade_25;
       border: 1px solid $dark_shade_25;
       border-radius: 50%;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 14px;
+      align-items: center;
+      justify-content: center;
     }
 
     &__price {
@@ -55,32 +57,28 @@
 
   &__rezult {
     display: flex;
-    justify-content: space-between;
     margin: 20px 0;
+    justify-content: space-between;
 
     &-text {
-      font-weight: bold;
-      font-size: 19px;
-      line-height: 23px;
-      color: #1F2041;
       padding-right: 5px;
+      color: #1f2041;
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 23px;
     }
 
     &-dots {
-      margin-bottom: 4px;
       flex: 1;
+      margin-bottom: 4px;
       border-bottom: 1px dashed $dark_shade_25;
     }
 
     &-sum {
-      font-weight: bold;
+      color: #1f2041;
       font-size: 19px;
+      font-weight: bold;
       line-height: 23px;
-      color: #1F2041;
     }
   }
-
-  &__button {
-  }
 }
-

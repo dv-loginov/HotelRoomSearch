@@ -1,7 +1,6 @@
 .form-reg {
-
   &__header {
-    padding: 10px 0 15px 0;
+    padding: 10px 0 15px;
   }
 
   &__input-name,
@@ -9,12 +8,12 @@
   &__checkbox,
   &__login-email,
   &__login-password,
-  &__login-details{
+  &__login-details {
     margin: 10px 0;
   }
 
   &__date-of-birth,
-  &__login-details{
+  &__login-details {
     padding-top: 10px;
   }
 
@@ -23,17 +22,17 @@
   }
 
   &__footer {
-    padding-top: 30px;
-    max-width: 320px;
-    width: 100%;
     display: flex;
+    width: 100%;
+    max-width: 320px;
+    padding-top: 30px;
     justify-content: space-between;
     align-items: center;
 
-    &-text{
-      font-weight: 400;
+    &-text {
+      color: #000;
       font-size: 14px;
-      color: #000000;
+      font-weight: normal;
     }
   }
 }
