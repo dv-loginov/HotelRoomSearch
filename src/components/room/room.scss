@@ -1,4 +1,6 @@
 .room {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 270px;
   border-radius: 4px;
@@ -7,8 +9,8 @@
 
   &__header {
     display: flex;
-    margin: 0 20px;
-    padding: 20px 0 10px;
+    margin: 21px 18px 0;
+    padding: 0 0 8px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     justify-content: space-between;
     align-items: flex-end;
@@ -16,9 +18,9 @@
 
   &__footer {
     display: flex;
-    padding: 10px 20px 20px;
+    padding: 9px 22px 11px 19px;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__rating {

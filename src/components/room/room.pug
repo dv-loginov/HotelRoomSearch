@@ -10,7 +10,5 @@ mixin room(num, isLux, price, rating, recall)
             +room-number(num, isLux)
             +room-price(price)
         .room__footer
-            .room__rating
-                +rate-button(rating)
-            .room__recall
-                +recall(recall)
+            +rate-button(rating)
+            +recall(recall)

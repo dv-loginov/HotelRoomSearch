@@ -1,5 +1,5 @@
 mixin room-slider(num)
-    .swiper.swiper-room(id=`swiper-room-${num}`)
+    .swiper.room-slider(data-type = "room-slider")
         .swiper-wrapper
             .swiper-slide
                 img(src=`./img/room/${num}/slide-1.png`)
@@ -10,7 +10,7 @@ mixin room-slider(num)
             .swiper-slide
                 img(src="https://via.placeholder.com/270x150")
         .swiper-button-prev
-            span(class="material-icons" style={transform: 'rotate(90deg)'}) expand_more
+            include ./img/arrow_left.svg
         .swiper-button-next
-            span(class="material-icons" style={transform: 'rotate(-90deg)'}) expand_more
+            include ./img/arrow_right.svg
         .swiper-pagination

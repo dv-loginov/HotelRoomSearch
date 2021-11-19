@@ -1,24 +1,28 @@
 import Swiper, {Navigation, Pagination} from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import './room-slider.scss';
 
-const roomSlider = () => {
-  console.log('run roomSlider');
+const roomSlider = (node) => {
 
   Swiper.use([Navigation, Pagination]);
 
-  const slider = new Swiper('.swiper-room', {
+  new Swiper(node, {
     loop: true,
     pagination: {
-      el: ".swiper-pag",
+      el: ".swiper-pagination",
       clickable: true,
-      modifierClass: 'room-'
+      // modifierClass: 'room-'
     },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-   });
-
-
+  });
 };
 
-export default roomSlider;
+(() => {
+  const roomSliders =document.querySelectorAll('[data-type="room-slider"]');
+  roomSliders.forEach(((node) => roomSlider(node)));
+})();
