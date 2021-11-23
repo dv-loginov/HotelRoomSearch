@@ -1,4 +1,6 @@
 mixin like-button(args)
+    if !args
+        - args = {}
     - const className = args.isLike ? "like-button like-button_like" : "like-button"
 
     div(class=className data-type='like')

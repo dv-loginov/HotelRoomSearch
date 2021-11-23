@@ -1,4 +1,6 @@
 mixin toggle(args)
+    if !args
+        - args = {}
     .toggle-wrap
         label.toggle
             input.toggle__input( type="checkbox" name=args.name checked=!!args.checked )

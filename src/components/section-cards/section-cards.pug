@@ -19,6 +19,18 @@ include ../room/room
                     .section__element
                         +calendar()
                     .section__element
-                        +room("888", true, "9 990", 5, 145)
+                        +room({
+                          num: "888",
+                          isLux: true,
+                          price: "9 990",
+                          rating: 5,
+                          recall: 145
+                        })
                     .section__element
-                        +room("840", false, "9 900", 4, 65)
+                        +room({
+                          num: "840",
+                          isLux: false,
+                          price: "9 900",
+                          rating: 4,
+                          recall: 65
+                        })

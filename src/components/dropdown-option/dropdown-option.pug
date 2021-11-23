@@ -1,4 +1,6 @@
 mixin dropdown-option(args)
+    if !args
+        - args = {}
     .dropdown-option
         .dropdown-option_text=args.text
         .dropdown-option_counter

@@ -3,7 +3,7 @@ include ../../room-price/room-price
 
 form(class="form form-booking" id="form-booking")
     .form-booking__header
-        +room-number(888, true)
+        +room-number({num: 888, isLux: true})
         +room-price("9 990")
     .form-booking__range
         +dropdown-date-range({

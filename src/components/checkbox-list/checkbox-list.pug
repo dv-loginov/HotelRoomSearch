@@ -3,6 +3,8 @@ include ../checkbox-button/checkbox-button
 include ../subheading/subheading
 
 mixin checkbox-list(args)
+    if !args
+        - args = {}
     -   const items=args.items
     .checkbox-list(data-type="checkbox-list")
         .checkbox-list__header

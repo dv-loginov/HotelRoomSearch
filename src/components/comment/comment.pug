@@ -2,6 +2,8 @@ include ../icon-text/icon-text
 include ../like-button/like-button
 
 mixin comment(args)
+    if !args
+        - args = {}
     .comment
         +icon-text({
           img: args.iconText.img,

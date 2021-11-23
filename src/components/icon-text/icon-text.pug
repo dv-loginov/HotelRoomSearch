@@ -1,4 +1,6 @@
 mixin icon-text(args)
+    if !args
+        - args = {}
     -   const mod=args.mod?' icon-text_' + args.mod : ''
     div(class="icon-text" + mod)
         .icon-text__ico

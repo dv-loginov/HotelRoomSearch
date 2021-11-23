@@ -1,6 +1,8 @@
-mixin room-number(num, isLux)
+mixin room-number(args)
+    if !args
+        - args = {}
     .room-number
         span(class="room-number__sign") №
-        span(class="room-number__num")=num
-        if isLux
+        span(class="room-number__num")=args.num
+        if args.isLux
             span(class="room-number__isLux") люкс

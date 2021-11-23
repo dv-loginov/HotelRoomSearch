@@ -1,6 +1,8 @@
-mixin color-info(modClass, name, code)
+mixin color-info(args)
+    if !args
+        - args = {}
     .color-info
-        div(class = "color-info__view color-info__view_" + modClass)
+        div(class = "color-info__view color-info__view_" + args.classMod)
         .color-info__specification
-            .color-info__name=name
-            .color-info__code=code
+            .color-info__name=args.name
+            .color-info__code=args.code

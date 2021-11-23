@@ -1,4 +1,6 @@
 mixin pagin(args)
+    if !args
+        - args = {}
     .pagin(data-type="pagination")
         .data-container(data-page-size=args.pageSize)
         .pagination-container

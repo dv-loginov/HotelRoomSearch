@@ -1,4 +1,6 @@
 mixin button(args)
+    if !args
+        - args = {}
     - const type=args.type?args.type:"def"
     - const modClass=args.mod?" btn-def_"+args.mod:null
     - const action = args.action ? args.action : null

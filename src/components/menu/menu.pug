@@ -1,4 +1,6 @@
 mixin menu(args)
+    if !args
+        - args = {}
     -
         const items=args.items
         const indexActive=args.indexActive?args.indexActive:false
