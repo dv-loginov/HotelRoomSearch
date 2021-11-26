@@ -1,29 +1,28 @@
-@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "../../theme/colors";
 
 .footer {
   display: flex;
   flex-direction: column;
-  max-width: 1440px;
   width: 100%;
-  background: #FFFFFF;
-  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  max-width: 1440px;
   padding-top: 85px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 
-
-  &__top, &__bottom {
+  &__top,
+  &__bottom {
     display: flex;
-    justify-content: space-between;
-    max-width: 1160px;
     width: 100%;
+    max-width: 1160px;
     margin: 0 auto;
+    justify-content: space-between;
   }
 
   &__top {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
     color: $dark_shade_75;
-
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
   }
 
   &__bottom {
@@ -31,18 +30,15 @@
   }
 
   &__line {
-    padding-top: 100px;
     height: 1px;
+    padding-top: 100px;
     box-shadow: 0 1px 0 rgba(31, 32, 65, 0.1);
   }
 
-  &__description, &__subscription {
-    max-width: 260px;
+  &__description,
+  &__subscription {
     width: 100%;
-  }
-
-  &__description {
-
+    max-width: 260px;
   }
 
   &__text {
@@ -51,8 +47,8 @@
   }
 
   &__menu {
-    max-width: 550px;
     width: 100%;
+    max-width: 550px;
   }
 
   &__subscription {
@@ -62,36 +58,38 @@
   }
 
   &__copyright {
-    font-weight: normal;
-    font-size: 14px;
     color: $dark_shade_75;
+    font-size: 14px;
+    font-weight: normal;
   }
 
-  a {
-    i {
-      background: -webkit-linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      padding: 23px 0 23px 20px;
-      font-size: 24px;
+  &__soc-ico {
+    padding: 23px 0;
+
+    a {
+      margin-left: 20px;
+      text-decoration: none;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
   &__nav {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: space-around;
     align-items: flex-start;
   }
-
 }
 
 @media screen and (max-width: 1180px) {
-
   .footer {
     max-width: 768px;
-    padding: 120px 0;
     margin: 0 auto;
+    padding: 120px 0;
 
     &__top {
       width: 100%;
@@ -104,7 +102,7 @@
     }
 
     &__copyright {
-      padding: 20px 0 25px 0;
+      padding: 20px 0 25px;
     }
 
     &__line,
@@ -116,12 +114,6 @@
 
     &__bottom {
       flex-direction: column;
-    }
-
-    a {
-      i {
-        padding: 0 10px;
-      }
     }
   }
 }

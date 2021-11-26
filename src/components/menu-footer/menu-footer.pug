@@ -1,5 +1,9 @@
+include ../menu-column/menu-column
+
 mixin menu-footer(args)
-    +menu({
+  if !args
+    - args = {}
+    +menu-column({
       menuHeader: "навигация",
       items:[
         {text:"О нас", href:"#"},
@@ -7,11 +11,8 @@ mixin menu-footer(args)
         {text:"Служба поддержки", href:"#"},
         {text:"Услуги", href:"#"}
       ],
-      classMenu: "menu-footer",
-      classItem: "menu-footer__item",
-      classLink: "menu-footer__link",
     })
-    +menu({
+    +menu-column({
       menuHeader: "о нас",
       items: [
         {text: "О сервисе", href: "#"},
@@ -19,18 +20,12 @@ mixin menu-footer(args)
         {text: "Вакансии", href: "#"},
         {text: "Инвесторы", href: "#"}
       ],
-      classMenu: "menu-footer",
-      classItem: "menu-footer__item",
-      classLink: "menu-footer__link",
     })
-    +menu({
+    +menu-column({
       menuHeader: "служба поддержки",
       items: [
         {text: "Соглашения", href: "#"},
         {text: "Сообщества", href: "#"},
         {text: "Связь с нами", href: "#"},
       ],
-      classMenu: "menu-footer",
-      classItem: "menu-footer__item",
-      classLink: "menu-footer__link",
     })

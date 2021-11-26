@@ -1,0 +1,10 @@
+mixin menu-column(args)
+    if !args
+        - args = {}
+    -
+        const items=args.items
+    ul(class="menu-footer")
+        h3=args.menuHeader
+        each item, index in items
+            li(class="menu-footer__item")
+                a(class="menu-footer__link" href=item.href)=item.text
