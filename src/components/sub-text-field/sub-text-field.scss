@@ -21,7 +21,7 @@
     border: none;
     outline: none;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: normal;
     line-height: 24px;
 
     &::placeholder {
@@ -31,8 +31,9 @@
 
   &__input-ico {
     display: flex;
-    width: 44px;
+    //width: 44px;
     height: 44px;
+    padding-right: 10px;
     cursor: pointer;
     text-align: center;
     align-items: center;

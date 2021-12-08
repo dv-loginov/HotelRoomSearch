@@ -5,7 +5,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 1440px;
-  padding-top: 85px;
+  padding-top: 100px;
   background: #fff;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 
@@ -31,7 +31,7 @@
 
   &__line {
     height: 1px;
-    padding-top: 100px;
+    padding-top: 81px;
     box-shadow: 0 1px 0 rgba(31, 32, 65, 0.1);
   }
 
@@ -42,18 +42,14 @@
   }
 
   &__text {
-    padding-top: 5px;
-    letter-spacing: 1px;
-  }
-
-  &__menu {
-    width: 100%;
-    max-width: 550px;
+    padding-top: 17px;
   }
 
   &__subscription {
+    padding-top: 3px;
+
     .footer__text {
-      padding: 20px 0;
+      padding: 20px 0 21px;
     }
   }
 
@@ -64,10 +60,14 @@
   }
 
   &__soc-ico {
-    padding: 23px 0;
+    display: flex;
+    width: 112px;
+    padding: 18px 0;
+    justify-content: space-between;
 
     a {
-      margin-left: 20px;
+      display: inline-block;
+      padding-top: 4px;
       text-decoration: none;
 
       svg {
@@ -79,8 +79,8 @@
 
   &__nav {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    width: calc(60px * 6 + 40px * 5);
+    justify-content: space-between;
     align-items: flex-start;
   }
 }
@@ -89,7 +89,7 @@
   .footer {
     max-width: 768px;
     margin: 0 auto;
-    padding: 120px 0;
+    padding: 120px 0 114px;
 
     &__top {
       width: 100%;
@@ -102,7 +102,11 @@
     }
 
     &__copyright {
-      padding: 20px 0 25px;
+      padding: 17px;
+    }
+
+    &__soc-ico {
+      padding: 0;
     }
 
     &__line,
