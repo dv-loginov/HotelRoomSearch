@@ -1,8 +1,12 @@
 include ../section/section
+include ../header/header
 include ../footer/footer
+
 +section({modClass:'darker'})
     block section
         .section__element
+            +header()
         .section__element
+            +header({isLogin: true})
         .section__element
             +footer()

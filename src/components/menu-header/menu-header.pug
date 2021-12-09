@@ -1,7 +1,7 @@
 -
     const menu=[
       {text:"О нас", link:"#"},
-      {text:"Услуги", link: false, type: "vertical",
+      {text:"Услуги", link: false,
         sub:[
           {text:"Услуги-1", link:"#"},
           {text:"Услуги-2", link:"#"}
@@ -9,7 +9,7 @@
       },
       {text:"Вакансии", link:"#"},
       {text:"Новости", link:"#"},
-      {text:"Соглашения", link: false, type: "vertical",
+      {text:"Соглашения", link: false,
           sub:[
             {text:"Соглашение-1", link:"#"},
             {text:"Соглашение-2", link:"#"}
@@ -18,11 +18,14 @@
     ]
 
 mixin menu-header(args)
+    if !args
+        - args = {}
     ul.menu-header
-        each item in menu
+        each item, index in menu
             li.menu-header__item
+                - const active=(index===0) ? 'menu-header__link_active': ''
                 if item.link
-                    a(href=item.link).menu-header__link=item.text
+                    a(href=item.link class=`menu-header__link ${active}`)=item.text
                 else
-                    a(href=item.link).menu-header__link=item.text
-                        span.material-icons.md-24 expand_more
+                    a(href=item.link class=`menu-header__link ${active}`)=item.text
+                        include ./img/expand_more.svg
