@@ -1,4 +1,4 @@
-include ../menu-header/menu-header
+include ../menu/menu
 
 mixin header(args)
     if !args
@@ -7,8 +7,8 @@ mixin header(args)
     header(class=`header ${mod}`)
         .header__logo
             +logo({isBig:true})
-        nav.header__nav
-           +menu-header()
+        .header__nav
+           +menu()
         .header__buttons
             .header__button-login
                 +button({
