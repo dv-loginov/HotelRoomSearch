@@ -1,4 +1,6 @@
 include ../menu/menu
+include ../logo/logo
+include ../button/button
 
 mixin header(args)
     if !args
@@ -12,13 +14,14 @@ mixin header(args)
         .header__buttons
             .header__button-login
                 +button({
-                  type: "def",
-                  mod: "secondary-narrow",
+                  role: "link",
+                  size: "small",
                   text: "войти"
                 })
             .header__button-register
                 +button({
-                  type: "adv-no-ico",
+                  role: "link",
+                  size: "big",
                   text: "зарегистрироваться"
                 })
         .header__accaunt

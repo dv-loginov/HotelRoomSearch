@@ -1,18 +1,25 @@
+//- role= {btn, link}
+//- size= {big, small}
+//- type = {type-1,type-2,type-3}
+//
 mixin button(args)
     if !args
         - args = {}
-    - const type=args.type?args.type:"def"
-    - const modClass=args.mod?" btn-def_"+args.mod:null
+
+    - const role = args.role ? args.role : "btn"
+    - const size = args.size?args.size:"small"
+    - const type = args.type?args.type: false
     - const action = args.action ? args.action : null
-    if (type==="def")
-        button(class="btn-def"+modClass data-action-button = action)
-            span(class="btn-def__label")=args.text
-    if (type==="adv")
-        button(class="btn-adv" data-action-button = action)
-            span(class="btn-adv__label")=args.text
-            include ./img/arrow_forward.svg
-    if (type==="link")
-        button(class="btn-link" data-action-button = action)=args.text
-    if (type === "adv-no-ico")
-        button(class="btn-adv-no-ico" data-action-button = action)
-            span(class="btn-adv-no-ico__label")=args.text
+    - const link = args.link ? args.link : "#"
+
+    if (role === "btn")
+        if (size === "big")
+            button(class="button button_btn button_big" data-action-button = action)
+                span=args.text
+                include ./img/arrow_forward.svg
+        if (size === "small")
+            button(class=`button button_btn button_small button_${type}` data-action-button = action)
+                span=args.text
+    if (role === "link")
+        a(class=`button button_link-${size}` href=link)
+            span=args.text

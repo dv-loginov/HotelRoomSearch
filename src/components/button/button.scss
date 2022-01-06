@@ -1,119 +1,112 @@
 @import "../../theme/colors";
+
 $gradien: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
 
-.btn {
-  &-def,
-  &-adv,
-  &-adv-no-ico,
-  &-link {
-    cursor: pointer;
-    letter-spacing: 0.1px;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14.63px;
-  }
+.button {
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 22px;
+  font-size: 12px;
+  font-weight: 500;
 
-  &-def {
-    &_primary,
-    &_secondary {
-      width: 99px;
-      height: 45px;
-      padding: 0;
-      transition: 500ms ease-in-out;
-      letter-spacing: 1px;
-      border: none;
-      border-radius: 22px;
-    }
-
-    &_primary {
-      color: #fff;
-      border: none;
-      background: $gradien;
-
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-
-    &_secondary,
-    &_secondary-narrow {
-      display: inline-block;
-      padding: 2px;
-      color: $purple;
-      border: none;
-      border-radius: 22px;
-      background: $gradien;
-
-      .btn-def__label {
-        display: block;
-        padding: 13px 0;
-        border-radius: 20px;
-        background: #fff;
-      }
-
-      &:hover {
-        background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-      }
-    }
-
-    &_secondary-narrow {
-      width: 87px;
-      height: 34px;
-      padding: 2px;
-
-      .btn-def__label {
-        display: block;
-        padding: 7px 10px;
-        border-radius: 22px;
-        background: #fff;
-      }
-    }
-  }
-
-  &-adv,
-  &-adv-no-ico {
-    display: flex;
-    color: #fff;
+  &_btn {
     border: none;
-    border-radius: 22px;
-    background: $gradien;
-    align-items: center;
   }
 
-  &-adv {
-    width: 320px;
+  &_big,
+  &_small {
     height: 44px;
-    padding: 15px 10px;
-    justify-content: space-between;
+  }
+
+  &_big,
+  &_link-big {
+    position: relative;
+    display: flex;
+    width: 320px;
+    padding-right: 12px;
+    padding-left: 30px;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      width: 100%;
+    }
 
     svg {
       fill: #fff;
     }
+  }
 
-    &__label {
-      width: 90%;
+  &_small {
+    width: 99px;
+  }
+
+  &_big,
+  &_type-1,
+  &_link-big {
+    transition: 500ms ease-in-out;
+    color: #fff;
+    background: $gradien;
+
+    &:hover {
+      opacity: 0.5;
     }
   }
 
-  &-adv-no-ico {
-    width: 196px;
-    height: 34px;
-    padding: 9px 19px;
-    justify-content: center;
-
-    &__label {
-      width: 100%;
-    }
-  }
-
-  &-link {
+  &_type-2,
+  &_type-3,
+  &_link-small {
+    transition: 500ms ease-in-out;
     color: $purple;
-    border: none;
+    font-weight: bold;
+  }
+
+  &_type-2,
+  &_link-small {
+    display: inline-block;
+    padding: 2px;
+    background: $gradien;
+
+    span {
+      display: block;
+      padding: 13px 0;
+      border-radius: 20px;
+      background: #fff;
+    }
+
+    &:hover {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+    }
+  }
+
+  &_type-3 {
     background-color: transparent;
 
     &:hover {
       color: $dark_shade_50;
+    }
+  }
+
+  &_link-big,
+  &_link-small {
+    height: 34px;
+    text-decoration: none;
+
+    span {
+      text-align: center;
+    }
+  }
+
+  &_link-big {
+    width: 196px;
+    padding: 0;
+  }
+
+  &_link-small {
+    width: 87px;
+
+    span {
+      padding: 5px 0;
     }
   }
 }

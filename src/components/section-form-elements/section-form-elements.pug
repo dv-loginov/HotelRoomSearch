@@ -26,10 +26,10 @@ include ../masked-text-field/masked-text-field
             .section__col
                 .section__element
                     +text-field({
-                        label: "text-field",
-                        type: "text",
-                        name: "text-field",
-                        defValue: "Email",
+                      label: "text-field",
+                      type: "text",
+                      name: "text-field",
+                      defValue: "Email",
                     })
                 .section__element
                     +dropdown({
@@ -43,10 +43,10 @@ include ../masked-text-field/masked-text-field
                 .section__element
                     +dropdown-date-filter()
                 .section__element
-                    +sub-text-field({label:"subscription text field"})
+                    +sub-text-field({label: "subscription text field"})
             .section__col
                 .section__element
-                    +subheading({text:'CHECKBOX BUTTONS'})
+                    +subheading({text: 'CHECKBOX BUTTONS'})
                     +checkbox-button({
                       name: "smoke",
                       text: "Можно курить",
@@ -63,69 +63,75 @@ include ../masked-text-field/masked-text-field
                       checked: true
                     })
                 .section__element
-                    +subheading({text:'RADIO BUTTONS'})
+                    +subheading({text: 'RADIO BUTTONS'})
                     +radio-button()
                 .section__element
-                    +subheading({text:'TOGGLE'})
+                    +subheading({text: 'TOGGLE'})
                     +toggle({
-                        text: "Получать спецпредложения",
-                        name: "special-offer",
-                        checked: true
+                      text: "Получать спецпредложения",
+                      name: "special-offer",
+                      checked: true
                     })
                     +toggle({
-                        text: "Получать спецпредложения",
-                        name: "special-offer",
+                      text: "Получать спецпредложения",
+                      name: "special-offer",
                     })
                 .section__element
-                    +subheading({text:'LIKE BUTTON'})
+                    +subheading({text: 'LIKE BUTTON'})
                     +like-button({
-                        isLike: false,
-                        num: '2'
+                      isLike: false,
+                      num: '2'
                     })
                     +like-button({
-                        isLike: true,
-                        num: '12'
+                      isLike: true,
+                      num: '12'
                     })
                 .section__element
-                    +subheading({text:'RATE BUTTON'})
+                    +subheading({text: 'RATE BUTTON'})
                     +rate-button(4)
                     +rate-button(5)
             .section__col
                 .section__element
                     +range-slider({
-                        text: "range slider",
-                        start: 5000,
-                        end: 10000,
-                        step: 1000,
-                        rangeMin: 0,
-                        rangeMax: 15000,
+                      text: "range slider",
+                      start: 5000,
+                      end: 10000,
+                      step: 1000,
+                      rangeMin: 0,
+                      rangeMax: 15000,
                     })
                 .section__element
-                    +subheading({text:'BUTTONS'})
+                    +subheading({text: 'BUTTONS'})
                     +button({
-                        type: "def",
-                        mod: "primary",
-                        text: "click me"
-                    })
-                .section__element
-                    +button({
-                      type: "def",
-                      mod: "secondary",
+                      role: "btn",
+                      size: "small",
+                      type: "type-1",
                       text: "click me"
                     })
                 .section__element
                     +button({
-                      type: "link",
+                      role: "btn",
+                      size: "small",
+                      type: "type-2",
                       text: "click me"
                     })
                 .section__element
                     +button({
-                      type: "adv",
+                      role: "btn",
+                      size: "small",
+                      type: "type-3",
+                      text: "click me"
+                    })
+                .section__element
+                    +button({
+                      role: "btn",
+                      size: "big",
+                      action: "test-action",
                       text: "перейти к оплате"
                     })
                 .section__element
-                    +subheading({text:'PAGINATION'})
-                    +pagin({pageSize:12})
+                    +subheading({text: 'PAGINATION'})
+                    +pagin({pageSize: 12})
         .section__row
             .section__col
                 .section__element
@@ -141,13 +147,13 @@ include ../masked-text-field/masked-text-field
             .section__col
                 .section__element
                     +dropdown-select({
-                        label: "DROPDOWN",
-                        variant: "people",
-                        options: [
-                            {text: "взрослые", value: 0},
-                            {text: "дети", value: 0},
-                            {text: "младенцы", value: 0}
-                        ]
+                      label: "DROPDOWN",
+                      variant: "people",
+                      options: [
+                        {text: "взрослые", value: 0},
+                        {text: "дети", value: 0},
+                        {text: "младенцы", value: 0}
+                      ]
                     })
             .section__col
                 .section__element
@@ -164,15 +170,23 @@ include ../masked-text-field/masked-text-field
             .section__col
                 .section__element
                     +checkbox-list({
-                        name: "EXPANDABLE CHECKBOX LIST",
-                        items: [
-                          {name: "breakfast", text: "Завтрак", checked: false},
-                          {name: "desk", text: "Письменный стол", checked: true},
-                          {name: "feeding-chair", text: "Стул для кормления", checked: true},
-                          {name: "crib", text: "Кроватка", checked: true},
-                          {name: "television", text: "Телевизор", checked: false},
-                          {name: "shampoo", text: "Шампунь", checked: false}
-                        ]
+                      name: "EXPANDABLE CHECKBOX LIST",
+                      items: [
+                        {name: "breakfast", text: "Завтрак", checked: false},
+                        {name: "desk", text: "Письменный стол", checked: true},
+                        {
+                          name: "feeding-chair",
+                          text: "Стул для кормления",
+                          checked: true
+                        },
+                        {name: "crib", text: "Кроватка", checked: true},
+                        {
+                          name: "television",
+                          text: "Телевизор",
+                          checked: false
+                        },
+                        {name: "shampoo", text: "Шампунь", checked: false}
+                      ]
                     })
             .section__col
                 .section__element
@@ -195,12 +209,12 @@ include ../masked-text-field/masked-text-field
                 .section__element
                     +subheading({text: 'BULLET LIST'})
                     +bullet-list({
-                                  items: [
-                                    {text: "Нельзя с питомцами"},
-                                    {text: "Без вечеринок и мероприятий"},
-                                    {text: "Время прибытия - после 13:00, а выезд до 12:00"}
-                                  ]
-                            })
+                      items: [
+                        {text: "Нельзя с питомцами"},
+                        {text: "Без вечеринок и мероприятий"},
+                        {text: "Время прибытия - после 13:00, а выезд до 12:00"}
+                      ]
+                    })
         .section__row
             .section__col
                 .section__element
@@ -208,17 +222,17 @@ include ../masked-text-field/masked-text-field
             .section__col
                 .section__element
                     +comment({
-                        iconText:{
-                          img: require('../../components/comment/img/user.png').default,
-                          title: 'Мурад Сарафанов',
-                          subtitle: '5 дней'
-                        },
-                        likeButton:{
-                          isLike: true,
-                          num: '12'
-                        },
-                        descText:
-                          `Великолепный матрас на кровати в основной спальне!
+                      iconText: {
+                        img: require('../../components/comment/img/user.png').default,
+                        title: 'Мурад Сарафанов',
+                        subtitle: '5 дней'
+                      },
+                      likeButton: {
+                        isLike: true,
+                        num: '12'
+                      },
+                      descText:
+                        `Великолепный матрас на кровати в основной спальне!
                           А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
                           Выкрикивал комплименты повару — никто не жаловался из соседей.`
                     })

@@ -44,14 +44,16 @@ form(class="form form-reg" id="form-reg")
         })
     .form-reg__button
         +button({
-          type: "adv",
+          role: "btn",
+          size: "big",
           text: "перейти к оплате"
         })
     .form-reg__footer
         .form-reg__footer-text Уже есть аккаунт на Toxin
         .form-reg__footer-button
             +button({
-              type: "def",
-              mod: "secondary",
+              role: "btn",
+              size: "small",
+              type: "type-2",
               text: "войти"
             })

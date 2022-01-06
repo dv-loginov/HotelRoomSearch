@@ -17,14 +17,16 @@ form(class="form form-login" id="form-login")
         })
     .form-login__button
         +button({
-          type: "adv",
+          role: "btn",
+          size: "big",
           text: "войти"
         })
     .form-login__footer
         .form-login__footer-text Нет аккаунта на Toxin?
         .form-login__footer-button
             +button({
-              type: "def",
-              mod: "secondary",
+              role: "btn",
+              size: "small",
+              type: "type-2",
               text: "создать"
             })
