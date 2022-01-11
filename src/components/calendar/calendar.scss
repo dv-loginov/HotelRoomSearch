@@ -151,3 +151,11 @@
   color: $purple;
   font-weight: bold;
 }
+
+.air-datepicker.-active- {
+  transform: translate(-14px, -7px);
+}
+
+.-top-left- .air-datepicker--pointer, .-bottom-left- .air-datepicker--pointer {
+  display: none;
+}

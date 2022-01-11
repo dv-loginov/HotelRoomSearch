@@ -50,9 +50,9 @@
     display: flex;
     width: 44px;
     height: 44px;
+    margin-right: 5px;
     cursor: pointer;
     user-select: none;
-    justify-content: center;
     align-items: center;
 
     svg {
@@ -69,6 +69,9 @@
     }
 
     .dropdown__ico {
+      margin-right: 10px;
+      justify-content: flex-end;
+
       svg {
         fill: $dark_shade_75;
       }
@@ -90,8 +93,7 @@
 
   &__buttons {
     display: flex;
-    padding-bottom: 13px;
-    padding-left: 10px;
+    margin-top: 3px;
     justify-content: space-between;
   }
 }

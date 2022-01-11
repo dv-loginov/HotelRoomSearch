@@ -1,5 +1,10 @@
+include ../header/header
+include ../footer/footer
+
 .page
     .page__header
-    .page__main
+        +header()
+    .page__content
         block main
     .page__footer
+        +footer()

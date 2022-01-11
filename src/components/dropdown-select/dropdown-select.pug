@@ -22,12 +22,16 @@ mixin dropdown-select(args)
                 if args.variant === "people"
                     .dropdown__buttons
                         +button({
-                          type: "link",
-                          text: "очистить",
-                          action: "clear"
+                          role: "btn",
+                          size: "small",
+                          type: "type-3",
+                          action: "clear",
+                          text: "очистить"
                         })
                         +button({
-                          type: "link",
-                          text: "применить",
-                          action: "apply"
+                          role: "btn",
+                          size: "small",
+                          type: "type-3",
+                          action: "apply",
+                          text: "применить"
                         })

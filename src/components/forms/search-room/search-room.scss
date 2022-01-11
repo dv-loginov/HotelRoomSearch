@@ -4,12 +4,15 @@
     padding-right: 20px;
   }
 
-  &__range,
+  &__range {
+    padding-top: 21px;
+  }
+
   &__guests {
-    padding-top: 20px;
+    padding-top: 14px;
   }
 
   &__button {
-    padding-top: 30px;
+    padding-top: 29px;
   }
 }

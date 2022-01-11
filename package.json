@@ -46,6 +46,6 @@
     "jquery": "^3.6.0",
     "nouislider": "^15.2.0",
     "paginationjs": "^2.1.5",
-    "swiper": "^7.0.1"
+    "swiper": "7.4.1"
   }
 }

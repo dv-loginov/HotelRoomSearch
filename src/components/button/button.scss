@@ -89,6 +89,7 @@ $gradien: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
 
   &_link-big,
   &_link-small {
+    box-sizing: border-box;
     height: 34px;
     text-decoration: none;
 
@@ -104,9 +105,10 @@ $gradien: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
 
   &_link-small {
     width: 87px;
+    font-weight: 500;
 
     span {
-      padding: 5px 0;
+      padding: 3px 0;
     }
   }
 }

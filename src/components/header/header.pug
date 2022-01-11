@@ -10,7 +10,7 @@ mixin header(args)
         .header__logo
             +logo({isBig:true})
         .header__nav
-           +menu()
+           +menu({active: args.active})
         .header__buttons
             .header__button-login
                 +button({

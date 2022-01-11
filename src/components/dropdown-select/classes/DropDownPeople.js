@@ -5,6 +5,7 @@ export class DropDownPeople extends DropDown {
     super(node);
     this.name = 'DropDownPeople';
   }
+//FIXME скрывать кнопку "очистить при нулевом количестве гостей"
 
   setInputValue() {
     let str = 'Сколько гостей';

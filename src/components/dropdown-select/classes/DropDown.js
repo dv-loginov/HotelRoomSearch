@@ -7,7 +7,7 @@ export class DropDown {
     node.addEventListener('click', this.headerClick.bind(this));
     this.setInputValue();
   };
-
+//TODO закрывать список при клике вне контрола
   headerClick(event) {
     event.preventDefault();
 
