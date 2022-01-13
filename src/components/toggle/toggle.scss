@@ -1,10 +1,9 @@
 @import "../../theme/colors";
 
-$toggle-indicator-size: 12px; // changing this number will resize the whole toggle
-$track-height: 18px;
+$toggle-indicator-size: 12px;
+$track-height: 20px;
 $track-width: 40px;
 
-// Toggle specific styles
 .toggle-wrap {
   display: flex;
 }
@@ -16,7 +15,6 @@ $track-width: 40px;
   align-items: center;
 }
 
-// Since we can't style the checkbox directly, we "hide" it so we can draw the toggle.
 .toggle__input {
   position: absolute;
   overflow: hidden;
@@ -35,6 +33,7 @@ $track-width: 40px;
 .toggle-track {
   position: relative;
   display: flex;
+  box-sizing: border-box;
   width: $track-width;
   height: $track-height;
   margin-right: 10px;

@@ -1,0 +1,20 @@
+.sign {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+  &_bg-5 {
+    max-height: 702px;
+    background-image: url("./img/bg-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__form {
+    //position: absolute;
+    //top: 70px;
+    //left: 140px;
+  }
+}

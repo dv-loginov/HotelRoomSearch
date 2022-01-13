@@ -1,6 +1,8 @@
 include ../section/section
 include ../calendar/calendar
 include ../room/room
+include ../forms/account-registration/account-registration
+
 +section({modClass:'darker'})
     block section
         .section__element
@@ -9,7 +11,7 @@ include ../room/room
                     .section__element
                         include ../forms/search-room/search-room
                     .section__element
-                        include ../forms/account-registration/account-registration
+                        +form-reg({btnText: "перейти к оплате"})
                 .section__col
                     .section__element
                         include ../forms/booking/booking

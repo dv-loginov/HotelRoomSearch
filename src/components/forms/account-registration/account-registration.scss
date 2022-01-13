@@ -1,24 +1,38 @@
 .form-reg {
   &__header {
-    padding: 10px 0 15px;
+    margin-top: 9px;
   }
 
-  &__input-name,
-  &__input-surname,
-  &__checkbox,
-  &__login-email,
-  &__login-password,
-  &__login-details {
-    margin: 10px 0;
+  &__input-name {
+    margin-top: 21px;
   }
 
-  &__date-of-birth,
-  &__login-details {
-    padding-top: 10px;
+  &__input-surname {
+    margin-top: 10px;
+  }
+
+  &__checkbox {
+    margin-top: 10px;
+  }
+
+  &__date-of-birth {
+    margin-top: 12px;
+  }
+
+  &__login-email {
+    margin-top: 16px;
+  }
+
+  &__login-password {
+    margin-top: 11px;
+  }
+
+  &__radio {
+    margin-top: 7px;
   }
 
   &__button {
-    padding-top: 20px;
+    margin-top: 23px;
   }
 
   &__footer {

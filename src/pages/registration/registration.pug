@@ -4,4 +4,7 @@ block variables
     -var title = 'Registration page'
 
 block main
-    h1 Registration page
+    include ../../components/forms/account-registration/account-registration
+    .reg.reg_bg-4
+        .reg__form
+            +form-reg({btnText: "зарегистрироваться"})

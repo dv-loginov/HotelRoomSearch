@@ -1,0 +1,19 @@
+.reg {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+  &_bg-4 {
+    max-height: 683px;
+    background-image: url("./img/bg-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__form {
+    position: relative;
+    left: 1px;
+  }
+}

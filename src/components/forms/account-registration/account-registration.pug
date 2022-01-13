@@ -4,62 +4,65 @@ include ../../masked-text-field/masked-text-field
 include ../../toggle/toggle
 include ../../button/button
 
-form(class="form form-reg" id="form-reg")
-    .form-reg__header
-        h1 Регистрация аккаунта
-    .form-reg__input-name
-        +text-field({
-          type: text,
-          name: "reg-name",
-          class:"form-reg",
-          defValue: "Имя" ,
-        })
-    .form-reg__input-surname
-        +text-field({
-          type: text,
-          name: "reg-surname",
-          class: "form-reg",
-          defValue: "Фамилия",
-        })
-    .form-reg__checkbox
-        +radio-button()
-    .form-reg__date-of-birth
-        +masked-text-field({
-          label: "дата рождения",
-        })
+mixin form-reg(args)
+    if !args
+        - args = {}
+    form(class="form form-reg" id="form-reg")
+        .form-reg__header
+            h1 Регистрация аккаунта
+        .form-reg__input-name
+            +text-field({
+              type: text,
+              name: "reg-name",
+              class:"form-reg",
+              defValue: "Имя" ,
+            })
+        .form-reg__input-surname
+            +text-field({
+              type: text,
+              name: "reg-surname",
+              class: "form-reg",
+              defValue: "Фамилия",
+            })
+        .form-reg__checkbox
+            +radio-button()
+        .form-reg__date-of-birth
+            +masked-text-field({
+              label: "дата рождения",
+            })
 
-    .form-reg__login-details
-        .form-reg__login-email
-            +text-field({
-              label: "данные для входа в сервис",
-              type: "email",
-              name: "reg-email",
-              class: "form-reg",
-              defValue: "Email",
+        .form-reg__login-details
+            .form-reg__login-email
+                +text-field({
+                  label: "данные для входа в сервис",
+                  type: "email",
+                  name: "reg-email",
+                  class: "form-reg",
+                  defValue: "Email",
+                })
+            .form-reg__login-password
+                +text-field({
+                  type: "password",
+                  name: "reg-password",
+                  class: "form-reg",
+                  defValue: "Пароль",
+                })
+        .form-reg__radio
+            +toggle({
+              text: "Получать спецпредложения",
             })
-        .form-reg__login-password
-            +text-field({
-              type: "password",
-              name: "reg-password",
-              class: "form-reg",
-              defValue: "Пароль",
-            })
-    .form-reg__radio
-        +toggle({
-          text: "Получать спецпредложения",
-        })
-    .form-reg__button
-        +button({
-          role: "btn",
-          size: "big",
-          text: "перейти к оплате"
-        })
-    .form-reg__footer
-        .form-reg__footer-text Уже есть аккаунт на Toxin
-        .form-reg__footer-button
+        .form-reg__button
             +button({
               role: "btn",
-              size: "small",
-              type: "type-2",
-              text: "войти"
+              size: "big",
+              text: args.btnText
             })
+        .form-reg__footer
+            .form-reg__footer-text Уже есть аккаунт на Toxin
+            .form-reg__footer-button
+                +button({
+                  role: "btn",
+                  size: "small",
+                  type: "type-2",
+                  text: "войти"
+                })
