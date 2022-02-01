@@ -1,0 +1,9 @@
+include ../date-dropdown/date-dropdown
+mixin date-filter(args)
+    if !args
+        - args = {}
+
+    +date-dropdown({
+      labelText: "filter date dropdown",
+      type: "date-filter"
+    })

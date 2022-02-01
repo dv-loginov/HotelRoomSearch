@@ -1,0 +1,12 @@
+include ../date-dropdown/date-dropdown
+mixin date-range(args)
+    if !args
+        - args = {}
+    .date-range
+        +date-dropdown({
+          type: "date-range"
+        })
+        +date-dropdown({
+          type: "date-range",
+          placeholder: "11.11.11"
+        })

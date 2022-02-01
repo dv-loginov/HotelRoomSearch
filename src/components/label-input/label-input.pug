@@ -1,0 +1,5 @@
+mixin label-input(args)
+    if !args
+        - args = {}
+    label(class="label-input")=args.text
+        block
