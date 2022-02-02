@@ -14,8 +14,8 @@ const rangeSlider = (node) => {
 
   const inputMin = node.querySelector('[name="slider-input-min"]');
   const inputMax = node.querySelector('[name="slider-input-max"]');
-  const viewMin = document.querySelector('[data-range-slider-value=min]');
-  const viewMax = document.querySelector('[data-range-slider-value=max]');
+  const viewMin = document.querySelector('[date-range-slider-value=min]');
+  const viewMax = document.querySelector('[date-range-slider-value=max]');
 
   inputMin.value = start;
   inputMax.value = end;

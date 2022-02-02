@@ -2,12 +2,13 @@ include ../label-input/label-input
 mixin date-dropdown(args)
     if !args
         - args = {}
-    - const type = args.type ? `date-dropdown__input_${args.type}`:""
+    - const type = args.type ? `date-dropdown_${args.type}`:""
     - const labelText = args.labelText || "date dropdown"
     - const defValue = args.placeholder || "ДД.ММ.ГГГГ"
-    .date-dropdown
+    div(class=`date-dropdown ${type}`)
         +label-input({text: labelText})
             input(
-                class=`date-dropdown__input ${type}`
+                class="date-dropdown__input"
                 placeholder=defValue
+                readonly
             )

@@ -2,11 +2,15 @@ include ../date-dropdown/date-dropdown
 mixin date-range(args)
     if !args
         - args = {}
-    .date-range
+    .date-range(data-type="date-range")
         +date-dropdown({
+          labelText: args.labelStart,
+          placeholder: args.placeholderStart,
           type: "date-range"
         })
         +date-dropdown({
+          labelText: args.labelEnd,
+          placeholder: args.placeholderEnd,
           type: "date-range",
-          placeholder: "11.11.11"
         })
+        input.date-range__input

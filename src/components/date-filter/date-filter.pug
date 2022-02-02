@@ -2,8 +2,9 @@ include ../date-dropdown/date-dropdown
 mixin date-filter(args)
     if !args
         - args = {}
-
-    +date-dropdown({
-      labelText: "filter date dropdown",
-      type: "date-filter"
-    })
+    .date-filter(data-type="date-filter")
+        +date-dropdown({
+          labelText: "даты пребывания в отеле",
+          type: "date-filter",
+          placeholder: "19 авг - 23 авг",
+        })

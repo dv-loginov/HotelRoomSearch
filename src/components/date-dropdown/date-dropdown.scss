@@ -6,7 +6,6 @@
   &__input {
     overflow: hidden;
     box-sizing: border-box;
-    width: 150px;
     padding: 12px 14px;
     cursor: pointer;
     user-select: none;
@@ -23,23 +22,24 @@
     &::placeholder {
       color: $dark_shade_75;
     }
+  }
 
-    &_date-range {
-    }
+  &_date-range .date-dropdown__input {
+    width: 150px;
+  }
 
-    &_date-filter {
-      width: 266px;
-    }
+  &_date-filter {
+    width: 266px;
   }
 
   &::after {
     position: absolute;
     top: 35px;
-    right: 2px;
+    right: 3px;
     width: 24px;
     height: 24px;
-    content: ">";
+    content: url(./img/expand_more.png);
+    cursor: pointer;
+    pointer-events: none;
   }
 }
-
-//TODO заменить галку на svg и отрегулировать расположение
