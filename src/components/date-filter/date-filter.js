@@ -1,4 +1,4 @@
-import './dropdown-date-filter.scss'
+import './date-filter.scss'
 import svgArrowBack from "src/components/calendar/img/arrow_back.svg";
 import svgArrowForward from "src/components/calendar/img/arrow_forward.svg";
 import AirDatepicker from "air-datepicker";

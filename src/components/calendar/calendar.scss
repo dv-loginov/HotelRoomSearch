@@ -153,9 +153,10 @@
 }
 
 .air-datepicker.-active- {
-  transform: translate(-14px, -7px);
+  transform: translate(0, -7px);
 }
 
-.-top-left- .air-datepicker--pointer, .-bottom-left- .air-datepicker--pointer {
+.-top-left- .air-datepicker--pointer,
+.-bottom-left- .air-datepicker--pointer {
   display: none;
 }
