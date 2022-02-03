@@ -4,4 +4,117 @@ block variables
     -var title = 'Search room page'
 
 block main
-    h1 Search room page
+    include ../../components/date-filter/date-filter
+    include ../../components/dropdown-select/dropdown-select
+    include ../../components/range-slider/range-slider
+    include ../../components/subheading/subheading
+    include ../../components/checkbox-button/checkbox-button
+    include ../../components/checkbox-list/checkbox-list
+
+    .search-room
+        aside.search-room__left
+            .search-room__data-range
+                +date-filter({placeholder: "даты пребывания в отеле"})
+            .search-room__guests
+                +dropdown-select({
+                  label: "DROPDOWN",
+                  variant: "people",
+                  options: [
+                    {text: "взрослые", value: 0},
+                    {text: "дети", value: 0},
+                    {text: "младенцы", value: 0}
+                  ]
+                })
+            .search-room__slider-price
+                +range-slider({
+                  text: "range slider",
+                  start: 5000,
+                  end: 10000,
+                  step: 1000,
+                  rangeMin: 0,
+                  rangeMax: 15000,
+                })
+            .search-room__slider-price-info
+            .search-room__rules
+                +subheading({text: 'CHECKBOX BUTTONS'})
+                +checkbox-button({
+                    name: "smoke",
+                    text: "Можно курить",
+                    checked: false
+                })
+                +checkbox-button({
+                    name: "pet",
+                    text: "Можно с питомцами",
+                    checked: true
+                })
+                +checkbox-button({
+                    name: "guests",
+                    text: "Можно пригласить гостей (до 10 человек)",
+                    checked: true
+                })
+            .search-room__accessibility
+                +subheading({text: 'RICH CHECKBOX BUTTONS'})
+                +checkbox-button({
+                    name: "wideCorridor",
+                    text: "Широкий коридор",
+                    desc: "Ширина коридоров в номере не менее 91 см.",
+                    checked: false,
+                    mod: "rich"
+                })
+                +checkbox-button({
+                    name: "helper",
+                    text: "Помошник для инвалидов",
+                    desc: "На 1 этаже вас встретит специалист и проводит до номера",
+                    checked: false,
+                    mod: "rich"
+                })
+            .search-room__room-amenities
+                +dropdown-select({
+                  label: "dropdown",
+                  variant: "things",
+                  options: [
+                    {text: "спальни", value: 2},
+                    {text: "кровати", value: 2},
+                    {text: "ванные комнаты", value: 0}
+                  ]
+                })
+            .search-room__additional-amenities
+                +checkbox-list({
+                  name: "EXPANDABLE CHECKBOX LIST",
+                  items: [
+                    {name: "breakfast", text: "Завтрак", checked: false},
+                    {name: "desk", text: "Письменный стол", checked: true},
+                    {
+                      name: "feeding-chair",
+                      text: "Стул для кормления",
+                      checked: true
+                    },
+                    {name: "crib", text: "Кроватка", checked: true},
+                    {
+                      name: "television",
+                      text: "Телевизор",
+                      checked: false
+                    },
+                    {name: "shampoo", text: "Шампунь", checked: false}
+                  ]
+                })
+        main.search-room__right
+            .search-room__header
+                h1="Номера, которые мы для вас подобрали"
+            .search-room__grid
+                - for (let i=0;i<12;i++)
+                    .test
+            .search-room__pagin
+
+                //TODO dropdown гостей
+                    добавит вывод младенцев отдельно
+
+                //TODO range slider
+                    добавить подпись под шкалой (см. макет)
+
+                //TODO checkbox button and rich checkbox buttons
+                    объеденить в один компонент
+
+                //TODO добавить номера
+
+                //TODO pixel in pixel
