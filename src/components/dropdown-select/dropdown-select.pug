@@ -6,10 +6,11 @@ mixin dropdown-select(args)
     if !args
         - args = {}
     +dropdown({
-      label: args.label||"dropdown",
-      mod: "dropdown__with-options",
-      type: 'dropdown-select',
-      variant: args.variant
+      labelText: args.labelText,
+      mod: args.mod,
+      type: args.type,
+      placeholder: args.placeholder,
+      modIco: args.modIco,
     })
         if args.options
             .dropdown__wrap-options
@@ -19,7 +20,7 @@ mixin dropdown-select(args)
                       value: option.value,
                       item: index
                     })
-                if args.variant === "people"
+                if args.type === "people"
                     .dropdown__buttons
                         +button({
                           role: "btn",

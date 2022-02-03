@@ -4,45 +4,20 @@
   position: relative;
   width: 320px;
 
-  &__wrap-options {
-    position: absolute;
-    z-index: 1000;
-    display: none;
-    width: 318px;
-    border: 1px solid $dark_shade_25;
-    border-top: none;
-    border-radius: 0 0 4px 4px;
-    background-color: #fff;
-
-    &-open {
-      display: block;
-    }
-  }
-
-  &__wrap-input {
-    display: flex;
-    box-sizing: border-box;
-    padding-left: 12px;
-    cursor: pointer;
-    user-select: none;
-    border: 1px solid $dark_shade_25;
-    border-radius: 4px;
-    background: #fff;
-    justify-content: space-between;
-  }
-
   &__input {
     overflow: hidden;
-    width: 150px;
-    cursor: pointer;
+    box-sizing: border-box;
+    padding: 12px 14px 13px;
+    user-select: none;
     white-space: nowrap;
     text-overflow: ellipsis;
     color: $dark_shade_75;
-    border: none;
+    border: 1px solid $dark_shade_25;
+    border-radius: 4px;
     outline: none;
+    background: #fff;
     font-size: 14px;
-    font-weight: 300;
-    line-height: 24px;
+    font-weight: 400;
 
     &::placeholder {
       color: $dark_shade_75;
@@ -50,47 +25,65 @@
   }
 
   &__ico {
+    position: absolute;
+    top: 25px;
+    right: 0;
     display: flex;
     width: 44px;
     height: 44px;
-    margin-right: 5px;
-    pointer-events: none;
+    cursor: pointer;
     align-items: center;
+    justify-content: center;
 
     svg {
-      width: 24px;
-      height: 24px;
-      pointer-events: none;
       fill: $dark_shade_50;
     }
-  }
 
-  &__with-options {
-    .dropdown__wrap-input {
-      border-radius: 4px 4px 0 0;
-    }
-
-    .dropdown__ico {
-      margin-right: 10px;
-      justify-content: flex-end;
-
+    &_rich {
       svg {
         fill: $dark_shade_75;
       }
     }
   }
 
-  &__date {
-    display: flex;
-    flex-direction: column;
-    width: 150px;
-    cursor: pointer;
-    user-select: none;
-    justify-content: space-between;
+  &_form {
+    width: 320px;
   }
 
-  &__date-filter {
+  &_page {
     width: 266px;
+  }
+
+  &_things .dropdown__input {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &_people {
+  }
+
+  &__wrap-options {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid $dark_shade_50;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+  }
+
+  &_open {
+    .dropdown__input {
+      border-color: $dark_shade_50;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .dropdown__wrap-options {
+      display: block;
+    }
   }
 
   &__buttons {
@@ -99,3 +92,91 @@
     justify-content: space-between;
   }
 }
+
+//
+//.dropdown {
+//  position: relative;
+//  width: 320px;
+//
+//  &__wrap-options {
+//    position: absolute;
+//    z-index: 1000;
+//    display: none;
+//    width: 318px;
+//    border: 1px solid $dark_shade_25;
+//    border-top: none;
+//    border-radius: 0 0 4px 4px;
+//    background-color: #fff;
+//
+//    &-open {
+//      display: block;
+//    }
+//  }
+//
+//  &__wrap-input {
+//    display: flex;
+//    box-sizing: border-box;
+//    padding-left: 12px;
+//    cursor: pointer;
+//    user-select: none;
+//    border: 1px solid $dark_shade_25;
+//    border-radius: 4px;
+//    background: #fff;
+//    justify-content: space-between;
+//  }
+//
+//  &__input {
+//    overflow: hidden;
+//    width: 150px;
+//    cursor: pointer;
+//    white-space: nowrap;
+//    text-overflow: ellipsis;
+//    color: $dark_shade_75;
+//    border: none;
+//    outline: none;
+//    font-size: 14px;
+//    font-weight: 300;
+//    line-height: 24px;
+//
+//    &::placeholder {
+//      color: $dark_shade_75;
+//    }
+//  }
+//
+//  &__ico {
+//    display: flex;
+//    width: 44px;
+//    height: 44px;
+//    margin-right: 5px;
+//    pointer-events: none;
+//    align-items: center;
+//
+//    svg {
+//      width: 24px;
+//      height: 24px;
+//      pointer-events: none;
+//      fill: $dark_shade_50;
+//    }
+//  }
+//
+//  &__with-options {
+//    .dropdown__wrap-input {
+//      border-radius: 4px 4px 0 0;
+//    }
+//
+//    .dropdown__ico {
+//      margin-right: 10px;
+//      justify-content: flex-end;
+//
+//      svg {
+//        fill: $dark_shade_75;
+//      }
+//    }
+//  }
+//
+//  &__buttons {
+//    display: flex;
+//    margin-top: 3px;
+//    justify-content: space-between;
+//  }
+//}
