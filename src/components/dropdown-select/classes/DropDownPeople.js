@@ -6,6 +6,7 @@ export class DropDownPeople extends DropDown {
     this.name = 'DropDownPeople';
   }
 //FIXME скрывать кнопку "очистить при нулевом количестве гостей"
+//FIXME считать младенцев отдельно
 
   setInputValue() {
     let str = 'Сколько гостей';
@@ -33,7 +34,7 @@ export class DropDownPeople extends DropDown {
   }
 
   closeOptions() {
-    this.node.querySelector('.dropdown__wrap-options').classList.toggle('dropdown__wrap-options-open');
+    this.node.classList.toggle('dropdown_open');
   }
 
   clearCounter() {
