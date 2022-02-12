@@ -26,3 +26,4 @@ const dropdownSelect = (node) => {
   const dropdownNodes = document.querySelectorAll('[data-type="dropdown-select"]');
   dropdownNodes.forEach(((node) => dropdownSelect(node)));
 })();
+

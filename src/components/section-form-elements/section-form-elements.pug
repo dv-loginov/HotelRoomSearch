@@ -136,8 +136,11 @@ include ../masked-text-field/masked-text-field
             .section__col
                 .section__element
                     +dropdown-select({
-                      label: "dropdown",
-                      variant: "things",
+                      labelText: "удобства номера",
+                      type: "things",
+                      mod: "page",
+                      modIco: "rich",
+                      placeholder: "2 спални, 2 кровати...",
                       options: [
                         {text: "спальни", value: 2},
                         {text: "кровати", value: 2},
@@ -147,8 +150,11 @@ include ../masked-text-field/masked-text-field
             .section__col
                 .section__element
                     +dropdown-select({
-                      label: "DROPDOWN",
-                      variant: "people",
+                      labelText: "dropdown_people-form",
+                      type: "people",
+                      mod: "form",
+                      modIco: "rich",
+                      placeholder: "Сколько гостей",
                       options: [
                         {text: "взрослые", value: 0},
                         {text: "дети", value: 0},
@@ -158,8 +164,11 @@ include ../masked-text-field/masked-text-field
             .section__col
                 .section__element
                     +dropdown-select({
-                      label: "DROPDOWN",
-                      variant: "people",
+                      labelText: "dropdown_people-form",
+                      type: "people",
+                      mod: "form",
+                      modIco: "rich",
+                      placeholder: "Сколько гостей",
                       options: [
                         {text: "взрослые", value: 2},
                         {text: "дети", value: 1},

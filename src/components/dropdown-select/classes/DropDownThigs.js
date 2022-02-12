@@ -4,6 +4,7 @@ export class DropDownThings extends DropDown {
   constructor(node) {
     super(node);
     this.name = 'DropDownThings';
+    this.setInputValue();
   }
 
   setInputValue() {

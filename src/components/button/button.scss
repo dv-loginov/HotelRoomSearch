@@ -9,6 +9,10 @@ $gradien: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
   font-size: 12px;
   font-weight: 500;
 
+  span {
+    pointer-events: none;
+  }
+
   &_btn {
     border: none;
   }

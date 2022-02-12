@@ -21,7 +21,7 @@ mixin dropdown-select(args)
                       item: index
                     })
                 if args.type === "people"
-                    .dropdown__buttons
+                    .dropdown__buttons(data-type = "buttons")
                         +button({
                           role: "btn",
                           size: "small",
