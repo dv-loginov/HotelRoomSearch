@@ -5,14 +5,12 @@ export class DropDown {
     this.nodeCountersValue = node.querySelectorAll('[data-counter-value]');
     this.nodeInput = node.querySelector('.dropdown__input');
     node.addEventListener('click', this.headerClick.bind(this));
-    this.setInputValue();
   };
-//TODO закрывать список при клике вне контрола
+
   headerClick(event) {
     event.preventDefault();
 
     const actionCounter = event.target.dataset.actionCounter;
-    const actionButton = event.target.dataset.actionButton;
 
     if (actionCounter) {
       const item = parseInt(event.target.dataset.item);
@@ -31,17 +29,6 @@ export class DropDown {
           break;
       }
       this.setInputValue();
-    }
-
-    if (actionButton) {
-      switch (actionButton) {
-        case 'clear':
-          this.clearCounter();
-          break;
-        case 'apply':
-          this.closeOptions();
-          break;
-      }
     }
   }
 
@@ -62,16 +49,6 @@ export class DropDown {
     });
   }
 
-  setInputValue() {
-
-  }
-
-  clearCounter() {
-
-  }
-
-  closeOptions() {
-
-  }
+  setInputValue() {}
 }
 

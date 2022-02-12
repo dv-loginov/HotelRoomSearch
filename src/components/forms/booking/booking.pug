@@ -14,8 +14,11 @@ form(class="form form-booking" id="form-booking")
         })
     .form-booking__guests
         +dropdown-select({
-          label: "Гости",
-          variant: "people",
+          labelText: "dropdown_people-form",
+          type: "people",
+          mod: "form",
+          modIco: "rich",
+          placeholder: "Сколько гостей",
           options: [
             {text: "взрослые", value: 0},
             {text: "дети", value: 0},

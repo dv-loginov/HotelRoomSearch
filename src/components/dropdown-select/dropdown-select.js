@@ -1,15 +1,15 @@
 import './dropdown-select.scss'
-
-import {DropDownThings} from "../dropdown-select/classes/DropDownThigs";
-import {DropDownPeople} from "../dropdown-select/classes/DropDownPeople";
+import {DropDownThings} from "./classes/DropDownThigs";
+import {DropDownPeople} from "./classes/DropDownPeople";
 
 const dropdownSelect = (node) => {
   const variant = node.dataset.variant;
   const buttonExpand = node.querySelector('[data-action=expand]');
-  const nodeOptionsWrap = node.querySelector('.dropdown__wrap-options');
+
   buttonExpand.onclick = () => {
-    nodeOptionsWrap.classList.toggle('dropdown__wrap-options-open');
+    node.classList.toggle('dropdown_open');
   };
+
   switch (variant) {
     case 'things':
       new DropDownThings(node);
@@ -26,3 +26,4 @@ const dropdownSelect = (node) => {
   const dropdownNodes = document.querySelectorAll('[data-type="dropdown-select"]');
   dropdownNodes.forEach(((node) => dropdownSelect(node)));
 })();
+
