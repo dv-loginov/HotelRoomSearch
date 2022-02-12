@@ -1,0 +1,12 @@
+mixin icon-text(args)
+    if !args
+        - args = {}
+    -   const mod=args.mod?' icon-text_' + args.mod : ''
+    div(class="icon-text" + mod)
+        .icon-text__ico
+            img(
+                src=args.img
+                alt='img')
+        .icon-text__descroption
+            .icon-text__title=args.title
+            .icon-text__subtitle=args.subtitle

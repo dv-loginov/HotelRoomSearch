@@ -1,0 +1,14 @@
+.date-range {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 320px;
+  justify-content: space-between;
+
+  &__input {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    visibility: hidden;
+  }
+}

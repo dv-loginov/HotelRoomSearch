@@ -1,0 +1,27 @@
+include ../../date-range/date-range
+include ../../dropdown-select/dropdown-select
+
+form(class="form form-search" id="form-search")
+    .form-search__header
+        h1 Найдём номера под ваши пожелания
+    .form-search__range
+        +date-range({
+          labelStart: "прибытие",
+          labelEnd: "выезд",
+        })
+    .form-search__guests
+        +dropdown-select({
+          label: "Гости",
+          variant: "people",
+          options: [
+            {text: "взрослые", value: 0},
+            {text: "дети", value: 0},
+            {text: "младенцы", value: 0}
+          ]
+        })
+    .form-search__button
+        +button({
+          role: "btn",
+          size: "big",
+          text: "подобрать номер"
+        })

@@ -1,0 +1,19 @@
+//-
+    args.isBig - boolean (true - большой логотип)
+
+mixin logo(args)
+    if !args
+        - args = {}
+
+    if args.isBig
+        img(
+            class='logo logo-big'
+            alt='logo'
+            src=require('../../components/logo/img/logo-big.png').default
+            )
+    else
+        img(
+            class="logo"
+            alt="logo"
+            src=require('../../components/logo/img/logo.png').default
+            )

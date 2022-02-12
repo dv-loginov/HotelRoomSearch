@@ -1,0 +1,52 @@
+.form-reg {
+  &__header {
+    margin-top: 9px;
+  }
+
+  &__input-name {
+    margin-top: 21px;
+  }
+
+  &__input-surname {
+    margin-top: 10px;
+  }
+
+  &__checkbox {
+    margin-top: 10px;
+  }
+
+  &__date-of-birth {
+    margin-top: 12px;
+  }
+
+  &__login-email {
+    margin-top: 16px;
+  }
+
+  &__login-password {
+    margin-top: 11px;
+  }
+
+  &__radio {
+    margin-top: 7px;
+  }
+
+  &__button {
+    margin-top: 23px;
+  }
+
+  &__footer {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    padding-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      color: #000;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}

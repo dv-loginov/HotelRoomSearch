@@ -1,0 +1,9 @@
+mixin rate-button(rating)
+    .rate-button(data-type='rating')
+        - for (let i = 0; i < 5; i++)
+          if i < rating
+              span(data-numstar=i)
+                include ./img/star.svg
+          else
+              span(data-numstar=i)
+                include ./img/star_border.svg

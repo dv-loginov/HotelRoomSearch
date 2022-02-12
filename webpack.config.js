@@ -12,8 +12,9 @@ const isDev = !isProd;
 const PATH_SRC = path.resolve(__dirname,'src');
 const PATH_DIST = path.resolve(__dirname,'dist');
 
-const PAGES_DIR = `${PATH_SRC}/pug/pages/`;
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
+const PAGES_DIR = `${PATH_SRC}/pages/`;
+
+const PAGES = fs.readdirSync(PAGES_DIR);
 
 const fileName = ext => isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`;
 
@@ -49,9 +50,9 @@ module.exports = {
 
     new CleanWebpackPlugin(),
 
-    ...PAGES.map(page => new HtmlWebpackPlugin({
-      template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`,
+    ...PAGES.map(fileName => new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/${fileName}/${fileName}.pug`,
+      filename: `${fileName}.html`,
       minify: {
         removeComments: isProd,
         collapseWhitespace: isProd
@@ -62,7 +63,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname,'src/static/favicon.ico'),
+          from: path.resolve(__dirname,'src/static/'),
           to: PATH_DIST
         },
         {
@@ -100,7 +101,16 @@ module.exports = {
           }
         }
       },
-
+      {
+        test: /\.css/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {}
+          },
+          'css-loader',
+        ],
+      },
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -119,21 +129,25 @@ module.exports = {
       },
 
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      },
+
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },
+
+      {
+        test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[ext]'
         }
       },
-
-      {
-        test: /\.(png|jpg|gif)$/,
-        loader: 'file-loader',
-        options: {
-          name: 'img/[name].[ext]'
-        }
-      },
-
     ],
 
   },

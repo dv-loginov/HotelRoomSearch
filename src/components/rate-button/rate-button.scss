@@ -1,0 +1,14 @@
+.rate-button {
+  display: inline-flex;
+  margin-right: 20px;
+  cursor: pointer;
+  user-select: none;
+
+  span {
+    svg {
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+    }
+  }
+}

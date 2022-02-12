@@ -1,0 +1,11 @@
+mixin sub-text-field(args)
+    if !args
+        - args = {}
+    if (args.label)
+        +label({
+            text: args.label,
+        })
+    .sub-field
+        input(class="sub-field__input" placeholder="Email" type="email")
+        div(class="sub-field__input-ico" data-action="send")
+            include ./img/arrow_forward.svg

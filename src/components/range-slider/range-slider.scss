@@ -1,0 +1,81 @@
+@import "../../theme/colors";
+
+.range-slider {
+  width: 266px;
+
+  &__info {
+    display: inline-flex;
+    width: 100%;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: baseline;
+
+    & > .label {
+      padding: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__wrap-input {
+    display: flex;
+    text-transform: uppercase;
+    color: $dark_shade_50;
+    font-size: 12px;
+    font-weight: 300;
+    justify-content: end;
+  }
+
+  &__input-value {
+    overflow: hidden;
+    max-width: 6em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &::after {
+      padding-left: 1px;
+      content: "₽";
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input-separator {
+    padding: 0 5px;
+  }
+}
+
+.noUi-target {
+  height: 6px;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.noUi-base {
+  height: 6px;
+}
+
+.noUi-horizontal .noUi-handle {
+  top: -6px;
+  right: -5px;
+  width: 17px;
+  height: 17px;
+}
+
+.noUi-handle {
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  box-shadow: none;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.noUi-connect {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}

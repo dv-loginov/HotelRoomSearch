@@ -1,0 +1,19 @@
+include ../icon-text/icon-text
+include ../like-button/like-button
+
+mixin comment(args)
+    if !args
+        - args = {}
+    .comment
+        +icon-text({
+          img: args.iconText.img,
+          title: args.iconText.title,
+          subtitle: args.iconText.subtitle
+        })
+        .comment__description
+            .comment__description-ico
+                +like-button({
+                  isLike: args.likeButton.isLike,
+                  num: args.likeButton.num
+                })
+            .comment__description-text=args.descText

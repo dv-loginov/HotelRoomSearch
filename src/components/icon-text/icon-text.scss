@@ -1,0 +1,35 @@
+@import "../../theme/colors";
+
+.icon-text {
+  display: flex;
+  width: 280px;
+
+  &__ico {
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__descroption {
+    padding-left: 10px;
+    color: $dark_shade_75;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    padding-top: 5px;
+    font-weight: 300;
+  }
+
+  &_list {
+    margin-bottom: 20px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  }
+}

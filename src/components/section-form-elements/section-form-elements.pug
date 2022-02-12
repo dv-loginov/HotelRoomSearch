@@ -1,0 +1,238 @@
+include ../section/section
+include ../subheading/subheading
+include ../like-button/like-button
+include ../rate-button/rate-button
+include ../icon-text-list/icon-text-list
+include ../comment/comment
+include ../checkbox-button/checkbox-button
+include ../bullet-list/bullet-list
+include ../checkbox-list/checkbox-list
+include ../radio-button/radio-button
+include ../toggle/toggle
+include ../range-slider/range-slider
+include ../button/button
+include ../pagin/pagin
+include ../dropdown/dropdown
+include ../date-range/date-range
+include ../date-filter/date-filter
+include ../dropdown-select/dropdown-select
+include ../text-field/text-field
+include ../sub-text-field/sub-text-field
+include ../masked-text-field/masked-text-field
+
++section()
+    block section
+        .section__row
+            .section__col
+                .section__element
+                    +text-field({
+                      label: "text-field",
+                      type: "text",
+                      name: "text-field",
+                      defValue: "Email",
+                    })
+                .section__element
+                    +dropdown({
+                      label: "dropdown",
+                      defValue: "Сколько гостей",
+                    })
+                .section__element
+                    +masked-text-field({label: "masked text field"})
+                .section__element
+                    +date-range()
+                .section__element
+                    +date-filter()
+                .section__element
+                    +sub-text-field({label: "subscription text field"})
+            .section__col
+                .section__element
+                    +subheading({text: 'CHECKBOX BUTTONS'})
+                    +checkbox-button({
+                      name: "smoke",
+                      text: "Можно курить",
+                      checked: false
+                    })
+                    +checkbox-button({
+                      name: "pet",
+                      text: "Можно с питомцами",
+                      checked: true
+                    })
+                    +checkbox-button({
+                      name: "guests",
+                      text: "Можно пригласить гостей (до 10 человек)",
+                      checked: true
+                    })
+                .section__element
+                    +subheading({text: 'RADIO BUTTONS'})
+                    +radio-button()
+                .section__element
+                    +subheading({text: 'TOGGLE'})
+                    +toggle({
+                      text: "Получать спецпредложения",
+                      name: "special-offer",
+                      checked: true
+                    })
+                    +toggle({
+                      text: "Получать спецпредложения",
+                      name: "special-offer",
+                    })
+                .section__element
+                    +subheading({text: 'LIKE BUTTON'})
+                    +like-button({
+                      isLike: false,
+                      num: '2'
+                    })
+                    +like-button({
+                      isLike: true,
+                      num: '12'
+                    })
+                .section__element
+                    +subheading({text: 'RATE BUTTON'})
+                    +rate-button(4)
+                    +rate-button(5)
+            .section__col
+                .section__element
+                    //+range-slider({
+                    //  text: "range slider",
+                    //  start: 5000,
+                    //  end: 10000,
+                    //  step: 1000,
+                    //  rangeMin: 0,
+                    //  rangeMax: 15000,
+                    //})
+                .section__element
+                    +subheading({text: 'BUTTONS'})
+                    +button({
+                      role: "btn",
+                      size: "small",
+                      type: "type-1",
+                      text: "click me"
+                    })
+                .section__element
+                    +button({
+                      role: "btn",
+                      size: "small",
+                      type: "type-2",
+                      text: "click me"
+                    })
+                .section__element
+                    +button({
+                      role: "btn",
+                      size: "small",
+                      type: "type-3",
+                      text: "click me"
+                    })
+                .section__element
+                    +button({
+                      role: "btn",
+                      size: "big",
+                      action: "test-action",
+                      text: "перейти к оплате"
+                    })
+                .section__element
+                    +subheading({text: 'PAGINATION'})
+                    +pagin({pageSize: 12})
+        .section__row
+            .section__col
+                .section__element
+                    +dropdown-select({
+                      label: "dropdown",
+                      variant: "things",
+                      options: [
+                        {text: "спальни", value: 2},
+                        {text: "кровати", value: 2},
+                        {text: "ванные комнаты", value: 0}
+                      ]
+                    })
+            .section__col
+                .section__element
+                    +dropdown-select({
+                      label: "DROPDOWN",
+                      variant: "people",
+                      options: [
+                        {text: "взрослые", value: 0},
+                        {text: "дети", value: 0},
+                        {text: "младенцы", value: 0}
+                      ]
+                    })
+            .section__col
+                .section__element
+                    +dropdown-select({
+                      label: "DROPDOWN",
+                      variant: "people",
+                      options: [
+                        {text: "взрослые", value: 2},
+                        {text: "дети", value: 1},
+                        {text: "младенцы", value: 0}
+                      ]
+                    })
+        .section__row
+            .section__col
+                .section__element
+                    +checkbox-list({
+                      name: "EXPANDABLE CHECKBOX LIST",
+                      items: [
+                        {name: "breakfast", text: "Завтрак", checked: false},
+                        {name: "desk", text: "Письменный стол", checked: true},
+                        {
+                          name: "feeding-chair",
+                          text: "Стул для кормления",
+                          checked: true
+                        },
+                        {name: "crib", text: "Кроватка", checked: true},
+                        {
+                          name: "television",
+                          text: "Телевизор",
+                          checked: false
+                        },
+                        {name: "shampoo", text: "Шампунь", checked: false}
+                      ]
+                    })
+            .section__col
+                .section__element
+                    +subheading({text: 'RICH CHECKBOX BUTTONS'})
+                    +checkbox-button({
+                      name: "wideCorridor",
+                      text: "Широкий коридор",
+                      desc: "Ширина коридоров в номере не менее 91 см.",
+                      checked: false,
+                      mod: "rich"
+                    })
+                    +checkbox-button({
+                      name: "helper",
+                      text: "Помошник для инвалидов",
+                      desc: "На 1 этаже вас встретит специалист и проводит до номера",
+                      checked: false,
+                      mod: "rich"
+                    })
+            .section__col
+                .section__element
+                    +subheading({text: 'BULLET LIST'})
+                    +bullet-list({
+                      items: [
+                        {text: "Нельзя с питомцами"},
+                        {text: "Без вечеринок и мероприятий"},
+                        {text: "Время прибытия - после 13:00, а выезд до 12:00"}
+                      ]
+                    })
+        .section__row
+            .section__col
+                .section__element
+                    +icon-text-list()
+            .section__col
+                .section__element
+                    +comment({
+                      iconText: {
+                        img: require('../../components/comment/img/user.png').default,
+                        title: 'Мурад Сарафанов',
+                        subtitle: '5 дней'
+                      },
+                      likeButton: {
+                        isLike: true,
+                        num: '12'
+                      },
+                      descText:
+                        `Великолепный матрас на кровати в основной спальне!
+                          А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
+                          Выкрикивал комплименты повару — никто не жаловался из соседей.`
+                    })

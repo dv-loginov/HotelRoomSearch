@@ -1,0 +1,20 @@
+include ../label/label
+include ../checkbox-button/checkbox-button
+include ../subheading/subheading
+
+mixin checkbox-list(args)
+    if !args
+        - args = {}
+    -   const items=args.items
+    .checkbox-list(data-type="checkbox-list")
+        .checkbox-list__header
+            .checkbox-list__name.sta-text=args.name
+            .checkbox-list__ico(data-action="expand")
+                include ./img/expand_more.svg
+        .checkbox-list__items.checkbox-list__items_hide(data-action="expand-list")
+            each item in items
+                +checkbox-button({
+                  name: item.name,
+                  text: item.text,
+                  checked: item.checked
+                })

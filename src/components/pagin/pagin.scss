@@ -1,0 +1,62 @@
+@import "../../theme/colors";
+
+.paginationjs {
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat, Arial, sans-serif;
+
+  &__footer {
+    padding: 10px 0;
+    color: $dark_shade_75;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+
+.paginationjs .paginationjs-pages li {
+  border: none;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.paginationjs .paginationjs-pages li:first-child > a,
+.paginationjs .paginationjs-pages li:last-child > a {
+  border: none;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+  }
+}
+
+.paginationjs .paginationjs-pages li > a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  color: $dark_shade_50;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border-radius: 22px;
+  }
+}
+
+.paginationjs .paginationjs-pages li.active > a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationjs .paginationjs-pages li.disabled > a {
+  opacity: 1;
+}

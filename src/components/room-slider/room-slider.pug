@@ -1,0 +1,16 @@
+mixin room-slider(num)
+    .swiper.room-slider(data-type = "room-slider")
+        .swiper-wrapper
+            .swiper-slide
+                img(src=`./img/room/${num}/slide-1.png`)
+            .swiper-slide
+                img(src="https://via.placeholder.com/270x150")
+            .swiper-slide
+                img(src="https://via.placeholder.com/270x150")
+            .swiper-slide
+                img(src="https://via.placeholder.com/270x150")
+        .swiper-button-prev
+            include ./img/arrow_left.svg
+        .swiper-button-next
+            include ./img/arrow_right.svg
+        .swiper-pagination

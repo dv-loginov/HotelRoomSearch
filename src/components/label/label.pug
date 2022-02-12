@@ -1,0 +1,9 @@
+mixin label(args)
+    if !args
+        - args = {}
+    - const mod = args.mod ? "label_" + args.mod : ""
+    - const forAttr = args.forAttr ? args.forAttr : null
+    label(
+        class="label"+ mod
+        for = forAttr
+    )=args.text

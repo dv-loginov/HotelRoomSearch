@@ -1,0 +1,101 @@
+@import '../../theme/colors';
+
+.dropdown {
+  position: relative;
+  width: 320px;
+
+  &__wrap-options {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    width: 318px;
+    border: 1px solid $dark_shade_25;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+
+    &-open {
+      display: block;
+    }
+  }
+
+  &__wrap-input {
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 12px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid $dark_shade_25;
+    border-radius: 4px;
+    background: #fff;
+    justify-content: space-between;
+  }
+
+  &__input {
+    overflow: hidden;
+    width: 150px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $dark_shade_75;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    &::placeholder {
+      color: $dark_shade_75;
+    }
+  }
+
+  &__ico {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    margin-right: 5px;
+    pointer-events: none;
+    align-items: center;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+      fill: $dark_shade_50;
+    }
+  }
+
+  &__with-options {
+    .dropdown__wrap-input {
+      border-radius: 4px 4px 0 0;
+    }
+
+    .dropdown__ico {
+      margin-right: 10px;
+      justify-content: flex-end;
+
+      svg {
+        fill: $dark_shade_75;
+      }
+    }
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    cursor: pointer;
+    user-select: none;
+    justify-content: space-between;
+  }
+
+  &__date-filter {
+    width: 266px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 3px;
+    justify-content: space-between;
+  }
+}

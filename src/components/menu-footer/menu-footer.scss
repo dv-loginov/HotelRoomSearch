@@ -1,0 +1,29 @@
+@import "../../theme/colors";
+
+.menu-footer {
+  width: calc(60px * 2 + 40px);
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-left: -10px;
+    padding-top: 15px;
+  }
+
+  &__link {
+    padding: 10px;
+    text-decoration: none;
+    color: $dark_shade_50;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+
+    &:hover {
+      transition: background-color 500ms;
+      color: #fff;
+      border-radius: 5px;
+      background-color: $dark_shade_75;
+    }
+  }
+}

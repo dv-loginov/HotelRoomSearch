@@ -1,0 +1,45 @@
+@import '../../theme/colors';
+
+.date-dropdown {
+  position: relative;
+
+  &__input {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $dark_shade_75;
+    border: 1px solid $dark_shade_25;
+    border-radius: 4px;
+    outline: none;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 400;
+
+    &::placeholder {
+      color: $dark_shade_75;
+    }
+  }
+
+  &_date-range .date-dropdown__input {
+    width: 150px;
+  }
+
+  &_date-filter {
+    width: 266px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 35px;
+    right: 3px;
+    width: 24px;
+    height: 24px;
+    content: url(./img/expand_more.png);
+    cursor: pointer;
+    pointer-events: none;
+  }
+}

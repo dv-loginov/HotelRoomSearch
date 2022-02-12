@@ -1,0 +1,36 @@
+-
+    const menu=[
+      {text:"О нас", link:"#"},
+      {text:"Услуги", link: "#",
+        sub:[
+          {text:"Услуги-1", link:"#"},
+          {text:"Услуги-2", link:"#"}
+        ]
+      },
+      {text:"Вакансии", link:"#"},
+      {text:"Новости", link:"#"},
+      {text:"Соглашения", link: "#",
+          sub:[
+            {text:"Соглашение-1", link:"#"},
+            {text:"Соглашение-2", link:"#"}
+          ]
+      },
+    ]
+
+mixin menu(args)
+    if !args
+        - args = {}
+    .menu(data-type="menu")
+        .menu__icon
+            span
+        nav.menu__body
+            ul.menu__list
+                each item, index in menu
+                    li
+                        a.menu__link(href=item.link class=`${(index===args.active)?"_active":""}`)=item.text
+                        if (item.sub)
+                            include ./img/expand_more.svg
+                            ul.menu__sub-list
+                                each subItem, index in item.sub
+                                    li
+                                        a.menu__sub-link(href=subItem.link)=subItem.text

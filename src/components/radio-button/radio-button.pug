@@ -1,0 +1,23 @@
+mixin radio-button()
+    if !args
+        - args = {}
+    .radio-button
+        .radio-button__item
+            label(class="radio-button__item-label")
+                input(
+                    type="radio"
+                    name="gender"
+                    value="male"
+                    checked
+                    class="radio-button__input"
+                )
+                span(class="radio-button__flag")="Мужчина"
+        .radio-button__item
+            label(class="radio-button__item-label")
+                input(
+                    type="radio"
+                    name="gender"
+                    value="female"
+                    class="radio-button__input"
+                )
+                span(class="radio-button__flag")="Женщина"

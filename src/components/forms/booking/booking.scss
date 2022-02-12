@@ -1,0 +1,84 @@
+@import "../../../theme/colors";
+
+.form-booking {
+  &__header {
+    display: flex;
+    padding-top: 10px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__range {
+    margin-top: 20px;
+  }
+
+  &__guests {
+    margin-top: 20px;
+  }
+
+  &__items {
+    margin-top: 20px;
+  }
+
+  .item-price {
+    display: flex;
+    margin-bottom: 10px;
+    color: $dark_shade_75;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 18px;
+
+    &__text {
+      width: 100%;
+      max-width: 220px;
+    }
+
+    &__ico {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      color: $dark_shade_25;
+      border: 1px solid $dark_shade_25;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 14px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__price {
+      margin-left: auto;
+    }
+  }
+
+  &__rezult {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+
+    &-text {
+      padding-right: 5px;
+      color: #1f2041;
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 23px;
+    }
+
+    &-dots {
+      flex: 1;
+      margin-bottom: 4px;
+      border-bottom: 1px dashed $dark_shade_25;
+    }
+
+    &-sum {
+      color: #1f2041;
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 23px;
+    }
+  }
+}

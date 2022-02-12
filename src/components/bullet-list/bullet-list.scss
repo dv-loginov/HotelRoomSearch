@@ -1,0 +1,33 @@
+@import "../../theme/colors";
+
+.bullet-list {
+  max-width: 285px;
+  margin: 0;
+  list-style: none;
+  list-style-position: inside;
+  padding-inline-start: 0;
+
+  &_item {
+    display: flex;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    color: $dark_shade_75;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    align-items: baseline;
+
+    &::before {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+      content: " ";
+      color: $dark_shade_25;
+      border-radius: 50%;
+      background-color: $dark_shade_25;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  }
+}

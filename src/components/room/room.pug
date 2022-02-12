@@ -1,0 +1,16 @@
+include ../room-number/room-number
+include ../room-price/room-price
+include ../recall/recall
+include ../room-slider/room-slider
+
+mixin room(args)
+    if !args
+        - args = {}
+    .room()
+        +room-slider(args.num)
+        .room__header
+            +room-number({num: args.num, isLux: args.isLux})
+            +room-price(args.price)
+        .room__footer
+            +rate-button(args.rating)
+            +recall(args.recall)

@@ -1,0 +1,31 @@
+include ../menu-column/menu-column
+
+mixin menu-footer(args)
+  if !args
+    - args = {}
+    +menu-column({
+      menuHeader: "навигация",
+      items:[
+        {text:"О нас", href:"#"},
+        {text:"Новости", href:"#"},
+        {text:"Служба поддержки", href:"#"},
+        {text:"Услуги", href:"#"}
+      ],
+    })
+    +menu-column({
+      menuHeader: "о нас",
+      items: [
+        {text: "О сервисе", href: "#"},
+        {text: "Наша команда", href: "#"},
+        {text: "Вакансии", href: "#"},
+        {text: "Инвесторы", href: "#"}
+      ],
+    })
+    +menu-column({
+      menuHeader: "служба поддержки",
+      items: [
+        {text: "Соглашения", href: "#"},
+        {text: "Сообщества", href: "#"},
+        {text: "Связь с нами", href: "#"},
+      ],
+    })

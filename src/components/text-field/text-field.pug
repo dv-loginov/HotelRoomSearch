@@ -1,0 +1,20 @@
+include ../label/label
+
+mixin text-field(args)
+    if !args
+        - args = {}
+    if (args.label)
+        +label({
+          text: args.label,
+        })
+    div(class = "text-field")
+        input(
+            type = args.type
+            name = args.name
+            class = "text-field__input"
+            placeholder = args.defValue,
+            autocomplete = "off"
+        )
+
+
+

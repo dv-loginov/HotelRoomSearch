@@ -1,0 +1,28 @@
+include ../menu/menu
+include ../logo/logo
+include ../button/button
+
+mixin header(args)
+    if !args
+        - args = {}
+    -   const mod=args.isLogin ? "header_authorized" : ""
+    header(class=`header ${mod}`)
+        .header__logo
+            +logo({isBig:true})
+        .header__nav
+           +menu({active: args.active})
+        .header__buttons
+            .header__button-login
+                +button({
+                  role: "link",
+                  size: "small",
+                  text: "войти"
+                })
+            .header__button-register
+                +button({
+                  role: "link",
+                  size: "big",
+                  text: "зарегистрироваться"
+                })
+        .header__accaunt
+            span.header__accaunt-name="Юлий Цезарь"

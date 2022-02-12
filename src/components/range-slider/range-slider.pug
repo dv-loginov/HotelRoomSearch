@@ -1,0 +1,36 @@
+include ../label/label
+
+mixin range-slider(args)
+    if !args
+        - args = {}
+    .range-slider(
+        data-type = 'range-slider'
+        data-start = args.start
+        data-end = args.end
+        data-step = args.step
+        data-range-min = args.rangeMin
+        data-range-max = args.rangeMax
+        )
+        .range-slider__info
+            +label({text: args.text})
+            .range-slider__wrap-input
+                input(
+                    type="number"
+                    class="range-slider__input"
+                    name="slider-input-min"
+                )
+                input(
+                    type="number"
+                    class="range-slider__input"
+                    name="slider-input-max"
+                )
+                div(
+                    class="range-slider__input-value"
+                    data-range-slider-value="min"
+                )
+                span(class="range-slider__input-separator")="-"
+                div(
+                    class="range-slider__input-value"
+                    data-range-slider-value="max"
+                )
+        .range-slider__scale(data-type='range-slider-scale')

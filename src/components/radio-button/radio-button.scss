@@ -1,0 +1,89 @@
+@import "../../theme/colors";
+
+.radio-button {
+  display: flex;
+  width: 220px;
+  justify-content: space-between;
+
+  &__label {
+    margin-bottom: 17px;
+    text-transform: uppercase;
+    color: $dark_shade_100;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+  }
+
+  &__item-label {
+    cursor: pointer;
+    color: $dark_shade_50;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+
+  &__flag {
+    display: inline-flex;
+    user-select: none;
+    align-items: center;
+
+    &::before {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      content: '';
+      border: 1px solid $dark_shade_25;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  /* стили при наведении курсора на checkbox */
+  &__input:not(:disabled):not(:checked) + &__flag:hover::before {
+    border-color: $purple;
+  }
+
+  /* стили для активного чекбокса (при нажатии на него) */
+  &__input:not(:disabled):active + &__flag::before {
+    background-color: $purple;
+  }
+
+  /* стили для чекбокса, находящегося в фокусе */
+  &__input:focus + &__flag::before {
+    box-shadow: 0 0 0 0.1rem $dark_shade_25;
+  }
+
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  &__input:focus:not(:checked) + &__flag::before {
+    border-color: $dark_shade_50;
+  }
+
+  /* стили для чекбокса, находящегося в состоянии checked */
+  &__input:checked + &__flag::before {
+    border-color: $purple;
+    background-image: url("../radio-button/img/radio-button-dot.png");
+    background-position: center;
+    background-size: 12px 12px;
+  }
+
+  &__input:checked + span {
+    color: $dark_shade_75;
+  }
+
+  /* стили для чекбокса, находящегося в состоянии disabled */
+  &__input:disabled + &__flag::before {
+    background-color: $dark_shade_5;
+  }
+}

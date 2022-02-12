@@ -1,0 +1,29 @@
+@import "../../theme/colors";
+
+.room-price {
+  &__num,
+  &__sign,
+  &__legend {
+    color: $dark_shade_50;
+  }
+
+  &__num {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+  }
+
+  &__sign {
+    padding-left: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+  }
+
+  &__legend {
+    padding-left: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+  }
+}

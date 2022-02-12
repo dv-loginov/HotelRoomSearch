@@ -1,0 +1,7 @@
+mixin bullet-list(args)
+    if !args
+        - args = {}
+    -   const items=args.items
+    ul(class="bullet-list")
+        each item in items
+            li(class="bullet-list_item")=item.text

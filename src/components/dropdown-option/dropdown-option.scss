@@ -1,0 +1,44 @@
+@import "../../theme/colors";
+
+.dropdown-option {
+  display: flex;
+  padding: 4px 0 3px;
+  text-transform: uppercase;
+  color: #1f2041;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  align-items: center;
+  justify-content: space-between;
+
+  &_text {
+    padding-left: 14px;
+  }
+
+  &_counter {
+    display: flex;
+    padding-right: 7px;
+    align-items: center;
+
+    &-value {
+      width: 1em;
+      padding: 0 10px;
+      text-align: center;
+    }
+
+    &-sub,
+    &-add {
+      display: flex;
+      box-sizing: border-box;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      user-select: none;
+      color: $dark_shade_25;
+      border: 1px solid $dark_shade_25;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

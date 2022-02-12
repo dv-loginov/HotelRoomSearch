@@ -1,0 +1,38 @@
+include ../section/section
+include ../calendar/calendar
+include ../room/room
+include ../forms/account-registration/account-registration
+
++section({modClass:'darker'})
+    block section
+        .section__element
+            .section__row
+                .section__col
+                    .section__element
+                        include ../forms/search-room/search-room
+                    .section__element
+                        +form-reg({btnText: "перейти к оплате"})
+                .section__col
+                    .section__element
+                        include ../forms/booking/booking
+                    .section__element
+                        include ../forms/login/login
+                .section__col
+                    .section__element
+                        +calendar()
+                    .section__element
+                        +room({
+                          num: "888",
+                          isLux: true,
+                          price: "9 990",
+                          rating: 5,
+                          recall: 145
+                        })
+                    .section__element
+                        +room({
+                          num: "840",
+                          isLux: false,
+                          price: "9 900",
+                          rating: 4,
+                          recall: 65
+                        })

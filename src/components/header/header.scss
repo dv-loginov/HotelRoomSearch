@@ -1,0 +1,52 @@
+@import "../../theme/colors";
+
+.header {
+  display: flex;
+  max-width: 1440px;
+  padding: 13px 140px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  align-items: center;
+  justify-content: space-between;
+
+  //&__logo{
+  //}
+  &__nav {
+    margin-left: auto;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button-login {
+    padding: 0 20px;
+  }
+
+  &__accaunt {
+    display: none;
+  }
+
+  &__accaunt-name {
+    color: $dark_shade_50;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  &_authorized {
+    .header__buttons {
+      display: none;
+    }
+
+    .header__accaunt {
+      display: block;
+      margin-left: 10px;
+      padding-left: 20px;
+      border-left: 1px solid rgba(31, 32, 65, 0.1);
+    }
+
+    .header__nav {
+      margin-right: 10px;
+    }
+  }
+}

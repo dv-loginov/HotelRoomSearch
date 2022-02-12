@@ -1,0 +1,21 @@
+include ../label/label
+
+mixin dropdown(args)
+    if !args
+        - args = {}
+    - const classes = args.mod ? `dropdown ${args.mod}` : "dropdown"
+    div(
+        class=classes
+        data-type=args.type
+        data-variant=args.variant
+    )
+        +label({text: args.label || "dropdown"})
+        .dropdown__wrap-input
+            input(
+                class="dropdown__input"
+                placeholder=args.defValue
+                readonly
+            )
+            div(class="dropdown__ico" data-action="expand")
+                include ./img/expand_more.svg
+        block
