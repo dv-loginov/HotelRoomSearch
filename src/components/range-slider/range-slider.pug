@@ -12,7 +12,7 @@ mixin range-slider(args)
         data-range-max = args.rangeMax
         )
         .range-slider__info
-            +label({text: args.text})
+            +subheading({text: args.text})
             .range-slider__wrap-input
                 input(
                     type="number"
