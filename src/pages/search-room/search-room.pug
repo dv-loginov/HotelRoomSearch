@@ -10,6 +10,7 @@ block main
     include ../../components/subheading/subheading
     include ../../components/checkbox-button/checkbox-button
     include ../../components/checkbox-list/checkbox-list
+    include ../../components/pagin/pagin
 
     .search-room
         aside.search-room__left
@@ -20,7 +21,7 @@ block main
                     +dropdown-select({
                       labelText: "гости",
                       type: "people",
-                      mod: "form",
+                      mod: "page",
                       modIco: "rich",
                       placeholder: "Сколько гостей",
                       options: [
@@ -62,7 +63,7 @@ block main
                 +checkbox-button({
                     name: "wideCorridor",
                     text: "Широкий коридор",
-                    desc: "Ширина коридоров в номере не менее 91 см.",
+                    desc: "Ширина коридоров в номере               не менее 91 см.",
                     checked: false,
                     mod: "rich"
                 })
@@ -113,7 +114,9 @@ block main
                 - for (let i = 0; i < 12; i++)
                     .test
             .search-room__pagin
+                +pagin({pageSize: 12})
 
-                //TODO добавить номера
 
+                //TODO добавить карточки номеров
+                //TODO отпозиционировать пагинацию
                 //TODO pixel in pixel

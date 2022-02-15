@@ -1,7 +1,8 @@
 @import "../../theme/colors";
 
 .checkbox-button {
-  padding: 5px 0;
+  margin-bottom: 7px;
+  line-height: 0;
 
   &__label {
     cursor: pointer;
@@ -18,24 +19,26 @@
 
   &__desc {
     display: block;
-    max-width: 260px;
-    margin-top: -5px;
-    padding-left: 33px;
+    max-width: 234px;
+    padding-left: 30px;
     cursor: pointer;
     user-select: none;
+    white-space: pre-wrap;
     color: $dark_shade_50;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
   }
 
   &__flag {
     display: inline-flex;
+    max-width: 240px;
     user-select: none;
-    align-items: center;
+    align-items: self-start;
 
     &::before {
       display: inline-block;
+      box-sizing: border-box;
       width: 20px;
       height: 20px;
       margin-right: 10px;

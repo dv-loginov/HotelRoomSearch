@@ -1,23 +1,47 @@
 .search-room {
   display: flex;
   width: 100%;
-  height: 2000px;
   padding: 0 140px;
 
   &__left {
     width: 100%;
     max-width: 326px;
-    background-color: #6fcf97;
   }
 
-  &__data-range {}
-  &__guests {}
-  &__slider-price {}
-  &__slider-price-info {}
-  &__rules {}
-  &__accessibility {}
-  &__room-amenities {}
-  &__additional-amenities {}
+  &__data-range {
+    margin-top: 26px;
+  }
+
+  &__guests {
+    margin-top: 2px;
+  }
+
+  &__slider-price {
+    margin-top: 25px;
+  }
+
+  &__slider-price-info {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  &__rules {
+    margin-top: 24px;
+  }
+
+  &__accessibility {
+    margin-top: 31px;
+  }
+
+  &__room-amenities {
+    margin-top: 24px;
+  }
+
+  &__additional-amenities {
+    margin-top: 15px;
+  }
 
   &__right {
     flex: 1;
@@ -34,8 +58,9 @@
     grid-gap: 20px 12px;
   }
 
-  &__pagin {}
-
+  &__pagin {
+    margin: 0 50%;
+  }
 }
 
 .test {
