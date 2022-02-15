@@ -1,7 +1,7 @@
 extends ../../components/sub-layout/sub-layout
 
 block variables
-    -var title = 'Search room page'
+    -const title = 'Search room page'
 
 block main
     include ../../components/date-filter/date-filter
@@ -16,18 +16,22 @@ block main
             .search-room__data-range
                 +date-filter({placeholder: "даты пребывания в отеле"})
             .search-room__guests
-                +dropdown-select({
-                  label: "DROPDOWN",
-                  variant: "people",
-                  options: [
-                    {text: "взрослые", value: 0},
-                    {text: "дети", value: 0},
-                    {text: "младенцы", value: 0}
-                  ]
-                })
+                .form-search__guests
+                    +dropdown-select({
+                      labelText: "гости",
+                      type: "people",
+                      mod: "form",
+                      modIco: "rich",
+                      placeholder: "Сколько гостей",
+                      options: [
+                        {text: "взрослые", value: 0},
+                        {text: "дети", value: 0},
+                        {text: "младенцы", value: 0}
+                      ]
+                    })
             .search-room__slider-price
                 +range-slider({
-                  text: "range slider",
+                  text: "диапазон цены",
                   start: 5000,
                   end: 10000,
                   step: 1000,
@@ -35,8 +39,9 @@ block main
                   rangeMax: 15000,
                 })
             .search-room__slider-price-info
+                span="Стоимость за сутки пребывания в номере"
             .search-room__rules
-                +subheading({text: 'CHECKBOX BUTTONS'})
+                +subheading({text: 'правила дома'})
                 +checkbox-button({
                     name: "smoke",
                     text: "Можно курить",
@@ -53,7 +58,7 @@ block main
                     checked: true
                 })
             .search-room__accessibility
-                +subheading({text: 'RICH CHECKBOX BUTTONS'})
+                +subheading({text: 'доступность'})
                 +checkbox-button({
                     name: "wideCorridor",
                     text: "Широкий коридор",
@@ -70,8 +75,11 @@ block main
                 })
             .search-room__room-amenities
                 +dropdown-select({
-                  label: "dropdown",
-                  variant: "things",
+                  labelText: "удобства номера",
+                  type: "things",
+                  mod: "page",
+                  modIco: "rich",
+                  placeholder: "2 спални, 2 кровати...",
                   options: [
                     {text: "спальни", value: 2},
                     {text: "кровати", value: 2},
@@ -80,7 +88,7 @@ block main
                 })
             .search-room__additional-amenities
                 +checkbox-list({
-                  name: "EXPANDABLE CHECKBOX LIST",
+                  name: "дополнительные удобства",
                   items: [
                     {name: "breakfast", text: "Завтрак", checked: false},
                     {name: "desk", text: "Письменный стол", checked: true},
@@ -102,15 +110,9 @@ block main
             .search-room__header
                 h1="Номера, которые мы для вас подобрали"
             .search-room__grid
-                - for (let i=0;i<12;i++)
+                - for (let i = 0; i < 12; i++)
                     .test
             .search-room__pagin
-
-                //TODO range slider
-                    добавить подпись под шкалой (см. макет)
-
-                //TODO checkbox button and rich checkbox buttons
-                    объеденить в один компонент
 
                 //TODO добавить номера
 
