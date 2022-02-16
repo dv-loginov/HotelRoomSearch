@@ -10,6 +10,7 @@ block main
     include ../../components/subheading/subheading
     include ../../components/checkbox-button/checkbox-button
     include ../../components/checkbox-list/checkbox-list
+    include ../../components/room/room
     include ../../components/pagin/pagin
 
     .search-room
@@ -111,12 +112,28 @@ block main
             .search-room__header
                 h1="Номера, которые мы для вас подобрали"
             .search-room__grid
-                - for (let i = 0; i < 12; i++)
-                    .test
+                -
+                    const rooms = [
+                        {num:"888", isLux: true, price: "9 990", rating: 5, recall: 145},
+                        {num:"840", isLux: false, price: "9 990", rating: 4, recall: 65},
+                        {num:"980", isLux: true, price: "8 590", rating: 3, recall: 35},
+                        {num:"856", isLux: false, price: "7 300", rating: 5, recall: 19},
+                        {num:"740", isLux: false, price: "6 000", rating: 4, recall: 44},
+                        {num:"982", isLux: false, price: "5 800", rating: 3, recall: 56},
+                        {num:"678", isLux: false, price: "5 500", rating: 5, recall: 45},
+                        {num:"450", isLux: false, price: "5 300", rating: 4, recall: 39},
+                        {num:"350", isLux: false, price: "5 000", rating: 3, recall: 77},
+                        {num:"666", isLux: false, price: "5 000", rating: 5, recall: 25},
+                        {num:"444", isLux: false, price: "5 000", rating: 3, recall: 15},
+                        {num:"352", isLux: false, price: "5 000", rating: 3, recall: 55},
+                    ]
+                each room in rooms
+                    +room({
+                      num: room.num,
+                      isLux: room.isLux,
+                      price: room.price,
+                      rating: room.rating,
+                      recall: room.recall
+                    })
             .search-room__pagin
                 +pagin({pageSize: 12})
-
-
-                //TODO добавить карточки номеров
-                //TODO отпозиционировать пагинацию
-                //TODO pixel in pixel

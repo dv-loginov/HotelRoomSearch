@@ -1,4 +1,3 @@
-import pagination from 'paginationjs';
 import 'paginationjs/dist/pagination.css';
 import './pagin.scss';
 import forwardSvg from './img/arrow_forward.svg';
@@ -45,7 +44,7 @@ const pagin = (node) => {
               <span>${start}</span>
               <span>-</span>
               <span>${end}</span>
-              <span> из ${totalNumber > 100 ? '100+' : totalNumber} выриантов</span>
+              <span> из ${totalNumber > 100 ? '100+' : totalNumber} вариантов аренды</span>
           </div>
         `);
     },

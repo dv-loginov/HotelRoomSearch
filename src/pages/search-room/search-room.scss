@@ -45,7 +45,7 @@
 
   &__right {
     flex: 1;
-    background-color: #66d2ea;
+    padding-bottom: 74px;
   }
 
   &__header {
@@ -55,11 +55,13 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    grid-gap: 20px 12px;
+    grid-gap: 21px 12px;
   }
 
   &__pagin {
-    margin: 0 50%;
+    display: flex;
+    padding: 41px 15px 0 0;
+    justify-content: center;
   }
 }
 

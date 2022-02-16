@@ -5,9 +5,10 @@
   flex-direction: column;
   width: 100%;
   max-width: 1440px;
+  padding-top: 100px;
+  border-top: 1px solid $dark_shade_25;
   background: #fff;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
-  padding-top: 100px;
 
   &__top,
   &__bottom {
@@ -49,13 +50,6 @@
 
   &__text {
     padding: 17px 0 22px;
-  }
-
-  &__subscription {
-    //padding-top: 3px;
-
-    .footer__text {
-    }
   }
 
   &__copyright {
