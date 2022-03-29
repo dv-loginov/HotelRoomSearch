@@ -1,0 +1,54 @@
+.room-detals {
+  &__img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__info {
+    display: flex;
+    padding: 70px 140px;
+  }
+
+  &__specialty {
+    flex: 1 1 66%;
+
+    &-room {
+      display: flex;
+      width: 100%;
+
+      &-info {
+        flex: 1 1 50%;
+      }
+
+      &-impression {
+        flex: 1 1 50%;
+      }
+    }
+
+    &-comment {
+      &-header {
+      }
+
+      &-wrap {
+        margin-bottom: 22px;
+      }
+    }
+
+    &-addition {
+      display: flex;
+      width: 100%;
+    }
+
+    &-rules {
+      flex: 1 1 50%;
+    }
+
+    &-repeal {
+      flex: 1 1 50%;
+    }
+  }
+
+  &__booking {
+    flex: 1 1 34%;
+  }
+}

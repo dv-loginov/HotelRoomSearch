@@ -4,4 +4,83 @@ block variables
     -const title = 'Room details page'
 
 block main
-    h1 Room details page
+    include ../../components/icon-text/icon-text
+    include ../../components/comment/comment
+    .room-detals
+        img.room-detals__img(
+            alt="image-header"
+            src=require('../../pages/room-details/img/image.png').default)
+        .room-detals__info
+            .room-detals__specialty
+                .room-detals__specialty-room
+                    .room-detals__specialty-room-info
+                        h2="Сведения о номере"
+                        +icon-text({
+                            mod: "list",
+                            img: require("../../components/icon-text/img/insert_emoticon.png").default,
+                            title: "Комфорт",
+                            subtitle: "Шумопоглощающие стены"
+                        })
+                        +icon-text({
+                            mod: "list",
+                            img: require("../../components/icon-text/img/location_city.png").default,
+                            title: "Удобство",
+                            subtitle: "Окно в каждой из спален"
+                        })
+                        +icon-text({
+                            mod: "list",
+                            img: require("../../components/icon-text/img/insert_emoticon.png").default,
+                            title: "Уют",
+                            subtitle: "Номер оснащен камином"
+                        })
+                    .room-detals__specialty-room-impression
+                        h2="Впечатления от номера"
+                .room-detals__specialty-comment
+                    .room-detals__specialty-comment-header
+                        h2="Отзывы посетителей номера"
+                        .room-detals__specialty-comment-wrap
+                            +comment({
+                                iconText: {
+                                    img: require('../../components/comment/img/user.png').default,
+                                    title: 'Мурад Сарафанов',
+                                    subtitle: '5 дней'
+                                },
+                                likeButton: {
+                                    isLike: true,
+                                    num: '12'
+                                },
+                                descText:
+                                    `Великолепный матрас на кровати в основной спальне!
+                                     А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
+                                     Выкрикивал комплименты повару — никто не жаловался из соседей.`
+                            })
+                        .room-detals__specialty-comment-wrap
+                            +comment({
+                                iconText: {
+                                    img: require('../../components/comment/img/user.png').default,
+                                    title: 'Патрисия Стёклышкова',
+                                    subtitle: 'Неделю назад'
+                                },
+                                likeButton: {
+                                    isLike: false,
+                                    num: '2'
+                                },
+                                descText:
+                                    `Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую
+                                    заказать, каждый день новое блюдо и десерт как комплимент`
+                            })
+                .room-detals__specialty-addition
+                    .room-detals__specialty-rules
+                        h2="Правила"
+                    .room-detals__specialty-repeal
+                        h2="Отмена"
+            .room-detals__booking
+                include ../../components/forms/booking/booking
+
+                    //TODO h2 сделать отдельным компонентом
+                    //TODO добавить правельную иконку в третий icon-text
+                    //TODO сделать диаграмный компонент
+                    //TODO  добавить количество отзывов
+                    //TODO добавить правельную иконку во второй отзыв
+                    //TODO добавить правила и отмену
+                    //TODO подогнать под пиксель

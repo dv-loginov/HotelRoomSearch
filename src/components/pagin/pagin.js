@@ -1,3 +1,4 @@
+import 'paginationjs';
 import 'paginationjs/dist/pagination.css';
 import './pagin.scss';
 import forwardSvg from './img/arrow_forward.svg';
