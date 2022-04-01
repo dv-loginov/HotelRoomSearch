@@ -6,6 +6,7 @@ block variables
 block main
     include ../../components/icon-text/icon-text
     include ../../components/comment/comment
+    include ../../components/bullet-list/bullet-list
     .room-detals
         img.room-detals__img(
             alt="image-header"
@@ -29,7 +30,7 @@ block main
                         })
                         +icon-text({
                             mod: "list",
-                            img: require("../../components/icon-text/img/insert_emoticon.png").default,
+                            img: require("../../components/icon-text/img/whatshot.png").default,
                             title: "Уют",
                             subtitle: "Номер оснащен камином"
                         })
@@ -37,7 +38,9 @@ block main
                         h2="Впечатления от номера"
                 .room-detals__specialty-comment
                     .room-detals__specialty-comment-header
-                        h2="Отзывы посетителей номера"
+                        .room-detals__specialty-comment-header-wrap
+                            h2="Отзывы посетителей номера"
+                            span="2 отзыва"
                         .room-detals__specialty-comment-wrap
                             +comment({
                                 iconText: {
@@ -72,15 +75,24 @@ block main
                 .room-detals__specialty-addition
                     .room-detals__specialty-rules
                         h2="Правила"
+                        +bullet-list({
+                            items: [
+                                {text: "Нельзя с питомцами"},
+                                {text: "Без вечеринок и мероприятий"},
+                                {text: "Время прибытия - после 13:00, а выезд до 12:00"}
+                            ]
+                        })
                     .room-detals__specialty-repeal
                         h2="Отмена"
+                        .room-detals__specialty-repeal-text
+                            |Бесплатная отмена в течение 48 ч.
+                            |После этого при отмене не позднее чем за 5 дн.
+                            |до прибытия вы получите полный возврат за вычетом сбора за услуги.
             .room-detals__booking
                 include ../../components/forms/booking/booking
 
                     //TODO h2 сделать отдельным компонентом
                     //TODO добавить правельную иконку в третий icon-text
                     //TODO сделать диаграмный компонент
-                    //TODO  добавить количество отзывов
                     //TODO добавить правельную иконку во второй отзыв
-                    //TODO добавить правила и отмену
                     //TODO подогнать под пиксель
