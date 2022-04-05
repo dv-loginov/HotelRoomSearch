@@ -5,10 +5,6 @@
   width: 280px;
 
   &__ico {
-    img {
-      width: 48px;
-      height: 48px;
-    }
   }
 
   &__descroption {
@@ -23,7 +19,6 @@
   }
 
   &__subtitle {
-    padding-top: 5px;
     font-weight: 300;
   }
 
@@ -32,4 +27,15 @@
     padding-bottom: 17px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
   }
+
+  &_comment {
+    img {
+      width: 48px;
+      height: 48px;
+      border: 2px solid #fff;
+      border-radius: 32px;
+      box-shadow: 0 10px 20px rgba(31, 32, 65, .1);
+    }
+  }
 }
+

@@ -4,9 +4,17 @@ mixin icon-text(args)
     -   const mod=args.mod?' icon-text_' + args.mod : ''
     div(class="icon-text" + mod)
         .icon-text__ico
-            img(
-                src=args.img
-                alt='img')
+            if (args.mod==="comment")
+                img(
+                    src=args.img
+                    alt='img')
+            if (args.mod==="list")
+                if (args.title==="Комфорт")
+                    include ./img/insert_emoticon.svg
+                if (args.title === "Удобство")
+                    include ./img/location_city.svg
+                if (args.title === "Уют")
+                    include ./img/whatshot.svg
         .icon-text__descroption
             .icon-text__title=args.title
             .icon-text__subtitle=args.subtitle

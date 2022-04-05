@@ -7,6 +7,8 @@ block main
     include ../../components/icon-text/icon-text
     include ../../components/comment/comment
     include ../../components/bullet-list/bullet-list
+    include ../../components/subtitle/subtitle
+    include ../../components/pie/pie
     .room-detals
         img.room-detals__img(
             alt="image-header"
@@ -15,38 +17,36 @@ block main
             .room-detals__specialty
                 .room-detals__specialty-room
                     .room-detals__specialty-room-info
-                        h2="Сведения о номере"
+                        +subtitle({text:"Сведения о номере"})
                         +icon-text({
                             mod: "list",
-                            img: require("../../components/icon-text/img/insert_emoticon.png").default,
                             title: "Комфорт",
                             subtitle: "Шумопоглощающие стены"
                         })
                         +icon-text({
                             mod: "list",
-                            img: require("../../components/icon-text/img/location_city.png").default,
                             title: "Удобство",
                             subtitle: "Окно в каждой из спален"
                         })
                         +icon-text({
                             mod: "list",
-                            img: require("../../components/icon-text/img/whatshot.png").default,
                             title: "Уют",
                             subtitle: "Номер оснащен камином"
                         })
                     .room-detals__specialty-room-impression
-                        h2="Впечатления от номера"
+                        +subtitle({text:"Впечатления от номера"})
+                        +pie({})
                 .room-detals__specialty-comment
                     .room-detals__specialty-comment-header
                         .room-detals__specialty-comment-header-wrap
-                            h2="Отзывы посетителей номера"
+                            +subtitle({text:"Отзывы посетителей номера"})
                             span="2 отзыва"
                         .room-detals__specialty-comment-wrap
                             +comment({
                                 iconText: {
-                                    img: require('../../components/comment/img/user.png').default,
+                                    img: require('../../components/comment/img/murad_sarafanov.jpg').default,
                                     title: 'Мурад Сарафанов',
-                                    subtitle: '5 дней'
+                                    subtitle: '5 дней',
                                 },
                                 likeButton: {
                                     isLike: true,
@@ -60,9 +60,9 @@ block main
                         .room-detals__specialty-comment-wrap
                             +comment({
                                 iconText: {
-                                    img: require('../../components/comment/img/user.png').default,
+                                    img: require('../../components/comment/img/patricia_steklyshkova.jpg').default,
                                     title: 'Патрисия Стёклышкова',
-                                    subtitle: 'Неделю назад'
+                                    subtitle: 'Неделю назад',
                                 },
                                 likeButton: {
                                     isLike: false,
@@ -74,7 +74,7 @@ block main
                             })
                 .room-detals__specialty-addition
                     .room-detals__specialty-rules
-                        h2="Правила"
+                        +subtitle({text:"Правила"})
                         +bullet-list({
                             items: [
                                 {text: "Нельзя с питомцами"},
@@ -83,7 +83,7 @@ block main
                             ]
                         })
                     .room-detals__specialty-repeal
-                        h2="Отмена"
+                        +subtitle({text:"Отмена"})
                         .room-detals__specialty-repeal-text
                             |Бесплатная отмена в течение 48 ч.
                             |После этого при отмене не позднее чем за 5 дн.
@@ -91,8 +91,6 @@ block main
             .room-detals__booking
                 include ../../components/forms/booking/booking
 
-                    //TODO h2 сделать отдельным компонентом
-                    //TODO добавить правельную иконку в третий icon-text
                     //TODO сделать диаграмный компонент
-                    //TODO добавить правельную иконку во второй отзыв
+                    //TODO разбить картинку на 3
                     //TODO подогнать под пиксель

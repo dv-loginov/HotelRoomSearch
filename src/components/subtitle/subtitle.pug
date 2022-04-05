@@ -1,0 +1,5 @@
+mixin subtitle(args)
+    if !args
+        - args = {text:"Заголовок"}
+    .subtitle
+        h2=args.text
